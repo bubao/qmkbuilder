@@ -21,7 +21,7 @@ class Keyboard {
 		this.wiring = {};
 		this._rows = 1;
 		this._cols = 1;
-		this._controller = C.CONTROLLER_ATMEGA32U4;
+		this._controller = C.CONTROLLER_NRF52832;
 		this.pins = {
 			row: [],
 			col: [],

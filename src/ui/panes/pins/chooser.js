@@ -9,7 +9,7 @@ class Chooser extends React.Component {
 		const keyboard = state.keyboard;
 
 		const pin = this.props.pin || 'N/A';
-
+		
 		// Get list of available pins.
 		const pins = this.props.backlight ? ['B5', 'B6', 'B7'] : C.PINS[keyboard.controller].slice(); // B5, B6, and B7 on backlight.
 

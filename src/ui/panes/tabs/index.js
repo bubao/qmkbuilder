@@ -53,16 +53,16 @@ class Tabs extends React.Component {
 				onClick={ this.switchTab(C.SCREEN_KEYMAP) }>
 				Keymap
 			</Tab>
-			<Tab
+			{/* <Tab
 				selected={ screen === C.SCREEN_MACROS }
 				onClick={ this.switchTab(C.SCREEN_MACROS) }>
 				Macros
-			</Tab>
-			<Tab
+			</Tab> */}
+			{/* <Tab
 				selected={ screen === C.SCREEN_QUANTUM }
 				onClick={ this.switchTab(C.SCREEN_QUANTUM) }>
 				Quantum
-			</Tab>
+			</Tab> */}
 			<Tab
 				selected={ screen === C.SCREEN_SETTINGS }
 				onClick={ this.switchTab(C.SCREEN_SETTINGS) }>

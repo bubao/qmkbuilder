@@ -11,9 +11,10 @@ class RulesMK extends Generator {
 
 		let mcu;
 		switch (keyboard.controller) {
-			case C.CONTROLLER_ATMEGA32U2: mcu = 'atmega32u2'; break;
-			case C.CONTROLLER_ATMEGA32U4: mcu = 'atmega32u4'; break;
-			case C.CONTROLLER_AT90USB1286: mcu = 'at90usb1286'; break;
+			case C.CONTROLLER_NRF52832: mcu = 'nRF52832'; break;
+			// case C.CONTROLLER_ATMEGA32U2: mcu = 'atmega32u2'; break;
+			// case C.CONTROLLER_ATMEGA32U4: mcu = 'atmega32u4'; break;
+			// case C.CONTROLLER_AT90USB1286: mcu = 'at90usb1286'; break;
 		}
 
 		let bootloaderSize;

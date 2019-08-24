@@ -108,21 +108,21 @@ class Configure extends React.Component {
 					</div>);
 					break;
 				}
-				case 'MACRO': {
-					subfields.push(<div
-						className='pane-keymap-configure-field'
-						key={ i }>
-						&nbsp;&nbsp;Macro&nbsp;&nbsp;&nbsp;
-						<NumberBox
-							style={{ width: '3rem' }}
-							value={ value }
-							min='0'
-							minus='chevron-down'
-							plus='chevron-up'
-							onChange={ v => this.setField(i, v) }/>
-					</div>);
-					break;
-				}
+				// case 'MACRO': {
+				// 	subfields.push(<div
+				// 		className='pane-keymap-configure-field'
+				// 		key={ i }>
+				// 		&nbsp;&nbsp;Macro&nbsp;&nbsp;&nbsp;
+				// 		<NumberBox
+				// 			style={{ width: '3rem' }}
+				// 			value={ value }
+				// 			min='0'
+				// 			minus='chevron-down'
+				// 			plus='chevron-up'
+				// 			onChange={ v => this.setField(i, v) }/>
+				// 	</div>);
+				// 	break;
+				// }
 			}
 		}
 

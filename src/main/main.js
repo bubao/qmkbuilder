@@ -42,7 +42,8 @@ class Main extends React.Component {
 				});
 			} catch (e) {
 				console.error(e);
-				state.error('Invalid configuration');
+				console.log(e);
+				state.error('Invalid configuration'+e);
 			}
 		});
 	}
@@ -103,7 +104,8 @@ class Main extends React.Component {
 					});
 				} catch (e) {
 					console.error(e);
-					state.error('Invalid configuration');
+					console.log(e);
+					state.error('Invalid configuration'+e);
 				}
 			});
 	}

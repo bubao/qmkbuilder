@@ -32,32 +32,40 @@ const C = {
 	DIODE_ROW2COL: 1,
 
 	// Controllers.
-	CONTROLLER_ATMEGA32U2: 0,
-	CONTROLLER_ATMEGA32U4: 1,
-	CONTROLLER_AT90USB1286: 2,
+	CONTROLLER_NRF52832: 0,
+	// CONTROLLER_ATMEGA32U2: 1,
+	// CONTROLLER_ATMEGA32U4: 2,
+	// CONTROLLER_AT90USB1286: 3,
 
 	// Pins.
 	PINS: {
-		0: [ // CONTROLLER_ATMEGA32U2
-			'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
-			'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
-			'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7'
-		],
-		1: [ // CONTROLLER_ATMEGA32U4
-			'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
-			'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
-			'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7',
-			'E0', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7',
-			'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7'
-		],
-		2: [ // CONTROLLER_AT90USB1286
-			'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7',
-			'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
-			'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
-			'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7',
-			'E0', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7',
-			'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7'
+		0: [ // CONTROLLER_ATMEGA32U4
+			'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+			'10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
+			'20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
+			'30', '31'
 		]
+		// ,
+		// 1: [ // CONTROLLER_ATMEGA32U2
+		// 	'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
+		// 	'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
+		// 	'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7'
+		// ],
+		// 2: [ // CONTROLLER_ATMEGA32U4
+		// 	'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
+		// 	'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
+		// 	'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7',
+		// 	'E0', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7',
+		// 	'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7'
+		// ],
+		// 3: [ // CONTROLLER_AT90USB1286
+		// 	'A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7',
+		// 	'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7',
+		// 	'C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7',
+		// 	'D0', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7',
+		// 	'E0', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7',
+		// 	'F0', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7'
+		// ]
 	},
 
 	// Keycodes.
@@ -73,24 +81,24 @@ const C = {
 	KEYMAP_MAX_LAYERS: 16,
 
 	// Macros.
-	MACRO_NONE:     0,
-	MACRO_INTERVAL: 1,
-	MACRO_DOWN:     2,
-	MACRO_UP:       3,
-	MACRO_TYPE:     4,
-	MACRO_WAIT:     5,
+	// MACRO_NONE:     0,
+	// MACRO_INTERVAL: 1,
+	// MACRO_DOWN:     2,
+	// MACRO_UP:       3,
+	// MACRO_TYPE:     4,
+	// MACRO_WAIT:     5,
 
 	// Quantum.
-	QUANTUM_DEFAULT: `
-void matrix_init_user(void) {
-}
+// 	QUANTUM_DEFAULT: `
+// void matrix_init_user(void) {
+// }
 
-void matrix_scan_user(void) {
-}
+// void matrix_scan_user(void) {
+// }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	return true;
-}`.trim(),
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+// 	return true;
+// }`.trim(),
 
 	// Bootloader sizes.
 	BOOTLOADER_512: 0,
