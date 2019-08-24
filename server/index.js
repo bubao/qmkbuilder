@@ -1,5 +1,5 @@
 const PORT = 5004;
-const TMP = '/tmp/qmk-';
+const TMP = '/tmp/tmk-';
 
 const Express = require('express');
 const BodyParser = require('body-parser');
@@ -23,7 +23,7 @@ app.all('*', (req, res, next) => {
 });
 
 // Set up the /build route.
-app.post('/build', (req, res) => {
+app.post('/build', async(req, res) => {
 	// Get the files.
 	const files = req.body;
 
@@ -41,10 +41,10 @@ app.post('/build', (req, res) => {
 	};
 
 	// Start.
-	co(function*() {
+	try{
 		// Copy the base stencil.
-		yield new Promise((resolve, reject) => {
-			Exec('cp -rp qmk_firmware ' + TMP + key, (err, stdout, stderr) => {
+		await new Promise((resolve, reject) => {
+			Exec('cp -rp tmk_firmware ' + TMP + key, (err, stdout, stderr) => {
 				if (err) return reject('Failed to initialize.');
 				resolve();
 			});
@@ -52,8 +52,8 @@ app.post('/build', (req, res) => {
 
 		// Copy all the files.
 		for (const file in files) {
-			yield new Promise((resolve, reject) => {
-				const fileName = file.replace('qmk_firmware', TMP + key);
+			await new Promise((resolve, reject) => {
+				const fileName = file.replace('tmk_firmware', TMP + key);
 				Fs.writeFile(fileName, files[file], err => {
 					if (err) return reject('Failed to initialize.');
 					resolve();
@@ -62,7 +62,7 @@ app.post('/build', (req, res) => {
 		}
 
 		// Make.
-		yield new Promise((resolve, reject) => {
+		await new Promise((resolve, reject) => {
 			Exec('cd ' + TMP + key + '/keyboards/kb && make', (err, stdout, stderr) => {
 				if (err) return reject(stderr);
 				resolve();
@@ -70,7 +70,7 @@ app.post('/build', (req, res) => {
 		});
 
 		// Read the hex file.
-		const hex = yield new Promise((resolve, reject) => {
+		const hex = await new Promise((resolve, reject) => {
 			Fs.readFile(TMP + key + '/kb_default.hex', 'utf8', (err, data) => {
 				if (err) return reject('Failed to read hex file.');
 				resolve(data);
@@ -82,8 +82,11 @@ app.post('/build', (req, res) => {
 
 		// Clean up.
 		clean();
-	}).catch(e => sendError(e));
-});
+	} catch (e){
+		sendError(e)
+	}
+}).catch(e => sendError(e));
+
 
 // Start listening.
 app.listen(PORT, () => console.log('Listening on port ' + PORT + '...'));

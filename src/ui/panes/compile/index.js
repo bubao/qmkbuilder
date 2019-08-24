@@ -65,10 +65,20 @@ class Compile extends React.Component {
 
 		// Send the request.
 		Request
-			.post(C.LOCAL.API)
+		.post(C.LOCAL.API)
+		.timeout(99999999000)
 			.set('Content-Type', 'application/json')
 			.send(JSON.stringify(files))
 			.end((err, res) => {
+				console.log(res)
+				// Download the hex file.
+				res = JSON.parse(res.text);
+				let blob = new Blob([res.hex], { type: 'application/octet-stream' });
+				saveAs(blob, 'friendly' + '.hex');
+
+				// Re-enable buttons.
+				state.ui.set('compile-working', false);
+				return
 				res = JSON.parse(res.text);
 
 				if (err) {
@@ -90,12 +100,13 @@ class Compile extends React.Component {
 				const friendly = keyboard.settings.name ? Utils.generateFriendly(keyboard.settings.name) : 'layout';
 
 				// Download the hex file.
-				const blob = new Blob([res.hex], { type: 'application/octet-stream' });
-				saveAs(blob, friendly + '.hex');
+				// const blob = new Blob([res.hex], { type: 'application/octet-stream' });
+				// saveAs(blob, friendly + '.hex');
 
 				// Re-enable buttons.
 				state.ui.set('compile-working', false);
 			});
+			state.ui.set('compile-working', false);
 	}
 
 	downloadZip() {
