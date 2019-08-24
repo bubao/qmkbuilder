@@ -12,9 +12,9 @@ class Files {
 	 */
 	static generate(keyboard) {
 		return {
-			'ble60/config.h': new ConfigHGenerator(keyboard).generate(),
-			'ble60/key_plain.c': new KeyPlainCGenerator(keyboard).generate(),
-			'ble60/keymap.common.h': new KeymapCommonHGenerator(keyboard).generate()
+			'config.h': new ConfigHGenerator(keyboard).generate(),
+			'key_plain.c': new KeyPlainCGenerator(keyboard).generate(),
+			// 'ble60/keymap.common.h': new KeymapCommonHGenerator(keyboard).generate()
 		};
 	}
 

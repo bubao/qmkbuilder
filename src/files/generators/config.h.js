@@ -10,11 +10,11 @@ class ConfigH extends Generator {
 		const keyboard = this.keyboard;
 
 		return {
-			'MATRIX_ROWS': keyboard.rows,
-			'MATRIX_COLS': keyboard.cols,
-			'row_pins': keyboard.pins.row.join(', '),
-			'col_pins': keyboard.pins.col.join(', '),
-			'diode_direction': (keyboard.settings.diodeDirection === C.DIODE_COL2ROW ? 'ROW_IN' :'COL_IN'),
+			'MATRIX_ROWS': keyboard.rows, // 列
+			'MATRIX_COLS': keyboard.cols, // 行
+			'row_pins': keyboard.pins.row.join(', '), // pin口 
+			'col_pins': keyboard.pins.col.join(', '), // pin口
+			'diode_direction': (keyboard.settings.diodeDirection === C.DIODE_COL2ROW ? 'ROW_IN' :'COL_IN'), // 流向
 			'backlight_levels': keyboard.settings.backlightLevels,
 			'backlight_pin': keyboard.pins.led ? '#define BACKLIGHT_PIN ' + keyboard.pins.led : '',
 			'rgb_pin': keyboard.pins.rgb ? '#define RGB_DI_PIN ' + keyboard.pins.rgb : '',
@@ -28,7 +28,6 @@ class ConfigH extends Generator {
 			'RGBLIGHT_ANIMATIONS':keyboard.settings.RGBLIGHT_ENABLE?'':'//'
 		};
 	}
-
 }
 
 module.exports = ConfigH;

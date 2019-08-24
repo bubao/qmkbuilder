@@ -20,10 +20,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "keyboard_fn.h"
 
 const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /* 0: qwerty */
-    KEYMAP_ANSI(%KEYMAP_ANSI1%),
-    /* 1: Poker Fn */
-    KEYMAP_ANSI(%KEYMAP_ANSI2%),
+%keymaps%
 };
 const action_t fn_actions[] = {
     /* Poker Layout */
@@ -33,3 +30,8 @@ const action_t fn_actions[] = {
 };
 
 `.trim()
+
+///* 0: qwerty */
+// KEYMAP_ANSI(%KEYMAP_ANSI1%),
+// /* 1: Poker Fn */
+// KEYMAP_ANSI(%KEYMAP_ANSI2%),

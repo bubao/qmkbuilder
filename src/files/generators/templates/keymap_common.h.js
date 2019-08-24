@@ -35,8 +35,8 @@ extern const action_t fn_actions[];
 #define KEYMAP(%KEYMAP1%) {%KEYMAP2%}
 
 /* ANSI variant. No extra keys for ISO */
-#define KEYMAP_ANSI(%KEYMAP_ANSI1%) KEYMAP(%KEYMAP_ANSI2%)
+// #define KEYMAP_ANSI(%KEYMAP_ANSI1%) KEYMAP(%KEYMAP_ANSI2%)
 
 
-#define KEYMAP_HHKB(%KEYMAP_HHKB1%) KEYMAP(%KEYMAP_HHKB2%)
+// #define KEYMAP_HHKB(%KEYMAP_HHKB1%) KEYMAP(%KEYMAP_HHKB2%)
 `.trim()
