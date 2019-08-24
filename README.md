@@ -18,3 +18,12 @@ To compile, run `npm run build`.
 ## Deploying
 
 To deploy a production version of the application, run `npm run deploy`.
+
+## Run
+
+```sh
+npm run deploy
+npm i -g live-server
+cd static
+live-server ./
+```
