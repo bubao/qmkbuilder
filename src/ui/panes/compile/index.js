@@ -62,7 +62,6 @@ class Compile extends React.Component {
 
 		// Generate source files.
 		const files = Files.generate(keyboard);
-		console.log(files)
 		// Send the request.
 		Request
 		.post(C.LOCAL.API)
@@ -93,7 +92,9 @@ class Compile extends React.Component {
 				const friendly = keyboard.settings.name ? Utils.generateFriendly(keyboard.settings.name) : 'layout';
 
 				// Download the hex file.
+				console.log(res.hex)
 				const blob = new Blob([res.hex], { type: 'application/octet-stream' });
+				console.log(blob)
 				saveAs(blob, friendly + '.hex');
 
 				// Re-enable buttons.
