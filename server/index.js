@@ -1,5 +1,5 @@
 const PORT = 5004;
-const TMP = '/tmp/tmk-';
+const TMP = '/var/temp/nrf52_keyboard';
 
 const Express = require('express');
 const BodyParser = require('body-parser');
@@ -50,7 +50,7 @@ app.post('/build', async(req, res) => {
 	try{
 		// Copy the base stencil.
 		await new Promise((resolve, reject) => {
-			Exec('cp -rp tmk_firmware ' + TMP + key, (err, stdout, stderr) => {
+			Exec('cp -rp /usr/local/src/nrf52_keyboard ' + TMP + key, (err, stdout, stderr) => {
 				if (err) return reject('Failed to initialize.');
 				resolve();
 			});
@@ -69,7 +69,7 @@ app.post('/build', async(req, res) => {
 
 		// Make.
 		await new Promise((resolve, reject) => {
-			Exec('cd ' + TMP + key + '/keyboards/kb && make', (err, stdout, stderr) => {
+			Exec('cd ' + TMP + key + '/keyboard/template && make', (err, stdout, stderr) => {
 				if (err) return reject(stderr);
 				resolve();
 			});

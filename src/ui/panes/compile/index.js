@@ -62,7 +62,7 @@ class Compile extends React.Component {
 
 		// Generate source files.
 		const files = Files.generate(keyboard);
-
+		console.log(files)
 		// Send the request.
 		Request
 		.post(C.LOCAL.API)
@@ -72,13 +72,6 @@ class Compile extends React.Component {
 			.end((err, res) => {
 				console.log(res)
 				// Download the hex file.
-				res = JSON.parse(res.text);
-				let blob = new Blob([res.hex], { type: 'application/octet-stream' });
-				saveAs(blob, 'friendly' + '.hex');
-
-				// Re-enable buttons.
-				state.ui.set('compile-working', false);
-				return
 				res = JSON.parse(res.text);
 
 				if (err) {

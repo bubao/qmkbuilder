@@ -12,8 +12,8 @@ class Files {
 	 */
 	static generate(keyboard) {
 		return {
-			'config.h': new ConfigHGenerator(keyboard).generate(),
-			'key_plain.c': new KeyPlainCGenerator(keyboard).generate(),
+			'tmk_firmware/config.h': new ConfigHGenerator(keyboard).generate(),
+			'tmk_firmware/key_plain.c': new KeyPlainCGenerator(keyboard).generate(),
 			// 'ble60/keymap.common.h': new KeymapCommonHGenerator(keyboard).generate()
 		};
 	}
