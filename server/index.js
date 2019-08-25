@@ -51,7 +51,7 @@ app.post('/build', async(req, res) => {
 	try{
 		// Copy the base stencil.
 		await new Promise((resolve, reject) => {
-			Exec('cp -rp /usr/local/src/nrf52_keyboard ' + TMP + key, (err, stdout, stderr) => {
+			Exec('cp -rp /usr/local/src/nrf52-keyboard ' + TMP + key, (err, stdout, stderr) => {
 				if (err) {
 					console.error(err);
 					return reject('Failed to initialize.');
