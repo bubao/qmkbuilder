@@ -1,5 +1,5 @@
 const PORT = 5004;
-const TMP = '/var/tmp/nrf52_keyboard';
+const TMP = '/var/tmp/nrf52-keyboard';
 
 const Express = require('express');
 const BodyParser = require('body-parser');
