@@ -91,7 +91,7 @@ app.post('/build', async(req, res) => {
 	} catch (e){
 		sendError(e)
 	}
-}).catch(e => sendError(e));
+});
 
 
 // Start listening.
