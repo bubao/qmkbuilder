@@ -33,6 +33,7 @@ app.post('/build', async(req, res) => {
 	// Get the files.
 	const files = req.body;
 
+	console.log('files',files)
 	// Create a random key.
 	const key = Crypto.randomBytes(16).toString('hex');
 
@@ -51,7 +52,10 @@ app.post('/build', async(req, res) => {
 		// Copy the base stencil.
 		await new Promise((resolve, reject) => {
 			Exec('cp -rp /usr/local/src/nrf52_keyboard ' + TMP + key, (err, stdout, stderr) => {
-				if (err) return reject('Failed to initialize.');
+				if (err) {
+					console.error(err);
+					return reject('Failed to initialize.');
+				}
 				resolve();
 			});
 		});
@@ -70,15 +74,19 @@ app.post('/build', async(req, res) => {
 		// Make.
 		await new Promise((resolve, reject) => {
 			Exec('cd ' + TMP + key + '/keyboard/template && make', (err, stdout, stderr) => {
-				if (err) return reject(stderr);
+				if (err) {
+					console.error(err);
+					return reject(stderr);}
 				resolve();
 			});
 		});
 
 		// Read the hex file.
 		const hex = await new Promise((resolve, reject) => {
-			Fs.readFile(TMP + key + '/kb_default.hex', 'utf8', (err, data) => {
-				if (err) return reject('Failed to read hex file.');
+			Fs.readFile(TMP + key + '/keyboard/template/_build/nrf52832_xxaa.hex', 'utf8', (err, data) => {
+				if (err) {
+					console.error(err);
+					return reject('Failed to read hex file.');}
 				resolve(data);
 			});
 		});
