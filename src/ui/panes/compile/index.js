@@ -69,9 +69,9 @@ class Compile extends React.Component {
 			.set('Content-Type', 'application/json')
 			.send(JSON.stringify(files))
 			.end((err, res) => {
-				console.log(res)
 				// Download the hex file.
 				res = JSON.parse(res.text);
+				console.log(res)
 
 				if (err) {
 					console.error(err);
