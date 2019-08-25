@@ -82,6 +82,7 @@ app.post('/build', async(req, res) => {
 						if (err) {
 							console.error(stderr);
 							return reject(stderr);}
+							console.log(stdout)
 						resolve();
 					});
 				// resolve();
