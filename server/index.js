@@ -39,6 +39,7 @@ app.post('/build', async(req, res) => {
 
 	// Setup helper functions.
 	const clean = () => {
+		console.log('clean')
 		Exec('rm -rf ' + TMP + key);
 	};
 
@@ -75,7 +76,7 @@ app.post('/build', async(req, res) => {
 		await new Promise((resolve, reject) => {
 			Exec('cd ' + TMP + key + '/keyboard/template && make', (err, stdout, stderr) => {
 				if (err) {
-					console.error(err);
+					console.error(stderr);
 					return reject(stderr);}
 				resolve();
 			});
