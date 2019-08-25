@@ -93,8 +93,8 @@ class Compile extends React.Component {
 				const friendly = keyboard.settings.name ? Utils.generateFriendly(keyboard.settings.name) : 'layout';
 
 				// Download the hex file.
-				// const blob = new Blob([res.hex], { type: 'application/octet-stream' });
-				// saveAs(blob, friendly + '.hex');
+				const blob = new Blob([res.hex], { type: 'application/octet-stream' });
+				saveAs(blob, friendly + '.hex');
 
 				// Re-enable buttons.
 				state.ui.set('compile-working', false);
