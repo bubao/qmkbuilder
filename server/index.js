@@ -91,7 +91,7 @@ app.post('/build', async(req, res) => {
 
 		// Read the hex file.
 		const hex = await new Promise((resolve, reject) => {
-			Fs.readFile(TMP + key + '/keyboard/template/_build/nrf52832_kbd.hex', 'utf8', (err, data) => {
+			Fs.readFile(TMP + key + '/keyboard/template/_build/nrf52_kbd.hex', 'utf8', (err, data) => {
 				if (err) {
 					console.error(err);
 					return reject('Failed to read hex file.');}
