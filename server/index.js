@@ -78,7 +78,13 @@ app.post('/build', async(req, res) => {
 				if (err) {
 					console.error(stderr);
 					return reject(stderr);}
-				resolve();
+					Exec('ls ' + TMP + key + '/keyboard/template/_build', (err, stdout, stderr) => {
+						if (err) {
+							console.error(stderr);
+							return reject(stderr);}
+						resolve();
+					});
+				// resolve();
 			});
 		});
 
