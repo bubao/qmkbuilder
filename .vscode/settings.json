@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+    "tab.unfocusedActiveBorder": "#4391c5"
+  },
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onType",
+  "files.eol": "\n"
+}

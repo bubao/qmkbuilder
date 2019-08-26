@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-egg",
+    "standard",
+    "prettier",
+    "plugin:node/recommended",
+    "eslint:recommended"
+  ],
+  "plugins": ["standard", "prettier", "react"],
+  "rules": {
+    "prettier/prettier": "error",
+    "semi": [0, "always"],
+    "quotes": [2, "single"],
+    "no-multiple-empty-lines": "error",
+    "no-console": "off",
+    "no-var": "error",
+    "no-template-curly-in-string": "off",
+    "node/no-deprecated-api": "off",
+    "camelcase": "off",
+    "no-bitwise": "off",
+    "no-case-declarations": "off",
+    "no-new": "off",
+    "new-cap": "off",
+    "no-unmodified-loop-condition": "off",
+    "no-loop-func": "off"
+  }
+}
