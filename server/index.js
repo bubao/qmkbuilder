@@ -1,3 +1,10 @@
+/**
+ * @Description: build服务
+ * @Author: bubao
+ * @Date: 2019-08-29 17:13:48
+ * @LastEditors: bubao
+ * @LastEditTime: 2019-08-29 17:14:04
+ */
 const PORT = 5004
 const TMP = '/var/tmp/nrf52-keyboard'
 
