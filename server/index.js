@@ -109,23 +109,33 @@ app.post('/build', async (req, res) => {
     })
 
     // Read the hex file.
-    const hex = await new Promise((resolve, reject) => {
-      Fs.readFile(
-        TMP + key + `/keyboard/template/_build/${package?zipname:'nrf52_kbd.hex'}`,
-        'utf8',
-        (err, data) => {
-          if (err) {
-            console.error(err)
-            return reject(`Failed to read ${package?'zip':'hex'} file.`)
-          }
-          console.log(data)
-          resolve(data)
-        }
-      )
-    })
 
     // Send the hex file.
-    res.json({ hex })
+    if (package) {
+      res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
+        if (err) {
+          next(err);
+        } else {
+          console.log('Sent:', zipname);
+        }
+      });
+    }else{
+      
+      const hex = await new Promise((resolve, reject) => {
+        Fs.readFile(
+          TMP + key + `/keyboard/template/_build/nrf52_kbd.hex`,
+          'utf8',
+          (err, data) => {
+            if (err) {
+              console.error(err)
+              return reject(`Failed to read ${package?'zip':'hex'} file.`)
+            }
+            resolve(data)
+          }
+        )
+      })
+      res.json({ hex })
+    }
 
     // Clean up.
     clean()
