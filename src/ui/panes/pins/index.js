@@ -116,13 +116,13 @@ class Pins extends React.Component {
 				onChange={ p => keyboard.setPin('UART_TXD', p) }
 				pin={ keyboard.pins.caps }/>
 				
-			<div style={{ height: '0.5rem' }}/>
+			{/* <div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_DET</h2>
 			<Chooser
 				noPin
 				state={ state }
 				onChange={ p => keyboard.setPin('UART_DET', p) }
-				pin={ keyboard.pins.caps }/>
+				pin={ keyboard.pins.caps }/> */}
 		</div>;
 	}
 
