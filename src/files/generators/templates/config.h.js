@@ -87,16 +87,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_FUNCTION
 
 // LED 配置
-#define LED_NUM 22
-#define LED_CAPS 21
-#define LED_SCLK 23
+#define LED_NUM %LED_NUM% // 22
+#define LED_CAPS %LED_CAPS% // 21
+#define LED_SCLK %LED_SCLK% // 23
 #define LED_POSITIVE // LED上拉驱动
 
 // USB UART 传输配置
 #define HAS_USB // 启用与CH554的通信支持
-#define UART_RXD 17 // UART_RX口IO
-#define UART_TXD 18 // UART_TX口IO
-#define UART_DET 19 // UART 检测引脚，若此脚被拉低，则说明USB正在工作。若不配置则使用RX口作为检测引脚
+#define UART_RXD %UART_RXD% // UART_RX口IO 17
+#define UART_TXD %UART_TXD% // UART_TX口IO 18
+#define UART_DET %UART_DET% // UART 检测引脚，若此脚被拉低，则说明USB正在工作。若不配置则使用RX口作为检测引脚 19
 #define UART_BAUDRATE NRF_UART_BAUDRATE_57600 // 通信波特率，请不要修改
 
 // 电量检测配置
@@ -110,12 +110,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static const uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };
 static const uint8_t column_pin_array[MATRIX_COLS] = { %col_pins% };
 #define %diode_direction% // 键盘阵列的二极管方向是从COL->ROW
-// ws2812 RGB 配置
-%RGBLIGHT_ENABLE%#define RGBLIGHT_ENABLE
-#define RGB_DI_PIN 10
-#define RGBLED_NUM 8
-#define PWM_ENABLED 1
-#define PWM0_ENABLED 1
-#define PROGMEM // arm-gcc does not interpret PROGMEM
-%RGBLIGHT_ANIMATIONS%#define RGBLIGHT_ANIMATIONS
 `.trim()

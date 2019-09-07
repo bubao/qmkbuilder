@@ -176,16 +176,6 @@ class Compile extends React.Component {
           Download .hex
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or download the source files.
-        <div style={{ height: '0.5rem' }} />
-        <button
-          className="light"
-          disabled={!keyboard.valid || state.ui.get('compile-working', false)}
-          onClick={this.downloadZip}
-        >
-          Download .zip
-        </button>
-        <div style={{ height: '1.5rem' }} />
         Or 下载config.h.
         <div style={{ height: '0.5rem' }} />
         <button

@@ -93,41 +93,36 @@ class Pins extends React.Component {
 				onChange={ p => keyboard.setPin('caps', p) }
 				pin={ keyboard.pins.caps }/>
 			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Scroll Lock</h2>
-			<Chooser
-				noPin
-				state={ state }
-				onChange={ p => keyboard.setPin('scroll', p) }
-				pin={ keyboard.pins.scroll }/>
-			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Compose</h2>
-			<Chooser
-				noPin
-				state={ state }
-				onChange={ p => keyboard.setPin('compose', p) }
-				pin={ keyboard.pins.compose }/>
-			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Kana</h2>
-			<Chooser
-				noPin
-				state={ state }
-				onChange={ p => keyboard.setPin('kana', p) }
-				pin={ keyboard.pins.kana }/>
-			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Backlight</h2>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>led sclk</h2>
 			<Chooser
 				noPin
 				backlight
 				state={ state }
-				onChange={ p => keyboard.setPin('led', p) }
+				onChange={ p => keyboard.setPin('sclk', p) }
 				pin={ keyboard.pins.led }/>
 			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>WS2812 Strip</h2>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_RXD</h2>
 			<Chooser
 				noPin
 				state={ state }
-				onChange={ p => keyboard.setPin('rgb', p) }
-				pin={ keyboard.pins.rgb }/>
+				onChange={ p => keyboard.setPin('UART_RXD', p) }
+				pin={ keyboard.pins.caps }/>
+				
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_TXD</h2>
+			<Chooser
+				noPin
+				state={ state }
+				onChange={ p => keyboard.setPin('UART_TXD', p) }
+				pin={ keyboard.pins.caps }/>
+				
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_DET</h2>
+			<Chooser
+				noPin
+				state={ state }
+				onChange={ p => keyboard.setPin('UART_DET', p) }
+				pin={ keyboard.pins.caps }/>
 		</div>;
 	}
 
