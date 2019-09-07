@@ -112,14 +112,24 @@ app.post('/build', async (req, res) => {
 
     // Send the hex file.
     if (package) {
-      res.responseType = 'blob'
-      res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log('Sent:', zipname);
-        }
-      });
+      
+      await new Promise((resolve, reject) => {
+        Exec(`md5sum ${TMP + key + `/keyboard/template/_build/${zipname}`}`,(error,stdout, stderr)=>{
+          if (error) {
+            console.log(error)
+            return reject(error)
+          }
+          console.log(stdout)
+          res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log('Sent:', zipname);
+            }
+            resolve()
+          });
+        })
+      })
     }else{
       
       const hex = await new Promise((resolve, reject) => {
