@@ -130,9 +130,11 @@ app.post('/build', async (req, res) => {
 
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        TMP + key + package
-          ? `/keyboard/template/_build/${zipname}`
-          : `/keyboard/template/_build/nrf52_kbd.hex`,
+        TMP +
+          key +
+          (package
+            ? `/keyboard/template/_build/${zipname}`
+            : `/keyboard/template/_build/nrf52_kbd.hex`),
         'utf8',
         (err, data) => {
           if (err) {
