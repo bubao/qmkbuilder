@@ -145,8 +145,10 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        const blob = new Blob([res], { type: 'application/zip' })
-        saveAs(blob, friendly + '.zip')
+        // const blob = new Blob([res], { type: 'application/zip' })
+        // saveAs(blob, friendly + '.zip')
+        console.log(res)
+        saveAs(res, friendly + '.zip')
 
         // Re-enable buttons.
         state.ui.set('compile-working', false)

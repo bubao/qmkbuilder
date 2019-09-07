@@ -115,7 +115,7 @@ app.post('/build', async (req, res) => {
       res.responseType = 'blob'
       res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
         if (err) {
-          next(err);
+          console.log(err);
         } else {
           console.log('Sent:', zipname);
         }
