@@ -122,7 +122,7 @@ class Compile extends React.Component {
       .send(JSON.stringify({ package: 1, files }))
       .end((err, res) => {
         // Download the hex file.
-        // res = JSON.parse(res.text)
+        res = JSON.parse(res.text)
 
         if (err) {
           console.error(err)
@@ -132,12 +132,12 @@ class Compile extends React.Component {
         }
 
         // // Check if there was an error.
-        // if (res.error) {
-        //   console.error(res.error)
-        //   state.error('Server error:\n' + res.error)
-        //   state.ui.set('compile-working', false)
-        //   return
-        // }
+        if (res.error) {
+          console.error(res.error)
+          state.error('Server error:\n' + res.error)
+          state.ui.set('compile-working', false)
+          return
+        }
 
         // Generate a friendly name.
         const friendly = keyboard.settings.name
@@ -146,7 +146,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res)
-        // const blob = new Blob([res.text], { type: 'application/zip' })
+        const blob = new Blob([res.hex], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
         // saveAs(res.text, friendly + '.zip')
 

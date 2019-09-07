@@ -41,7 +41,6 @@ app.post('/build', async (req, res) => {
   // Get the files.
   const files = req.body.files
   const package = req.body.package - 0
-  console.log(req.body)
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
@@ -114,47 +113,37 @@ app.post('/build', async (req, res) => {
         }
       )
     })
+
+    // Read the hex file.
+
     // Send the hex file.
-    if (package) {
-      await new Promise((resolve, reject) => {
-        Exec(
-          `md5sum ${TMP + key + `/keyboard/template/_build/${zipname}`}`,
-          (error, stdout, stderr) => {
-            if (error) {
-              console.log(error)
-              return reject(error)
-            }
-            console.log(stdout)
-            res.sendFile(
-              TMP + key + `/keyboard/template/_build/${zipname}`,
-              function(err) {
-                if (err) {
-                  console.log(err)
-                } else {
-                  console.log('Sent:', zipname)
-                }
-                resolve()
-              }
-            )
+    // if (package) {
+    //   res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
+    //     if (err) {
+    //       next(err);
+    //     } else {
+    //       console.log('Sent:', zipname);
+    //     }
+    //   });
+    // }else{
+
+    const hex = await new Promise((resolve, reject) => {
+      Fs.readFile(
+        TMP +
+          key +
+          `/keyboard/template/_build/${package ? zipname : 'nrf52_kbd.hex'}`,
+        // 'utf8',
+        (err, data) => {
+          if (err) {
+            console.error(err)
+            return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
           }
-        )
-      })
-    } else {
-      const hex = await new Promise((resolve, reject) => {
-        Fs.readFile(
-          TMP + key + `/keyboard/template/_build/nrf52_kbd.hex`,
-          'utf8',
-          (err, data) => {
-            if (err) {
-              console.error(err)
-              return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
-            }
-            resolve(data)
-          }
-        )
-      })
-      res.json({ hex })
-    }
+          resolve(data)
+        }
+      )
+    })
+    res.json({ hex })
+    // }
 
     // Clean up.
     clean()
