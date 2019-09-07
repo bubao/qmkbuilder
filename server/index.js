@@ -116,10 +116,6 @@ app.post('/build', async (req, res) => {
     })
     // Send the hex file.
     if (package) {
-      res.set({
-        'Content-Type': 'application/octet-stream', //告诉浏览器这是一个二进制文件
-        'Content-Disposition': 'attachment; filename=' + zipname //告诉浏览器这是一个需要下载的文件
-      })
       await new Promise((resolve, reject) => {
         Exec(
           `md5sum ${TMP + key + `/keyboard/template/_build/${zipname}`}`,
