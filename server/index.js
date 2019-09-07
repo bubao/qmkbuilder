@@ -118,6 +118,7 @@ app.post('/build', async (req, res) => {
             console.error(err)
             return reject(`Failed to read ${package?'zip':'hex'} file.`)
           }
+          console.log(data)
           resolve(data)
         }
       )
