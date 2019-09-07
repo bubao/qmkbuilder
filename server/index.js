@@ -84,7 +84,7 @@ app.post('/build', async (req, res) => {
     // Make.
     await new Promise((resolve, reject) => {
       Exec(
-        'cd ' + randomPatch + '/keyboard/template && make',
+        'cd ' + randomPatch + '/keyboard/template && make default',
         (err, stdout, stderr) => {
           if (err) {
             console.error(stderr)
