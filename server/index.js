@@ -99,9 +99,10 @@ app.post('/build', async (req, res) => {
             res.forEach(element => {
               if(element.indexOf('.zip')){
                 zipname = element
+                console.log(zipname)
+                return resolve()
               }
             });
-            return resolve()
           })
         }
       )
