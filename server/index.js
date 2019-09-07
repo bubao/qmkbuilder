@@ -41,7 +41,7 @@ app.post('/build', async (req, res) => {
   // Get the files.
   const files = req.body.files
   const package = req.body.package - 0
-  console.log(req.body.package)
+  console.log(req.body)
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
