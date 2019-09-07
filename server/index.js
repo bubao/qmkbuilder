@@ -118,9 +118,10 @@ app.post('/build', async (req, res) => {
 
     // Send the hex file.
     // if (package) {
+    //   res.responseType = 'blob'
     //   res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
     //     if (err) {
-    //       next(err);
+    //       console.log(err);
     //     } else {
     //       console.log('Sent:', zipname);
     //     }
@@ -129,10 +130,10 @@ app.post('/build', async (req, res) => {
 
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        TMP +
-          key +
-          `/keyboard/template/_build/${package ? zipname : 'nrf52_kbd.hex'}`,
-        // 'utf8',
+        TMP + key + package
+          ? `/keyboard/template/_build/${zipname}`
+          : `/keyboard/template/_build/nrf52_kbd.hex`,
+        'utf8',
         (err, data) => {
           if (err) {
             console.error(err)

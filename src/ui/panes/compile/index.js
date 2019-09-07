@@ -131,7 +131,7 @@ class Compile extends React.Component {
           return
         }
 
-        // // Check if there was an error.
+        // Check if there was an error.
         if (res.error) {
           console.error(res.error)
           state.error('Server error:\n' + res.error)
@@ -145,10 +145,8 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        console.log(res)
-        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        const blob = new Blob([res.hex], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
-        // saveAs(res.text, friendly + '.zip')
 
         // Re-enable buttons.
         state.ui.set('compile-working', false)
