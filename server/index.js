@@ -28,7 +28,6 @@ app.all('*', (req, res, next) => {
     'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials'
   )
   res.header('Access-Control-Allow-Credentials', 'true')
-  res.header('responseType', 'bolb')
   //   if (req.method == "OPTIONS") {
   //     res.send(200);
   //   }
@@ -113,6 +112,7 @@ app.post('/build', async (req, res) => {
 
     // Send the hex file.
     if (package) {
+      res.responseType = 'blob'
       res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
         if (err) {
           next(err);

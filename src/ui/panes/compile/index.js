@@ -119,8 +119,6 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      // .set('responseType', 'blob')
-      .set('Response-Type', 'blob')
       .send(JSON.stringify({package:1,files}))
       .end((err, res) => {
         // Download the hex file.
@@ -146,10 +144,9 @@ class Compile extends React.Component {
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
 
-        // // Download the hex file.
-        // const blob = new Blob([res], { type: 'application/zip' })
-        // saveAs(blob, friendly + '.zip')
-        saveAs(res, friendly + '.zip')
+        // Download the hex file.
+        const blob = new Blob([res], { type: 'application/zip' })
+        saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
         state.ui.set('compile-working', false)
