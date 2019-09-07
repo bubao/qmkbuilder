@@ -119,7 +119,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .set('responseType', 'blob')
+      // .set('responseType', 'blob')
       .set('Response-Type', 'blob')
       .send(JSON.stringify({package:1,files}))
       .end((err, res) => {
