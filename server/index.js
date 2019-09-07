@@ -28,6 +28,7 @@ app.all('*', (req, res, next) => {
     'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials'
   )
   res.header('Access-Control-Allow-Credentials', 'true')
+  res.header('responseType', 'bolb')
   //   if (req.method == "OPTIONS") {
   //     res.send(200);
   //   }
