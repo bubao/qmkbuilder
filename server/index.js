@@ -91,7 +91,7 @@ app.post('/build', async (req, res) => {
             console.error(stderr)
             return reject(stderr)
           }
-          if (package) Fs.readdir(randomPatch + `/keyboard/template`,(error,res)=>{
+          if (package) Fs.readdir(randomPatch + `/keyboard/template/_build`,(error,res)=>{
             if (error) {
               console.error(error)
               return reject(error)
