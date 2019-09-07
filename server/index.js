@@ -86,44 +86,79 @@ app.post('/build', async (req, res) => {
     let zipname = ''
     await new Promise((resolve, reject) => {
       Exec(
-        'cd ' + randomPatch + `/keyboard/template && make ${package?'package':'default'} && ls`,
+        'cd ' +
+          randomPatch +
+          `/keyboard/template && make ${package ? 'package' : 'default'} && ls`,
         (err, stdout, stderr) => {
           if (err) {
             console.error(stderr)
             return reject(stderr)
           }
-          if (package) Fs.readdir(randomPatch + `/keyboard/template/_build`,(error,res)=>{
-            if (error) {
-              console.error(error)
-              return reject(error)
-            }
-            res.forEach(element => {
-              if(element.indexOf('.zip')){
-                zipname = element
-                console.log(zipname)
-                return resolve()
+          if (package)
+            Fs.readdir(
+              randomPatch + `/keyboard/template/_build`,
+              (error, res) => {
+                if (error) {
+                  console.error(error)
+                  return reject(error)
+                }
+                res.forEach(element => {
+                  if (element.indexOf('.zip')) {
+                    zipname = element
+                    console.log(zipname)
+                    return resolve()
+                  }
+                })
               }
-            });
-          })
+            )
         }
       )
     })
-      
+    // Send the hex file.
+    if (package) {
+      res.set({
+        'Content-Type': 'application/vnd.openxmlformats',
+        'Content-Disposition': 'attachment; filename=' + zipname
+      })
+      await new Promise((resolve, reject) => {
+        Exec(
+          `md5sum ${TMP + key + `/keyboard/template/_build/${zipname}`}`,
+          (error, stdout, stderr) => {
+            if (error) {
+              console.log(error)
+              return reject(error)
+            }
+            console.log(stdout)
+            res.sendFile(
+              TMP + key + `/keyboard/template/_build/${zipname}`,
+              function(err) {
+                if (err) {
+                  console.log(err)
+                } else {
+                  console.log('Sent:', zipname)
+                }
+                resolve()
+              }
+            )
+          }
+        )
+      })
+    } else {
       const hex = await new Promise((resolve, reject) => {
         Fs.readFile(
-          TMP + key + `/keyboard/template/_build/${package?zipname:'nrf52_kbd.hex'}`,
+          TMP + key + `/keyboard/template/_build/nrf52_kbd.hex`,
           'utf8',
           (err, data) => {
             if (err) {
               console.error(err)
-              return reject(`Failed to read ${package?'zip':'hex'} file.`)
+              return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
             }
             resolve(data)
           }
         )
       })
       res.json({ hex })
-    // }
+    }
 
     // Clean up.
     clean()
