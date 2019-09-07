@@ -108,34 +108,10 @@ app.post('/build', async (req, res) => {
         }
       )
     })
-
-    // Read the hex file.
-
-    // Send the hex file.
-    if (package) {
-      
-      await new Promise((resolve, reject) => {
-        Exec(`md5sum ${TMP + key + `/keyboard/template/_build/${zipname}`}`,(error,stdout, stderr)=>{
-          if (error) {
-            console.log(error)
-            return reject(error)
-          }
-          console.log(stdout)
-          res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function (err) {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log('Sent:', zipname);
-            }
-            resolve()
-          });
-        })
-      })
-    }else{
       
       const hex = await new Promise((resolve, reject) => {
         Fs.readFile(
-          TMP + key + `/keyboard/template/_build/nrf52_kbd.hex`,
+          TMP + key + `/keyboard/template/_build/${package?zipname:'nrf52_kbd.hex'}`,
           'utf8',
           (err, data) => {
             if (err) {
@@ -147,7 +123,7 @@ app.post('/build', async (req, res) => {
         )
       })
       res.json({ hex })
-    }
+    // }
 
     // Clean up.
     clean()
