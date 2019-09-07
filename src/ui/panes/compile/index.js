@@ -118,7 +118,7 @@ class Compile extends React.Component {
     // Send the request.
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
-      // .set('Content-Type', 'application/json')
+      .set('Content-Type', 'application/json')
       .send(JSON.stringify({package:1,files}))
       .end((err, res) => {
         // Download the hex file.
