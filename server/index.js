@@ -90,7 +90,7 @@ app.post('/build', async (req, res) => {
             console.error(stderr)
             return reject(stderr)
           }
-          console.log(studout)
+          console.log(stdout)
           resolve()
         }
       )
