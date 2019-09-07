@@ -122,22 +122,22 @@ class Compile extends React.Component {
       .send(JSON.stringify({package:1,files}))
       .end((err, res) => {
         // Download the hex file.
-        res = JSON.parse(res.text)
+        // res = JSON.parse(res.text)
 
-        if (err) {
-          console.error(err)
-          state.error('Unable to connect to API server.')
-          state.ui.set('compile-working', false)
-          return
-        }
+        // if (err) {
+        //   console.error(err)
+        //   state.error('Unable to connect to API server.')
+        //   state.ui.set('compile-working', false)
+        //   return
+        // }
 
-        // Check if there was an error.
-        if (res.error) {
-          console.error(res.error)
-          state.error('Server error:\n' + res.error)
-          state.ui.set('compile-working', false)
-          return
-        }
+        // // Check if there was an error.
+        // if (res.error) {
+        //   console.error(res.error)
+        //   state.error('Server error:\n' + res.error)
+        //   state.ui.set('compile-working', false)
+        //   return
+        // }
 
         // Generate a friendly name.
         const friendly = keyboard.settings.name
