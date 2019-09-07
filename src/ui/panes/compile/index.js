@@ -146,7 +146,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res)
-        const blob = new Blob([res.hex], { type: 'application/zip' })
+        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
         saveAs(blob, friendly + '.zip')
         // saveAs(res.text, friendly + '.zip')
 
