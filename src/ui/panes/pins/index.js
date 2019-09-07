@@ -93,14 +93,6 @@ class Pins extends React.Component {
 				onChange={ p => keyboard.setPin('caps', p) }
 				pin={ keyboard.pins.caps }/>
 			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>led sclk</h2>
-			<Chooser
-				noPin
-				backlight
-				state={ state }
-				onChange={ p => keyboard.setPin('sclk', p) }
-				pin={ keyboard.pins.led }/>
-			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_RXD</h2>
 			<Chooser
 				noPin
@@ -115,14 +107,35 @@ class Pins extends React.Component {
 				state={ state }
 				onChange={ p => keyboard.setPin('UART_TXD', p) }
 				pin={ keyboard.pins.caps }/>
-				
-			{/* <div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_DET</h2>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>RGB_DI_PIN</h2>
 			<Chooser
 				noPin
 				state={ state }
-				onChange={ p => keyboard.setPin('UART_DET', p) }
-				pin={ keyboard.pins.caps }/> */}
+				onChange={ p => keyboard.setPin('RGB_DI_PIN', p) }
+				pin={ keyboard.pins.caps }/>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>LED_BLE</h2>
+			<Chooser
+				noPin
+				state={ state }
+				onChange={ p => keyboard.setPin('LED_BLE', p) }
+				pin={ keyboard.pins.caps }/>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>LED_USB</h2>
+			<Chooser
+				noPin
+				state={ state }
+				onChange={ p => keyboard.setPin('LED_USB', p) }
+				pin={ keyboard.pins.caps }/>
+			
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '6rem', marginRight: '0.8rem' }}>POWER_BUTTON</h2>
+			<Chooser
+				noPin
+				state={ state }
+				onChange={ p => keyboard.setPin('POWER_BUTTON', p) }
+				pin={ keyboard.pins.caps }/>
 		</div>;
 	}
 

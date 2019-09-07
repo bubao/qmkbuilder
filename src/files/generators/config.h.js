@@ -22,13 +22,15 @@ class ConfigH extends Generator {
 			'PASSKEY_REQUIRED':keyboard.settings.PASSKEY_REQUIRED?'':'//',
 			'RGBLIGHT_ENABLE':keyboard.settings.RGBLIGHT_ENABLE?'':'//',
 			'RGBLIGHT_ANIMATIONS':keyboard.settings.RGBLIGHT_ENABLE?'':'//',
-			'LED_NUM' :keyboard.pins.num || 22,// 22
+			'RGBLED_NUM' :keyboard.pins.num || 8,// 8
 			'LED_CAPS': keyboard.pins.caps || 21,// 21
-			'LED_SCLK' : keyboard.pins.sclk || 23, // 23
+			'RGB_DI_PIN': keyboard.pins.RGB_DI_PIN || 10,// 21
+			'LED_BLE': keyboard.pins.LED_BLE || 19,// 19
+			'LED_USB': keyboard.pins.LED_USB || 20,// 20
+			'POWER_BUTTON': keyboard.pins.POWER_BUTTON || 3,// 3
 			'UART_RXD': keyboard.pins.UART_RXD || 17,// UART_RX口IO 17
-			'UART_TXD': keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
-            'UART_DET': keyboard.pins.UART_DET || 19 // UART 检测引脚，若此脚被拉低，则说明USB正在工作。若不配置则使用RX口作为检测引脚 19
-		};
+			'UART_TXD': keyboard.pins.UART_TXD || 18 // UART_TX口IO 18
+        };
 	}
 }
 
