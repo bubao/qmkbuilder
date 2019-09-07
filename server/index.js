@@ -82,6 +82,7 @@ app.post('/build', async (req, res) => {
     }
 
     // Make.
+    let zipname = ''
     await new Promise((resolve, reject) => {
       Exec(
         'cd ' + randomPatch + `/keyboard/template && make ${package?'package':'default'} && ls`,
@@ -90,8 +91,18 @@ app.post('/build', async (req, res) => {
             console.error(stderr)
             return reject(stderr)
           }
-          console.log(stdout)
-          resolve()
+          if (package) Fs.readdir(randomPatch + `/keyboard/template`,(error,res)=>{
+            if (error) {
+              console.error(error)
+              return reject(error)
+            }
+            res.forEach(element => {
+              if(element.indexOf('.zip')){
+                zipname = element
+              }
+            });
+            return resolve()
+          })
         }
       )
     })
@@ -99,7 +110,7 @@ app.post('/build', async (req, res) => {
     // Read the hex file.
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        TMP + key + `/keyboard/template/_build/${package?`nrf52_kbd_*.zip`:'nrf52_kbd.hex'}`,
+        TMP + key + `/keyboard/template/_build/${package?zipname:'nrf52_kbd.hex'}`,
         // 'utf8',
         (err, data) => {
           if (err) {
