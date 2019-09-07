@@ -23,7 +23,6 @@ class Compile extends React.Component {
 
     // Disable buttons.
     state.ui.set('compile-working', true)
-    state.ui.set('compile-working', true)
 
     // Generate source files.
     const files = Files.generate(keyboard)
@@ -69,7 +68,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .send(JSON.stringify(files))
+      .send(JSON.stringify({package:0,files}))
       .end((err, res) => {
         // Download the hex file.
         res = JSON.parse(res.text)
@@ -116,50 +115,96 @@ class Compile extends React.Component {
 
     // Generate source files.
     const files = Files.generate(keyboard)
+    // Send the request.
+    Request.post(C.LOCAL.API)
+      .timeout(99999999000)
+      .set('Content-Type', 'application/json')
+      .send(JSON.stringify({package:1,files}))
+      .end((err, res) => {
+        // Download the hex file.
+        res = JSON.parse(res.text)
 
-    // Get the firmware stencil.
-    JSZipUtils.getBinaryContent('/files/firmware.zip', (err, data) => {
-      if (err) {
-        console.error(err)
-        state.error('Unable to retrieve files')
-        state.ui.set('compile-working', false)
-        return
-      }
-
-      JSZip.loadAsync(data)
-        .then(zip => {
-          // Insert the files.
-          for (const file in files) {
-            zip.file(file, files[file])
-          }
-
-          // Download the file.
-          zip
-            .generateAsync({ type: 'blob' })
-            .then(blob => {
-              // Generate a friendly name.
-              const friendly = keyboard.settings.name
-                ? Utils.generateFriendly(keyboard.settings.name)
-                : 'layout'
-
-              saveAs(blob, friendly + '.zip')
-
-              // Re-enable buttons.
-              state.ui.set('compile-working', false)
-            })
-            .catch(e => {
-              console.error(err)
-              state.error('Unable to generate files')
-              state.ui.set('compile-working', false)
-            })
-        })
-        .catch(e => {
+        if (err) {
           console.error(err)
-          state.error('Unable to retrieve files')
+          state.error('Unable to connect to API server.')
           state.ui.set('compile-working', false)
-        })
-    })
+          return
+        }
+
+        // Check if there was an error.
+        if (res.error) {
+          console.error(res.error)
+          state.error('Server error:\n' + res.error)
+          state.ui.set('compile-working', false)
+          return
+        }
+
+        // Generate a friendly name.
+        const friendly = keyboard.settings.name
+          ? Utils.generateFriendly(keyboard.settings.name)
+          : 'layout'
+
+        // Download the hex file.
+        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        saveAs(blob, friendly + '.zip')
+
+        // Re-enable buttons.
+        state.ui.set('compile-working', false)
+      })
   }
+  // downloadZip() {
+  //   const state = this.props.state
+  //   const keyboard = state.keyboard
+
+  //   // Disable buttons.
+  //   state.ui.set('compile-working', true)
+
+  //   // Generate source files.
+  //   const files = Files.generate(keyboard)
+
+  //   // Get the firmware stencil.
+  //   JSZipUtils.getBinaryContent('/files/firmware.zip', (err, data) => {
+  //     if (err) {
+  //       console.error(err)
+  //       state.error('Unable to retrieve files')
+  //       state.ui.set('compile-working', false)
+  //       return
+  //     }
+
+  //     JSZip.loadAsync(data)
+  //       .then(zip => {
+  //         // Insert the files.
+  //         for (const file in files) {
+  //           zip.file(file, files[file])
+  //         }
+
+  //         // Download the file.
+  //         zip
+  //           .generateAsync({ type: 'blob' })
+  //           .then(blob => {
+  //             // Generate a friendly name.
+  //             const friendly = keyboard.settings.name
+  //               ? Utils.generateFriendly(keyboard.settings.name)
+  //               : 'layout'
+
+  //             saveAs(blob, friendly + '.zip')
+
+  //             // Re-enable buttons.
+  //             state.ui.set('compile-working', false)
+  //           })
+  //           .catch(e => {
+  //             console.error(err)
+  //             state.error('Unable to generate files')
+  //             state.ui.set('compile-working', false)
+  //           })
+  //       })
+  //       .catch(e => {
+  //         console.error(err)
+  //         state.error('Unable to retrieve files')
+  //         state.ui.set('compile-working', false)
+  //       })
+  //   })
+  // }
 
   render() {
     const state = this.props.state
@@ -173,7 +218,7 @@ class Compile extends React.Component {
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadHex}
         >
-          Download .hex
+          下载 .hex
         </button>
         <div style={{ height: '1.5rem' }} />
         Or 下载config.h.
@@ -181,9 +226,9 @@ class Compile extends React.Component {
         <button
           className="light"
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
-          onClick={this.downloadH}
+          onClick={this.downloadZip}
         >
-          Download .zip
+          下载DFU空中升级的刷机包 .zip
         </button>
       </div>
     )

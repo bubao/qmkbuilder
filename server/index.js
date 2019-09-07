@@ -39,7 +39,8 @@ app.all('*', (req, res, next) => {
 // Set up the /build route.
 app.post('/build', async (req, res) => {
   // Get the files.
-  const files = req.body
+  const files = req.body.files
+  const package = req.body.package - 0
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
@@ -48,7 +49,6 @@ app.post('/build', async (req, res) => {
   const clean = () => {
     Exec('rm -rf ' + randomPatch)
   }
-
   const sendError = err => {
     res.json({ error: err })
     clean()
@@ -84,7 +84,7 @@ app.post('/build', async (req, res) => {
     // Make.
     await new Promise((resolve, reject) => {
       Exec(
-        'cd ' + randomPatch + '/keyboard/template && make default',
+        'cd ' + randomPatch + `/keyboard/template && make ${package?'package':'default'}`,
         (err, stdout, stderr) => {
           if (err) {
             console.error(stderr)
@@ -98,12 +98,12 @@ app.post('/build', async (req, res) => {
     // Read the hex file.
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        TMP + key + '/keyboard/template/_build/nrf52_kbd.hex',
-        'utf8',
+        TMP + key + `/keyboard/template/_build/${package?`nrf52_kbd_*.zip`:'nrf52_kbd.hex'}`,
+        // 'utf8',
         (err, data) => {
           if (err) {
             console.error(err)
-            return reject('Failed to read hex file.')
+            return reject(`Failed to read ${package?'zip':'hex'} file.`)
           }
           resolve(data)
         }
