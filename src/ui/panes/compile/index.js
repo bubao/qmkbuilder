@@ -124,12 +124,12 @@ class Compile extends React.Component {
         // Download the hex file.
         // res = JSON.parse(res.text)
 
-        // if (err) {
-        //   console.error(err)
-        //   state.error('Unable to connect to API server.')
-        //   state.ui.set('compile-working', false)
-        //   return
-        // }
+        if (err) {
+          console.error(err)
+          state.error('Unable to connect to API server.')
+          state.ui.set('compile-working', false)
+          return
+        }
 
         // // Check if there was an error.
         // if (res.error) {
@@ -146,7 +146,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res)
-        const blob = new Blob([res.text], { type: 'application/zip' })
+        // const blob = new Blob([res.text], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
         // saveAs(res.text, friendly + '.zip')
 
