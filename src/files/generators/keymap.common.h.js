@@ -47,7 +47,8 @@ class KeymapC extends Generator {
     const keymap2 = (() => {
       const rowLength = keyboard.rows.toString(16).length
       const colLength = keyboard.cols.toString(16).length
-      const cellLength = Math.max(rowLength + colLength + 1, 'KC_NO'.length) + 2
+      const cellLength =
+        Math.max(rowLength + colLength + 1, 'KC_##K'.length) + 2
 
       let result = ''
 
@@ -59,7 +60,10 @@ class KeymapC extends Generator {
           const sCol = Utils.leftPad(col.toString(16), colLength, '0')
 
           if (keyboard.wiring[row + ',' + col]) {
-            rowString += Utils.rightPad('K' + sRow + sCol + ', ', cellLength)
+            rowString += Utils.rightPad(
+              'KC_##K' + sRow + sCol + ', ',
+              cellLength
+            )
           } else {
             rowString += Utils.rightPad('KC_NO' + ', ', cellLength)
           }
