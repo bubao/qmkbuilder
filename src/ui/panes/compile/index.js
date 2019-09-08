@@ -169,18 +169,16 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .responseType('blob')
       .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
-
         if (err) {
           console.error(err)
           state.error('Unable to connect to API server.')
           state.ui.set('compile-working', false)
           return
         }
-        // res = JSON.parse(res.text)
+        res = JSON.parse(res.text)
         console.log(res)
 
         // Check if there was an error.
@@ -197,9 +195,9 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        // const blob = new Blob([res], { type: 'application/octet-stream' })
-        console.log(res.body)
-        saveAs(res.body, friendly + '.zip')
+        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        // console.log(res.body)
+        saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
         state.ui.set('compile-working', false)
