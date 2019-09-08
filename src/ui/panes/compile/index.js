@@ -103,7 +103,7 @@ class Compile extends React.Component {
         // Re-enable buttons.
         state.ui.set('compile-working', false)
       })
-    state.ui.set('compile-working', false)
+    // state.ui.set('compile-working', false)
   }
 
   downloadZip() {
