@@ -39,7 +39,7 @@ app.all('*', (req, res, next) => {
 // Set up the /build route.
 app.post('/build', async (req, res) => {
   // Get the files.
-  const files = req.body.files
+  const files = req.body
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
