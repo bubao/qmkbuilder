@@ -13,18 +13,18 @@ class KeymapC extends Generator {
 
     // Generate the keymaps.
     const keymap1 = (() => {
-      const rowLength = String(keyboard.rows).length
-      const colLength = String(keyboard.cols).length
+      const rowLength = keyboard.rows.toString(16).length
+      const colLength = keyboard.cols.toString(16).length
       const space = ' '.repeat(rowLength + colLength + 3)
 
       let result = ''
 
       for (let row = 0; row < keyboard.rows; row++) {
-        const sRow = Utils.leftPad(String(row), rowLength, '0')
+        const sRow = Utils.leftPad(row.toString(16), rowLength, '0')
 
         let rowString = ''
         for (let col = 0; col < keyboard.cols; col++) {
-          const sCol = Utils.leftPad(String(col), colLength, '0')
+          const sCol = Utils.leftPad(col.toString(16), colLength, '0')
 
           if (keyboard.wiring[row + ',' + col]) {
             rowString += 'K' + sRow + sCol + ', '
@@ -45,18 +45,18 @@ class KeymapC extends Generator {
     })()
 
     const keymap2 = (() => {
-      const rowLength = String(keyboard.rows).length
-      const colLength = String(keyboard.cols).length
+      const rowLength = keyboard.rows.toString(16).length
+      const colLength = keyboard.cols.toString(16).length
       const cellLength = Math.max(rowLength + colLength + 1, 'KC_NO'.length) + 2
 
       let result = ''
 
       for (let row = 0; row < keyboard.rows; row++) {
-        const sRow = Utils.leftPad(String(row), rowLength, '0')
+        const sRow = Utils.leftPad(row.toString(16), rowLength, '0')
 
         let rowString = ''
         for (let col = 0; col < keyboard.cols; col++) {
-          const sCol = Utils.leftPad(String(col), colLength, '0')
+          const sCol = Utils.leftPad(col.toString(16), colLength, '0')
 
           if (keyboard.wiring[row + ',' + col]) {
             rowString += Utils.rightPad('K' + sRow + sCol + ', ', cellLength)
