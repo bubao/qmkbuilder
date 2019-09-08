@@ -89,12 +89,13 @@ app.post('/build', async (req, res) => {
       Exec(
         `cd ${randomPatch}/keyboard/template && make ${
           package ? 'package' : 'default'
-        } && ls`,
+        }`,
         (err, stdout, stderr) => {
           if (err) {
             console.error(stderr)
             return reject(stderr)
           }
+          console.log(stdout)
           if (package) {
             Fs.readdir(
               randomPatch + `/keyboard/template/_build`,
