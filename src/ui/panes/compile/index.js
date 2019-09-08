@@ -155,6 +155,56 @@ class Compile extends React.Component {
       })
   }
 
+  downloadTest() {
+    const state = this.props.state
+    const keyboard = state.keyboard
+
+    // Disable buttons.
+    state.ui.set('compile-working', true)
+
+    // Generate source files.
+    const files = Files.generate(keyboard)
+    // Send the request.
+    Request.post(C.LOCAL.ZIP)
+      .timeout(99999999000)
+      .set('Content-Type', 'application/json')
+      .send(JSON.stringify(files))
+      .end((err, res) => {
+        // Download the hex file.
+
+        if (err) {
+          console.error(err)
+          state.error('Unable to connect to API server.')
+          state.ui.set('compile-working', false)
+          return
+        }
+        res = JSON.parse(res.text)
+        console.log(res)
+
+        // Check if there was an error.
+        if (res.error) {
+          console.error(res.error)
+          state.error('Server error:\n' + res.error)
+          state.ui.set('compile-working', false)
+          return
+        }
+
+        // Generate a friendly name.
+        const friendly = keyboard.settings.name
+          ? Utils.generateFriendly(keyboard.settings.name)
+          : 'layout'
+
+        // Download the hex file.
+        console.log(res)
+        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        // console.log(blob)
+        saveAs(blob, friendly + '.zip')
+
+        // Re-enable buttons.
+        state.ui.set('compile-working', false)
+      })
+  }
+
   render() {
     const state = this.props.state
     const keyboard = state.keyboard
@@ -188,6 +238,16 @@ class Compile extends React.Component {
           onClick={this.downloadH}
         >
           下载 .h
+        </button>
+        <div style={{ height: '1.5rem' }} />
+        Test
+        <div style={{ height: '0.5rem' }} />
+        <button
+          className="light"
+          disabled={!keyboard.valid || state.ui.get('compile-working', false)}
+          onClick={this.downloadTest}
+        >
+          Test
         </button>
       </div>
     )
