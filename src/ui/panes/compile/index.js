@@ -173,10 +173,14 @@ class Compile extends React.Component {
     // Generate source files.
     const files = Files.generate(keyboard)
     // Send the request.
+    let data = ''
     Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(files))
+      .on('data', d => {
+        data += d
+      })
       .end((err, res) => {
         // res = JSON.parse(res.text)
         // Download the hex file.
@@ -190,7 +194,7 @@ class Compile extends React.Component {
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
         console.log(res)
-        let blob = new Blob([str2bytes(res.text)], { type: 'application/zip' })
+        let blob = new Blob([data], { type: 'application/zip' })
         console.log(blob.size)
         saveAs(blob, friendly + '.zip')
         state.ui.set('compile-working', false)
