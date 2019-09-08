@@ -152,6 +152,8 @@ app.post('/build', async (req, res) => {
     // Clean up.
     clean()
   } catch (e) {
+    console.error(e)
+    clean()
     sendError(e)
   }
 })
