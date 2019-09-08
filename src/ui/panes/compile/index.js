@@ -13,6 +13,7 @@ class Compile extends React.Component {
 
     // Bind functions.
     this.downloadHex = this.downloadHex.bind(this)
+    this.downloadTest = this.downloadTest.bind(this)
     this.downloadZip = this.downloadZip.bind(this)
     this.downloadH = this.downloadH.bind(this)
   }
