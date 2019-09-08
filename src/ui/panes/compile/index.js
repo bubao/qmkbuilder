@@ -178,7 +178,7 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        console.log(res)
+        // console.log(res)
 
         // Check if there was an error.
         if (res.error) {
@@ -192,14 +192,45 @@ class Compile extends React.Component {
         const friendly = keyboard.settings.name
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
+        JSZip.loadAsync(res)
+          .then(zip => {
+            // Insert the files.
+            for (const file in files) {
+              zip.file(file, files[file])
+            }
 
+            // Download the file.
+            zip
+              .generateAsync({ type: 'blob' })
+              .then(blob => {
+                // Generate a friendly name.
+                const friendly = keyboard.settings.name
+                  ? Utils.generateFriendly(keyboard.settings.name)
+                  : 'layout'
+
+                saveAs(blob, friendly + '.zip')
+
+                // Re-enable buttons.
+                state.ui.set('compile-working', false)
+              })
+              .catch(e => {
+                console.error(err)
+                state.error('Unable to generate files')
+                state.ui.set('compile-working', false)
+              })
+          })
+          .catch(e => {
+            console.error(err)
+            state.error('Unable to retrieve files')
+            state.ui.set('compile-working', false)
+          })
         // Download the hex file.
-        const blob = new Blob([res.text], { type: 'application/octet-stream' })
-        console.log(blob)
-        saveAs(blob, friendly + '.zip')
+        // const blob = new Blob([res.text], { type: 'application/octet-stream' })
+        // console.log(blob)
+        // saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
-        state.ui.set('compile-working', false)
+        // state.ui.set('compile-working', false)
       })
   }
 
