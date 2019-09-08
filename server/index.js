@@ -61,7 +61,7 @@ app.post('/build', async (req, res) => {
         'cp -rp /usr/local/src/nrf52-keyboard/keyboard/template ' + randomPatch,
         (err, stdout, stderr) => {
           if (err) {
-            console.error(err)
+            console.log(err)
             return reject('Failed to initialize.')
           }
           resolve()
@@ -74,7 +74,10 @@ app.post('/build', async (req, res) => {
       await new Promise((resolve, reject) => {
         const fileName = file.replace('tmk_firmware', randomPatch)
         Fs.writeFile(fileName, files[file], err => {
-          if (err) return reject('Failed to initialize.')
+          if (err) {
+            console.log(err)
+            return reject('Failed to initialize.')
+          }
           resolve()
         })
       })
@@ -156,7 +159,7 @@ app.post('/zip', async (req, res) => {
         'cp -rp /usr/local/src/nrf52-keyboard/keyboard/template ' + randomPatch,
         (err, stdout, stderr) => {
           if (err) {
-            console.error(err)
+            console.log(err)
             return reject('Failed to initialize.')
           }
           resolve()
@@ -169,7 +172,10 @@ app.post('/zip', async (req, res) => {
       await new Promise((resolve, reject) => {
         const fileName = file.replace('tmk_firmware', randomPatch)
         Fs.writeFile(fileName, files[file], err => {
-          if (err) return reject('Failed to initialize.')
+          if (err) {
+            console.log(err)
+            return reject('Failed to initialize.')
+          }
           resolve()
         })
       })
