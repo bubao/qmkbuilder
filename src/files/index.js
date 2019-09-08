@@ -12,12 +12,10 @@ class Files {
   static generate(keyboard) {
     return {
       'tmk_firmware/config.h': new ConfigHGenerator(keyboard).generate(),
-      'tmk_firmware/keymap_plain.c': new KeyPlainCGenerator(
-        keyboard
-      ).generate(),
-      'tmk_firmware/keymap_common.h': new KeymapCommonHGenerator(
-        keyboard
-      ).generate()
+      'tmk_firmware/keymap_plain.c': new KeyPlainCGenerator(keyboard).generate()
+      // 'tmk_firmware/keymap_common.h': new KeymapCommonHGenerator(
+      //   keyboard
+      // ).generate()
     }
   }
 }
