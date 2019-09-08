@@ -49,6 +49,7 @@ app.post('/build', async (req, res) => {
     Exec('rm -rf ' + randomPatch)
   }
   const sendError = err => {
+    console.log('error')
     res.json({ error: err })
     clean()
   }
