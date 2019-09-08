@@ -178,59 +178,30 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        // console.log(res)
-
-        // Check if there was an error.
-        if (res.error) {
-          console.error(res.error)
-          state.error('Server error:\n' + res.error)
-          state.ui.set('compile-working', false)
-          return
-        }
-
-        // Generate a friendly name.
         const friendly = keyboard.settings.name
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
-        JSZip.loadAsync(res)
-          .then(zip => {
-            // Insert the files.
-            // for (const file in files) {
-            //   zip.file(file, files[file])
-            // }
-            // zip.file(res)
-            // Download the file.
-            zip
-              .generateAsync({ type: 'blob' })
-              .then(blob => {
-                // Generate a friendly name.
-                const friendly = keyboard.settings.name
-                  ? Utils.generateFriendly(keyboard.settings.name)
-                  : 'layout'
 
-                saveAs(blob, friendly + '.zip')
+        let blob = new Blob([res])
+        saveAs(blob, friendly + '.zip')
+        // console.log(res)
 
-                // Re-enable buttons.
-                state.ui.set('compile-working', false)
-              })
-              .catch(e => {
-                console.error(err)
-                state.error('Unable to generate files')
-                state.ui.set('compile-working', false)
-              })
-          })
-          .catch(e => {
-            console.error(err)
-            state.error('Unable to retrieve files')
-            state.ui.set('compile-working', false)
-          })
-        // Download the hex file.
+        // Check if there was an error.
+        // if (res.error) {
+        //   console.error(res.error)
+        //   state.error('Server error:\n' + res.error)
+        //   state.ui.set('compile-working', false)
+        //   return
+        // }
+
+        // // Generate a friendly name.
+        // // Download the hex file.
         // const blob = new Blob([res.text], { type: 'application/octet-stream' })
         // console.log(blob)
         // saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
-        // state.ui.set('compile-working', false)
+        state.ui.set('compile-working', false)
       })
   }
 
