@@ -43,8 +43,7 @@ app.post('/build', async (req, res) => {
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
-  console.log(files['tmk_firmware/config.h'])
-
+  console.log(files)
   // Setup helper functions.
   const clean = () => {
     Exec('rm -rf ' + randomPatch)
@@ -82,7 +81,6 @@ app.post('/build', async (req, res) => {
     }
 
     // Make.
-    let zipname = ''
     await new Promise((resolve, reject) => {
       Exec(
         `cd ${randomPatch}/keyboard/template && make default`,
@@ -141,7 +139,7 @@ app.post('/zip', async (req, res) => {
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
-  console.log(files['tmk_firmware/config.h'])
+  console.log(files)
 
   // Setup helper functions.
   const clean = () => {
