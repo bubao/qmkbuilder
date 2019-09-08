@@ -33,8 +33,7 @@ extern const action_t fn_actions[];
  * K2C, K31 and  K3C are extra keys for ISO
  */
 #define KEYMAP( \\
-%keymap_1%
-) { \\
+%keymap_1%) { \\
 %keymap_2%}
 
 /* ANSI variant. No extra keys for ISO */
