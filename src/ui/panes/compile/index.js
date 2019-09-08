@@ -178,7 +178,7 @@ class Compile extends React.Component {
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(files))
-      .on('data', d => {
+      .on('data', (error, d) => {
         data += d
       })
       .end((err, res) => {
