@@ -113,7 +113,7 @@ class Compile extends React.Component {
       })
   }
 
-  downloadZip() {
+  downloadTEST() {
     const state = this.props.state
     const keyboard = state.keyboard
 
@@ -163,7 +163,7 @@ class Compile extends React.Component {
       })
   }
 
-  downloadTest() {
+  downloadZip() {
     const state = this.props.state
     const keyboard = state.keyboard
 
@@ -173,27 +173,22 @@ class Compile extends React.Component {
     // Generate source files.
     const files = Files.generate(keyboard)
     // Send the request.
-    let data = ''
-    Request.post(C.LOCAL.TEST)
+    Request.post(C.LOCAL.ZIP)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
       .responseType('blob')
       .send(JSON.stringify(files))
       .end((err, res) => {
-        // res = JSON.parse(res.text)
-        // Download the hex file.
         if (err) {
           console.error(err)
           state.error('Unable to connect to API server.')
           state.ui.set('compile-working', false)
           return
         }
-        // res = JSON.parse(res.text)
         const friendly = keyboard.settings.name
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
         console.log(res.body)
-        // let blob = new Blob([res.text], { type: 'application/zip' })
         console.log(res.body.size)
         saveAs(res.body, friendly + '.zip')
         state.ui.set('compile-working', false)
@@ -225,24 +220,14 @@ class Compile extends React.Component {
           下载DFU空中升级的刷机包 .zip
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载config.h.
+        Or 下载源码文件
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadH}
         >
-          下载 .h
-        </button>
-        <div style={{ height: '1.5rem' }} />
-        Test
-        <div style={{ height: '0.5rem' }} />
-        <button
-          className="light"
-          disabled={!keyboard.valid || state.ui.get('compile-working', false)}
-          onClick={this.downloadTest}
-        >
-          Test
+          下载 .zip
         </button>
       </div>
     )
