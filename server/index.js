@@ -223,7 +223,7 @@ app.post('/zip', async (req, res) => {
     // }else{
 
     const hex = await new Promise((resolve, reject) => {
-      Fs.readFile(`${randomPatch}/_build/${zipname}`, 'buffer', (err, data) => {
+      Fs.readFile(`${randomPatch}/_build/${zipname}`, (err, data) => {
         if (err) {
           console.error(err)
           return reject(`Failed to read ${'zip'} file.`)
