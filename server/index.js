@@ -90,6 +90,7 @@ app.post('/build', async (req, res) => {
             return reject(stderr)
           }
           console.log(stdout)
+          resolve()
         }
       )
     })
