@@ -40,12 +40,10 @@ app.all('*', (req, res, next) => {
 app.post('/build', async (req, res) => {
   // Get the files.
   const files = req.body.files
-  const package = req.body.package - 0
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
   console.log(files['tmk_firmware/config.h'])
-  console.log(package)
 
   // Setup helper functions.
   const clean = () => {
@@ -87,33 +85,13 @@ app.post('/build', async (req, res) => {
     let zipname = ''
     await new Promise((resolve, reject) => {
       Exec(
-        `cd ${randomPatch}/keyboard/template && make ${
-          package ? 'package' : 'default'
-        }`,
+        `cd ${randomPatch}/keyboard/template && make default`,
         (err, stdout, stderr) => {
           if (err) {
             console.error(stderr)
             return reject(stderr)
           }
           console.log(stdout)
-          if (package) {
-            Fs.readdir(
-              randomPatch + `/keyboard/template/_build`,
-              (error, res) => {
-                if (error) {
-                  console.error(error)
-                  return reject(error)
-                }
-                res.forEach(element => {
-                  if (element.indexOf('.zip')) {
-                    zipname = element
-                    console.log(zipname)
-                    return resolve()
-                  }
-                })
-              }
-            )
-          }
         }
       )
     })
@@ -134,20 +112,136 @@ app.post('/build', async (req, res) => {
 
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        `${randomPatch}/keyboard/template/_build/${
-          package ? zipname : 'nrf52_kbd.hex'
-        }`,
+        `${randomPatch}/keyboard/template/_build/nrf52_kbd.hex`,
         'utf8',
         (err, data) => {
           if (err) {
             console.error(err)
-            return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
+            return reject('Failed to read hex file.')
           }
           resolve(data)
         }
       )
     })
     res.json({ hex })
+    // }
+
+    // Clean up.
+    clean()
+  } catch (e) {
+    console.error(e)
+    clean()
+    sendError(e)
+  }
+})
+
+app.post('/zip', async (req, res) => {
+  // Get the files.
+  const files = req.body
+  // Create a random key.
+  const key = Crypto.randomBytes(16).toString('hex')
+  const randomPatch = TMP + key
+  console.log(files['tmk_firmware/config.h'])
+
+  // Setup helper functions.
+  const clean = () => {
+    Exec('rm -rf ' + randomPatch)
+  }
+  const sendError = err => {
+    res.json({ error: err })
+    clean()
+  }
+
+  // Start.
+  try {
+    // Copy the base stencil.
+    await new Promise((resolve, reject) => {
+      Exec(
+        'cp -rp /usr/local/src/nrf52-keyboard ' + randomPatch,
+        (err, stdout, stderr) => {
+          if (err) {
+            console.error(err)
+            return reject('Failed to initialize.')
+          }
+          resolve()
+        }
+      )
+    })
+
+    // Copy all the files.
+    for (const file in files) {
+      await new Promise((resolve, reject) => {
+        const fileName = file.replace('tmk_firmware', randomPatch)
+        Fs.writeFile(fileName, files[file], err => {
+          if (err) return reject('Failed to initialize.')
+          resolve()
+        })
+      })
+    }
+
+    // Make.
+    let zipname = ''
+    await new Promise((resolve, reject) => {
+      Exec(
+        `cd ${randomPatch}/keyboard/template && make package`,
+        (err, stdout, stderr) => {
+          if (err) {
+            console.error(stderr)
+            return reject(stderr)
+          }
+          console.log(stdout)
+          Fs.readdir(
+            randomPatch + '/keyboard/template/_build',
+            (error, res) => {
+              if (error) {
+                console.error(error)
+                return reject(error)
+              }
+              res.forEach(element => {
+                if (element.indexOf('.zip')) {
+                  zipname = element
+                  console.log(zipname)
+                  return resolve()
+                }
+              })
+            }
+          )
+        }
+      )
+    })
+
+    // Read the hex file.
+
+    // Send the hex file.
+    // if (package) {
+    res.responseType = 'blob'
+    res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function(
+      err
+    ) {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log('Sent:', zipname)
+      }
+    })
+    // }else{
+
+    // const hex = await new Promise((resolve, reject) => {
+    //   Fs.readFile(
+    //     `${randomPatch}/keyboard/template/_build/${
+    //       package ? zipname : 'nrf52_kbd.hex'
+    //     }`,
+    //     'utf8',
+    //     (err, data) => {
+    //       if (err) {
+    //         console.error(err)
+    //         return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
+    //       }
+    //       resolve(data)
+    //     }
+    //   )
+    // })
+    // res.json({ hex })
     // }
 
     // Clean up.

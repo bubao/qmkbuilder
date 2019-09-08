@@ -68,7 +68,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .send(JSON.stringify({ package: 0, files }))
+      .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
 
@@ -118,10 +118,10 @@ class Compile extends React.Component {
     // Generate source files.
     const files = Files.generate(keyboard)
     // Send the request.
-    Request.post(C.LOCAL.API)
+    Request.post(C.LOCAL.ZIP)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .send(JSON.stringify({ package: 1, files }))
+      .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
 
@@ -131,16 +131,16 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        res = JSON.parse(res.text)
-        console.log(res)
+        // res = JSON.parse(res)
+        // console.log(res)
 
         // Check if there was an error.
-        if (res.error) {
-          console.error(res.error)
-          state.error('Server error:\n' + res.error)
-          state.ui.set('compile-working', false)
-          return
-        }
+        // if (res.error) {
+        //   console.error(res.error)
+        //   state.error('Server error:\n' + res.error)
+        //   state.ui.set('compile-working', false)
+        //   return
+        // }
 
         // Generate a friendly name.
         const friendly = keyboard.settings.name
@@ -148,9 +148,9 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        console.log(res.hex)
-        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
-        console.log(blob)
+        console.log(res)
+        const blob = new Blob([res], { type: 'application/octet-stream' })
+        // console.log(blob)
         saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
