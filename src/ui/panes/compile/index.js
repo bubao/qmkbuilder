@@ -178,6 +178,7 @@ class Compile extends React.Component {
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(files))
       .end((err, res) => {
+        res = JSON.parse(res.text)
         // Download the hex file.
         if (err) {
           console.error(err)
@@ -188,8 +189,8 @@ class Compile extends React.Component {
         const friendly = keyboard.settings.name
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
-        console.log(res)
-        let blob = new Blob([str2bytes(res)], { type: 'application/zip' })
+        console.log(res.hex)
+        let blob = new Blob([str2bytes(res.hex)], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
         state.ui.set('compile-working', false)
       })
