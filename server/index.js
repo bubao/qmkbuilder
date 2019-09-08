@@ -45,6 +45,7 @@ app.post('/build', async (req, res) => {
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
   console.log(files.length)
+  console.log(package)
 
   // Setup helper functions.
   const clean = () => {
