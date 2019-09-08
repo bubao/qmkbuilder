@@ -189,7 +189,7 @@ class Compile extends React.Component {
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
         console.log(res)
-        let blob = new Blob([str2bytes(myData)], { type: 'application/zip' })
+        let blob = new Blob([str2bytes(res)], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
         state.ui.set('compile-working', false)
       })
