@@ -165,7 +165,7 @@ class Compile extends React.Component {
     // Generate source files.
     const files = Files.generate(keyboard)
     // Send the request.
-    Request.post(C.LOCAL.ZIP)
+    Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(files))
