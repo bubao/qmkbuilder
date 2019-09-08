@@ -6,6 +6,13 @@ const Utils = require('utils')
 const Request = require('superagent')
 
 const C = require('const')
+function str2bytes(str) {
+  let bytes = new Uint8Array(str.length)
+  for (let i = 0; i < str.length; i++) {
+    bytes[i] = str.charCodeAt(i)
+  }
+  return bytes
+}
 
 class Compile extends React.Component {
   constructor(props) {
@@ -182,25 +189,8 @@ class Compile extends React.Component {
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
         console.log(res)
-        let blob = new Blob([res])
+        let blob = new Blob([str2bytes(myData)], { type: 'application/zip' })
         saveAs(blob, friendly + '.zip')
-        // console.log(res)
-
-        // Check if there was an error.
-        // if (res.error) {
-        //   console.error(res.error)
-        //   state.error('Server error:\n' + res.error)
-        //   state.ui.set('compile-working', false)
-        //   return
-        // }
-
-        // // Generate a friendly name.
-        // // Download the hex file.
-        // const blob = new Blob([res.text], { type: 'application/octet-stream' })
-        // console.log(blob)
-        // saveAs(blob, friendly + '.zip')
-
-        // Re-enable buttons.
         state.ui.set('compile-working', false)
       })
   }
