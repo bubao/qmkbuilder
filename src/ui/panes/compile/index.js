@@ -176,7 +176,7 @@ class Compile extends React.Component {
           下载 .hex
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载config.h.
+        Or 下载 .zip.
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
@@ -184,6 +184,16 @@ class Compile extends React.Component {
           onClick={this.downloadZip}
         >
           下载DFU空中升级的刷机包 .zip
+        </button>
+        <div style={{ height: '1.5rem' }} />
+        Or 下载config.h.
+        <div style={{ height: '0.5rem' }} />
+        <button
+          className="light"
+          disabled={!keyboard.valid || state.ui.get('compile-working', false)}
+          onClick={this.downloadH}
+        >
+          下载 .h
         </button>
       </div>
     )
