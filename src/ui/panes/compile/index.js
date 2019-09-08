@@ -179,7 +179,7 @@ class Compile extends React.Component {
           return
         }
         res = JSON.parse(res.text)
-        console.log(res)
+        console.log(res.hex)
 
         // Check if there was an error.
         if (res.error) {
@@ -196,7 +196,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         const blob = new Blob([res.hex], { type: 'application/octet-stream' })
-        // console.log(res.body)
+        console.log(blob)
         saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
