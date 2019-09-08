@@ -177,6 +177,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
+      .responseType('blob')
       .send(JSON.stringify(files))
       .end((err, res) => {
         // res = JSON.parse(res.text)
@@ -192,9 +193,9 @@ class Compile extends React.Component {
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
         console.log(res)
-        let blob = new Blob([res.text], { type: 'application/zip' })
-        console.log(blob.size)
-        saveAs(blob, friendly + '.zip')
+        // let blob = new Blob([res.text], { type: 'application/zip' })
+        console.log(res.size)
+        saveAs(res, friendly + '.zip')
         state.ui.set('compile-working', false)
       })
   }
