@@ -39,7 +39,7 @@ class KeymapC extends Generator {
         result += '\t' + rowString + '\\\n'
       }
 
-      result = result.substring(0, result.length - 4) + '  \\'
+      result = result.substring(0, result.length - 4) + '  \\\n'
 
       return result
     })()
@@ -74,7 +74,7 @@ class KeymapC extends Generator {
           '\t{ ' + rowString.substring(0, rowString.length - 1) + ' }, \\\n'
       }
 
-      result = result.substring(0, result.length - 4) + '  \\'
+      result = result.substring(0, result.length - 4) + '  \\\n'
 
       return result
     })()
