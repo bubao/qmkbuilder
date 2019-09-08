@@ -137,7 +137,7 @@ app.post('/zip', async (req, res) => {
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
-  console.log(files)
+  console.log(randomPatch)
 
   // Setup helper functions.
   const clean = () => {
