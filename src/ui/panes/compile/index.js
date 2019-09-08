@@ -169,6 +169,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
+      .set('responseType', 'arraybuffer')
       .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
