@@ -180,7 +180,7 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        res = JSON.parse(res.text)
+        // res = JSON.parse(res.text)
         console.log(res)
 
         // Check if there was an error.
@@ -198,7 +198,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res)
-        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        const blob = new Blob([res], { type: 'application/octet-stream' })
         // console.log(blob)
         saveAs(blob, friendly + '.zip')
 
