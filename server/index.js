@@ -136,17 +136,17 @@ app.post('/build', async (req, res) => {
 })
 
 app.post('/test', async (req, res) => {
-  const hex = await new Promise((resolve, reject) => {
-    Fs.readFile('/root/test.zip', (err, data) => {
-      if (err) {
-        console.error(err)
-        return reject(`Failed to read ${'zip'} file.`)
-      }
-      resolve(data)
-    })
-  })
-  res.json({ hex })
-  // res.send(hex)
+  // const hex = await new Promise((resolve, reject) => {
+  //   Fs.readFile('/root/test.zip', (err, data) => {
+  //     if (err) {
+  //       console.error(err)
+  //       return reject(`Failed to read ${'zip'} file.`)
+  //     }
+  //     resolve(data)
+  //   })
+  // })
+  // res.json({ hex })
+  res.sendFile('/root/test.zip')
 })
 
 app.post('/zip', async (req, res) => {
