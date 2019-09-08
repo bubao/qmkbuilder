@@ -123,6 +123,7 @@ class Compile extends React.Component {
       .end((err, res) => {
         // Download the hex file.
         res = JSON.parse(res.text)
+        console.log(res)
 
         if (err) {
           console.error(err)
