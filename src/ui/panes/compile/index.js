@@ -154,7 +154,7 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res)
-        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        const blob = new Blob([res.hex], { type: 'application/zip' })
         // console.log(blob)
         saveAs(blob, friendly + '.zip')
 
@@ -178,7 +178,7 @@ class Compile extends React.Component {
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(files))
       .end((err, res) => {
-        res = JSON.parse(res.text)
+        // res = JSON.parse(res.text)
         // Download the hex file.
         if (err) {
           console.error(err)
@@ -191,7 +191,8 @@ class Compile extends React.Component {
           : 'layout'
         console.log(res)
         let blob = new Blob([str2bytes(res.hex)], { type: 'application/zip' })
-        saveAs(res.hex.data, friendly + '.zip')
+        console.log(blob.size())
+        saveAs(blob, friendly + '.zip')
         state.ui.set('compile-working', false)
       })
   }
