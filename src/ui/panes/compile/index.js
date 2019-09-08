@@ -187,7 +187,7 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        res = JSON.parse(res.text)
+        // res = JSON.parse(res.text)
         const friendly = keyboard.settings.name
           ? Utils.generateFriendly(keyboard.settings.name)
           : 'layout'
