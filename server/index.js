@@ -44,7 +44,7 @@ app.post('/build', async (req, res) => {
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
-  console.log(files.length)
+  console.log(files['tmk_firmware/config.h'])
   console.log(package)
 
   // Setup helper functions.
