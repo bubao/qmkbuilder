@@ -222,22 +222,20 @@ app.post('/zip', async (req, res) => {
     })
     // }else{
 
-    // const hex = await new Promise((resolve, reject) => {
-    //   Fs.readFile(
-    //     `${randomPatch}/keyboard/template/_build/${
-    //       package ? zipname : 'nrf52_kbd.hex'
-    //     }`,
-    //     'utf8',
-    //     (err, data) => {
-    //       if (err) {
-    //         console.error(err)
-    //         return reject(`Failed to read ${package ? 'zip' : 'hex'} file.`)
-    //       }
-    //       resolve(data)
-    //     }
-    //   )
-    // })
-    // res.json({ hex })
+    const hex = await new Promise((resolve, reject) => {
+      Fs.readFile(
+        `${randomPatch}/keyboard/template/_build/${zipname}`,
+        'buffer',
+        (err, data) => {
+          if (err) {
+            console.error(err)
+            return reject(`Failed to read ${'zip'} file.`)
+          }
+          resolve(data)
+        }
+      )
+    })
+    res.json({ hex })
     // }
 
     // Clean up.
