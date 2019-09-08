@@ -37,12 +37,12 @@ extern const action_t fn_actions[];
 %keymap_2%}
 
 /* ANSI variant. No extra keys for ISO */
-// #define KEYMAP_ANSI( \\
-// %keymap_1%) KEYMAP( \\
-// %keymap_1%)
+#define KEYMAP_ANSI( \\
+%keymap_1%) KEYMAP( \\
+%keymap_1%)
 
 
-// #define KEYMAP_HHKB( \\
-// %keymap_1%) KEYMAP( \\
-// %keymap_1%)
+#define KEYMAP_HHKB( \\
+%keymap_1%) KEYMAP( \\
+%keymap_1%)
 `.trim()
