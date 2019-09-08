@@ -169,7 +169,7 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.TEST)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
-      .responseType('arraybuffer')
+      .responseType('blob')
       .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
@@ -197,8 +197,7 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        console.log(res.body)
-        const blob = new Blob([res.body], { type: 'application/octet-stream' })
+        const blob = new Blob([res], { type: 'application/octet-stream' })
         // console.log(blob)
         saveAs(blob, friendly + '.zip')
 
