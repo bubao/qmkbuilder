@@ -49,7 +49,7 @@ class Compile extends React.Component {
         state.ui.set('compile-working', false)
       })
       .catch(e => {
-        console.error(err)
+        console.error(e)
         state.error('Unable to generate files')
         state.ui.set('compile-working', false)
       })
@@ -103,9 +103,6 @@ class Compile extends React.Component {
         // Re-enable buttons.
         state.ui.set('compile-working', false)
       })
-      .catch(() => {
-        state.ui.set('compile-working', false)
-      })
   }
 
   downloadZip() {
@@ -154,9 +151,6 @@ class Compile extends React.Component {
         saveAs(blob, friendly + '.zip')
 
         // Re-enable buttons.
-        state.ui.set('compile-working', false)
-      })
-      .catch(() => {
         state.ui.set('compile-working', false)
       })
   }
