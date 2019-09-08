@@ -58,7 +58,7 @@ app.post('/build', async (req, res) => {
     // Copy the base stencil.
     await new Promise((resolve, reject) => {
       Exec(
-        'cp -rp /usr/local/src/nrf52-keyboard ' + randomPatch,
+        'cp -rp /usr/local/src/nrf52-keyboard/keyboard/template ' + randomPatch,
         (err, stdout, stderr) => {
           if (err) {
             console.error(err)
@@ -82,17 +82,14 @@ app.post('/build', async (req, res) => {
 
     // Make.
     await new Promise((resolve, reject) => {
-      Exec(
-        `cd ${randomPatch}/keyboard/template && make default`,
-        (err, stdout, stderr) => {
-          if (err) {
-            console.error(stderr)
-            return reject(stderr)
-          }
-          console.log(stdout)
-          resolve()
+      Exec(`cd ${randomPatch} && make default`, (err, stdout, stderr) => {
+        if (err) {
+          console.error(stderr)
+          return reject(stderr)
         }
-      )
+        console.log(stdout)
+        resolve()
+      })
     })
 
     // Read the hex file.
@@ -111,7 +108,7 @@ app.post('/build', async (req, res) => {
 
     const hex = await new Promise((resolve, reject) => {
       Fs.readFile(
-        `${randomPatch}/keyboard/template/_build/nrf52_kbd.hex`,
+        `${randomPatch}/_build/nrf52_kbd.hex`,
         'utf8',
         (err, data) => {
           if (err) {
@@ -156,7 +153,7 @@ app.post('/zip', async (req, res) => {
     // Copy the base stencil.
     await new Promise((resolve, reject) => {
       Exec(
-        'cp -rp /usr/local/src/nrf52-keyboard ' + randomPatch,
+        'cp -rp /usr/local/src/nrf52-keyboard/keyboard/template ' + randomPatch,
         (err, stdout, stderr) => {
           if (err) {
             console.error(err)
@@ -181,32 +178,26 @@ app.post('/zip', async (req, res) => {
     // Make.
     let zipname = ''
     await new Promise((resolve, reject) => {
-      Exec(
-        `cd ${randomPatch}/keyboard/template && make package`,
-        (err, stdout, stderr) => {
-          if (err) {
-            console.error(stderr)
-            return reject(stderr)
-          }
-          console.log(stdout)
-          Fs.readdir(
-            randomPatch + '/keyboard/template/_build',
-            (error, res) => {
-              if (error) {
-                console.error(error)
-                return reject(error)
-              }
-              res.forEach(element => {
-                if (element.indexOf('.zip')) {
-                  zipname = element
-                  console.log(zipname)
-                  return resolve()
-                }
-              })
-            }
-          )
+      Exec(`cd ${randomPatch} && make package`, (err, stdout, stderr) => {
+        if (err) {
+          console.error(stderr)
+          return reject(stderr)
         }
-      )
+        console.log(stdout)
+        Fs.readdir(randomPatch + '/_build', (error, res) => {
+          if (error) {
+            console.error(error)
+            return reject(error)
+          }
+          res.forEach(element => {
+            if (element.indexOf('.zip')) {
+              zipname = element
+              console.log(zipname)
+              return resolve()
+            }
+          })
+        })
+      })
     })
 
     // Read the hex file.
@@ -214,9 +205,7 @@ app.post('/zip', async (req, res) => {
     // Send the hex file.
     // if (package) {
     res.responseType = 'blob'
-    res.sendFile(TMP + key + `/keyboard/template/_build/${zipname}`, function(
-      err
-    ) {
+    res.sendFile(TMP + key + `/_build/${zipname}`, function(err) {
       if (err) {
         console.log(err)
       } else {
