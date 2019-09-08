@@ -44,7 +44,7 @@ app.post('/build', async (req, res) => {
   // Create a random key.
   const key = Crypto.randomBytes(16).toString('hex')
   const randomPatch = TMP + key
-  console.log(files)
+  console.log(files.length)
 
   // Setup helper functions.
   const clean = () => {
@@ -94,7 +94,7 @@ app.post('/build', async (req, res) => {
             console.error(stderr)
             return reject(stderr)
           }
-          if (package)
+          if (package) {
             Fs.readdir(
               randomPatch + `/keyboard/template/_build`,
               (error, res) => {
@@ -111,6 +111,7 @@ app.post('/build', async (req, res) => {
                 })
               }
             )
+          }
         }
       )
     })
