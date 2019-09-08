@@ -80,8 +80,8 @@ class KeymapC extends Generator {
     })()
 
     return {
-      keymap_1: keymap1,
-      keymap_2: keymap2
+      keymap_1: keymap1.toUpperCase(),
+      keymap_2: keymap2.toUpperCase()
     }
   }
 }
