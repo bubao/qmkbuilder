@@ -195,10 +195,10 @@ class Compile extends React.Component {
         JSZip.loadAsync(res)
           .then(zip => {
             // Insert the files.
-            for (const file in files) {
-              zip.file(file, files[file])
-            }
-
+            // for (const file in files) {
+            //   zip.file(file, files[file])
+            // }
+            // zip.file(res)
             // Download the file.
             zip
               .generateAsync({ type: 'blob' })
