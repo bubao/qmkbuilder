@@ -45,4 +45,5 @@ extern const action_t fn_actions[];
 #define KEYMAP_HHKB( \\
 %keymap_1%) KEYMAP( \\
 %keymap_1%)
+
 `.trim()

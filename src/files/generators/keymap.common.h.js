@@ -60,10 +60,7 @@ class KeymapC extends Generator {
           const sCol = Utils.leftPad(col.toString(16), colLength, '0')
 
           if (keyboard.wiring[row + ',' + col]) {
-            rowString += Utils.rightPad(
-              'KC_##K' + sRow + sCol + ', ',
-              cellLength
-            )
+            rowString += Utils.rightPad('K' + sRow + sCol + ', ', cellLength)
           } else {
             rowString += Utils.rightPad('KC_NO' + ', ', cellLength)
           }
