@@ -1,4 +1,4 @@
-module.exports =`/*
+module.exports = `/*
 Copyright 2012,2013 Jun Wako <wakojun@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@ extern const action_t fn_actions[];
 /* GH60 keymap definition macro
  * K2C, K31 and  K3C are extra keys for ISO
  */
-#define KEYMAP(%KEYMAP1%) {%KEYMAP2%}
+#define KEYMAP(%keymap_1%) {%keymap_2%}
 
 /* ANSI variant. No extra keys for ISO */
 // #define KEYMAP_ANSI(%KEYMAP_ANSI1%) KEYMAP(%KEYMAP_ANSI2%)
