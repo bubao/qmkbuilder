@@ -71,8 +71,6 @@ class Compile extends React.Component {
       .send(JSON.stringify({ package: 0, files }))
       .end((err, res) => {
         // Download the hex file.
-        res = JSON.parse(res.text)
-        console.log(res)
 
         if (err) {
           console.error(err)
@@ -80,6 +78,8 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
+        res = JSON.parse(res.text)
+        console.log(res)
 
         // Check if there was an error.
         if (res.error) {
@@ -122,8 +122,6 @@ class Compile extends React.Component {
       .send(JSON.stringify({ package: 1, files }))
       .end((err, res) => {
         // Download the hex file.
-        res = JSON.parse(res.text)
-        console.log(res)
 
         if (err) {
           console.error(err)
@@ -131,6 +129,8 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
+        res = JSON.parse(res.text)
+        console.log(res)
 
         // Check if there was an error.
         if (res.error) {
