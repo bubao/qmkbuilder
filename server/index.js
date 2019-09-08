@@ -145,7 +145,8 @@ app.post('/test', async (req, res) => {
       resolve(data)
     })
   })
-  res.json({ hex })
+  // res.json({ hex })
+  res.send(hex)
 })
 
 app.post('/zip', async (req, res) => {
