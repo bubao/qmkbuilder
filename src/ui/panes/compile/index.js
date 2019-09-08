@@ -128,16 +128,16 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        // res = JSON.parse(res)
-        // console.log(res)
+        res = JSON.parse(res.text)
+        console.log(res)
 
         // Check if there was an error.
-        // if (res.error) {
-        //   console.error(res.error)
-        //   state.error('Server error:\n' + res.error)
-        //   state.ui.set('compile-working', false)
-        //   return
-        // }
+        if (res.error) {
+          console.error(res.error)
+          state.error('Server error:\n' + res.error)
+          state.ui.set('compile-working', false)
+          return
+        }
 
         // Generate a friendly name.
         const friendly = keyboard.settings.name
@@ -145,8 +145,8 @@ class Compile extends React.Component {
           : 'layout'
 
         // Download the hex file.
-        console.log(res.text)
-        const blob = new Blob([res.text], { type: 'application/octet-stream' })
+        console.log(res)
+        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
         // console.log(blob)
         saveAs(blob, friendly + '.zip')
 
