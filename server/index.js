@@ -212,14 +212,14 @@ app.post('/zip', async (req, res) => {
 
     // Send the hex file.
     // if (package) {
-    res.responseType = 'blob'
-    res.sendFile(TMP + key + `/_build/${zipname}`, function(err) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log('Sent:', zipname)
-      }
-    })
+    // res.responseType = 'blob'
+    // res.sendFile(TMP + key + `/_build/${zipname}`, function(err) {
+    //   if (err) {
+    //     console.log(err)
+    //   } else {
+    //     console.log('Sent:', zipname)
+    //   }
+    // })
     // }else{
 
     const hex = await new Promise((resolve, reject) => {
@@ -232,7 +232,6 @@ app.post('/zip', async (req, res) => {
       })
     })
     res.json({ hex })
-    // }
 
     // Clean up.
     clean()
