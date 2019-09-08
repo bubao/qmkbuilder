@@ -15,7 +15,9 @@ class Files {
       'tmk_firmware/keymap_plain.c': new KeyPlainCGenerator(
         keyboard
       ).generate(),
-      'ble60/keymap_common.h': new KeymapCommonHGenerator(keyboard).generate()
+      'tmk_firmware/keymap_common.h': new KeymapCommonHGenerator(
+        keyboard
+      ).generate()
     }
   }
 }
