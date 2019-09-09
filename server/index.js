@@ -3,7 +3,7 @@
  * @Author: bubao
  * @Date: 2019-08-29 17:13:48
  * @LastEditors: bubao
- * @LastEditTime: 2019-08-29 17:14:04
+ * @LastEditTime: 2019-09-10 00:11:59
  */
 const PORT = 5004
 const TMP = '/var/tmp/nrf52-keyboard'
@@ -236,17 +236,17 @@ app.post('/zip', async (req, res) => {
     // })
     // }else{
 
-    const hex = await new Promise((resolve, reject) => {
-      Fs.readFile(`${randomPatch}/_build/${zipname}`, (err, data) => {
-        if (err) {
-          console.error(err)
-          return reject(`Failed to read ${'zip'} file.`)
-        }
-        resolve(data)
-      })
-    })
-    res.json({ hex })
-
+    // const hex = await new Promise((resolve, reject) => {
+    //   Fs.readFile(`${randomPatch}/_build/${zipname}`, (err, data) => {
+    //     if (err) {
+    //       console.error(err)
+    //       return reject(`Failed to read ${'zip'} file.`)
+    //     }
+    //     resolve(data)
+    //   })
+    // })
+    // res.json({ hex })
+    res.sendFile(`${randomPatch}/_build/${zipname}`)
     // Clean up.
     clean()
   } catch (e) {
