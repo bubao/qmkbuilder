@@ -3,7 +3,7 @@
  * @Author: bubao
  * @Date: 2019-08-29 17:13:48
  * @LastEditors: bubao
- * @LastEditTime: 2019-09-10 00:11:59
+ * @LastEditTime: 2019-09-10 00:15:59
  */
 const PORT = 5004
 const TMP = '/var/tmp/nrf52-keyboard'
@@ -146,7 +146,8 @@ app.post('/test', async (req, res) => {
   //   })
   // })
   // res.json({ hex })
-  res.sendFile('/root/test.zip')
+  // res.sendFile('/root/test.zip')
+  res.status(400).json({ error: 'test' })
 })
 
 app.post('/zip', async (req, res) => {
