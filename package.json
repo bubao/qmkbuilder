@@ -1,7 +1,7 @@
 {
-  "name": "qmkbuilder",
+  "name": "lotkbbuilder",
   "version": "1.0.0",
-  "description": "QMK Firmware Builder",
+  "description": "Lot Keyboard Builder",
   "main": "index.js",
   "engines": {
     "node": ">=10.16.3"

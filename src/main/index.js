@@ -26,7 +26,7 @@ class Index extends React.Component {
 
 		return <div>
 			<div className='header'>
-				Keyboard Firmware Builder
+				Lot Keyboard Builder
 			</div>
 			<Screen
 				state={ this.state }/>
