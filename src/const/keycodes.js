@@ -346,7 +346,7 @@ const keycodes = {
 	'KC_RABK': new Keycode('KC_RABK', '>', []),
 	'KC_COLN': new Keycode('KC_COLN', ':', []),
 	'KC_PIPE': new Keycode('KC_PIPE', '|', []),
-	'KC_QUES': new Keycode('KC_QUES', '?', []),
+	'KC_SLSH': new Keycode('KC_SLSH', '?', []),
 	'KC_DQUO': new Keycode('KC_DQUO', '"', []),
 	'KC_HYPR': new Keycode('KC_HYPR', 'HYPER', []),
 	'KC_MEH': new Keycode('KC_MEH', 'MEH', []),
