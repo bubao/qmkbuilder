@@ -13,7 +13,7 @@ class Pins extends React.Component {
     console.log(keyboard)
     return (
       <div className="pane-pins">
-        Choose the controller on the keyboard.
+        选择键盘采用的蓝牙主控芯片.
         <div style={{ height: '0.5rem' }} />
         <select
           style={{ width: '10rem' }}
@@ -33,7 +33,7 @@ class Pins extends React.Component {
 				<strong>AT90USB1286</strong>: Teensy++ 2.0
 			</Help> */}
         <div style={{ height: '1.5rem' }} />
-        Configure the row and column pins.
+        配置行和列的针脚.
         <div style={{ height: '0.5rem' }} />
         <div className="clear">
           <div className="float-left" style={{ width: '50%' }}>
@@ -86,9 +86,9 @@ class Pins extends React.Component {
           </div>
         </div>
         <div style={{ height: '1.5rem' }} />
-        Configure LED pins.
+        配置其他针脚.
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Num Lock</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Num Lock灯</h2>
         <Chooser
           noPin
           state={state}
@@ -96,7 +96,7 @@ class Pins extends React.Component {
           pin={keyboard.pins.num}
         />
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Caps Lock</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Caps Lock灯</h2>
         <Chooser
           noPin
           state={state}
@@ -120,7 +120,7 @@ class Pins extends React.Component {
           pin={keyboard.pins.UART_TXD}
         />
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>RGB_DI_PIN</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>RGB灯</h2>
         <Chooser
           noPin
           state={state}
@@ -128,7 +128,7 @@ class Pins extends React.Component {
           pin={keyboard.pins.RGB_DI_PIN}
         />
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>LED_BLE</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>BLE状态灯</h2>
         <Chooser
           noPin
           state={state}
@@ -136,7 +136,7 @@ class Pins extends React.Component {
           pin={keyboard.pins.LED_BLE}
         />
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>LED_USB</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>USB状态灯</h2>
         <Chooser
           noPin
           state={state}
@@ -144,7 +144,15 @@ class Pins extends React.Component {
           pin={keyboard.pins.LED_USB}
         />
         <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>POWER_BUTTON</h2>
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>充电状态灯</h2>
+        <Chooser
+          noPin
+          state={state}
+          onChange={p => keyboard.setPin('LED_CHARGING', p)}
+          pin={keyboard.pins.LED_USB}
+        />
+        <div style={{ height: '0.5rem' }} />
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Power按钮</h2>
         <Chooser
           noPin
           state={state}
