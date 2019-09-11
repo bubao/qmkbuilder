@@ -22,7 +22,7 @@ class ConfigH extends Generator {
 			'PASSKEY_REQUIRED':keyboard.settings.PASSKEY_REQUIRED?'':'//',
 			'RGBLIGHT_ENABLE':keyboard.settings.RGBLIGHT_ENABLE?'':'//',
 			'RGBLIGHT_ANIMATIONS':keyboard.settings.RGBLIGHT_ENABLE?'':'//',
-			'RGBLED_NUM' :keyboard.pins.num || 8,// 8
+			'RGBLED_NUM' :keyboard.settings.RGBLED_NUM || 8,// 8
 			'LED_CAPS': keyboard.pins.caps || 21,// 21
 			'RGB_DI_PIN': keyboard.pins.RGB_DI_PIN || 10,// 21
 			'LED_BLE': keyboard.pins.LED_BLE || 19,// 19
