@@ -65,7 +65,7 @@ class Settings extends React.Component {
 		}
 
 		return <div className='pane-settings'>
-			Configure your settings.
+			配置固件相关设置.
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>键盘名称</h2>
 			<input
