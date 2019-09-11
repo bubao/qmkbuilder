@@ -158,7 +158,7 @@ class Compile extends React.Component {
         下载DFU空中升级刷机包
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载烧录固件 .hex
+        下载烧录固件 .hex
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
@@ -168,7 +168,7 @@ class Compile extends React.Component {
         下载HEX烧录固件文件
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载源码 .zip
+        下载源码 .zip
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"

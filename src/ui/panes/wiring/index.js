@@ -13,7 +13,7 @@ class Wiring extends React.Component {
 		const selected = keyboard.selected;
 
 		return <div className='pane-wiring'>
-			Change the number of rows and columns in the matrix.
+			更改键盘矩阵的Rows和Columns针脚.
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '4rem', marginRight: '0.5rem' }}>Rows</h2>
 			<NumberBox
@@ -29,7 +29,7 @@ class Wiring extends React.Component {
 				value={ keyboard.cols }
 				onChange={ v => keyboard.cols = v }/>
 			<div style={{ height: '1.5rem' }}/>
-			Specify the diode direction.
+			指定二极管方向.
 			<div style={{ height: '0.5rem' }}/>
 			<select
 				value={ keyboard.settings.diodeDirection }
@@ -38,12 +38,12 @@ class Wiring extends React.Component {
 				<option value={ C.DIODE_ROW2COL }>Row to Column</option>
 			</select>
 			<Help>
-				<strong>Column to Row</strong>: Marked end of diode towards row. Used by most PCBs and handwired builds (Recommended).
+				<strong>Column to Row</strong>: 二极管标记朝向Row. 大多数PCB和手工接线采用此方向 (推荐).
 				<br/>
-				<strong>Row to Column</strong>: Marked end of diode towards column. Used by Phantom TKL PCB. Not common.
+				<strong>Row to Column</strong>: 二极管标记朝向Column. 大多数PCB和手工接线采用此方向. 少数键盘才会采用.
 			</Help>
 			<div style={{ height: '1.5rem' }}/>
-			Change the position of the selected key in the matrix.
+			更改选定的按键在矩阵中的位置.
 			<div style={{ height: '0.5rem' }}/>
 
 			{(() => {
@@ -70,7 +70,7 @@ class Wiring extends React.Component {
 							onChange={ v => selected.col = v }/>
 					</div>;
 				} else {
-					return <h5>No key selected</h5>;
+					return <h5>没有按键被选中</h5>;
 				}
 			})()}
 		</div>;

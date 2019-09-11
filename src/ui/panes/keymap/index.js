@@ -16,7 +16,7 @@ class Keymap extends React.Component {
 
     return (
       <div className="pane-keymap">
-        Select a layer to modify.
+        选择一个层进行更改.
         <div style={{ height: '0.5rem' }} />
         <NumberBox
           style={{ width: '3rem' }}
@@ -28,7 +28,7 @@ class Keymap extends React.Component {
           onChange={v => state.ui.set('keymap-layer', v)}
         />
         <div style={{ height: '1.5rem' }} />
-        Configure the selected key.
+        配置选择的按键.
         <div style={{ height: '0.5rem' }} />
         {(() => {
           if (selected) {
@@ -47,18 +47,18 @@ class Keymap extends React.Component {
                 </div>
                 <br />
                 <br />
-                Read the{' '}
+                阅读{' '}
                 <a
                   href="https://docs.qmk.fm/#/keycodes?id=keycodes-overview"
                   target="_blank"
                 >
-                  QMK Docs
+                  帮助文档
                 </a>{' '}
-                for an explanation of all the keycodes.
+                了解各个按键的按键键码.
               </div>
             )
           } else {
-            return <h5>No key selected</h5>
+            return <h5>没有按键被选择</h5>
           }
         })()}
       </div>
