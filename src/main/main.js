@@ -31,7 +31,7 @@ class Main extends React.Component {
 				const deserialized = JSON.parse(contents);
 
 				// Ensure the version is correct.
-				if (deserialized.version !== C.VERSION) throw 'version mismatch';
+				if (deserialized.version !== C.VERSION) throw '版本不匹配';
 
 				// Build a new keyboard.
 				const keyboard = Keyboard.deserialize(state, deserialized.keyboard);
@@ -43,7 +43,7 @@ class Main extends React.Component {
 			} catch (e) {
 				console.error(e);
 				console.log(e);
-				state.error('Invalid configuration'+e);
+				state.error('无效的配置文件'+e);
 			}
 		});
 	}
@@ -62,7 +62,7 @@ class Main extends React.Component {
 
 			// Make sure the data is valid.
 			if (keyboard.keys.length == 0) {
-				throw 'empty layout';
+				throw '布局为空';
 			}
 
 			state.update({
@@ -71,7 +71,7 @@ class Main extends React.Component {
 			});
 		} catch (e) {
 			console.error(e);
-			state.error('Invalid layout');
+			state.error('无效的布局');
 		}
 	}
 
@@ -86,14 +86,14 @@ class Main extends React.Component {
 		Request
 			.get(C.LOCAL.PRESETS + id + '.json')
 			.end((err, res) => {
-				if (err) return state.error('Unable to load preset.');
+				if (err) return state.error('无法载入预设.');
 
 				try {
 					// Deserialize the contents.
 					const deserialized = JSON.parse(res.text);
 
 					// Ensure the version is correct.
-					if (deserialized.version !== C.VERSION) throw 'version mismatch';
+					if (deserialized.version !== C.VERSION) throw '版本不匹配';
 
 					// Build a new keyboard.
 					const keyboard = Keyboard.deserialize(state, deserialized.keyboard);
@@ -105,7 +105,7 @@ class Main extends React.Component {
 				} catch (e) {
 					console.error(e);
 					console.log(e);
-					state.error('Invalid configuration'+e);
+					state.error('无效的配置文件'+e);
 				}
 			});
 	}
@@ -114,26 +114,26 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h3>Upload Keyboard Firmware Builder configuration</h3>
+			<h3>上传键盘配置文件</h3>
 			<button
 				className='block'
 				onClick={ this.upload }>
-				Upload
+				上传
 			</button>
 			<br/><br/>
-			<h3>Or import from keyboard-layout-editor.com</h3>
+			<h3>或 从keyboard-layout-editor.com导入</h3>
 			<textarea
 				className='kle'
-				placeholder='Paste layout here...'
+				placeholder='将按键布局的RAW Data粘贴在这里...'
 				value={ state.ui.get('kle', '') }
 				onChange={ state.ui.set('kle') }/>
 			<button
 				className='block'
 				onClick={ this.useKLE }>
-				Import
+				导入
 			</button>
 			<br/><br/>
-			<h3>Or choose a preset layout</h3>
+			<h3>或 选择一个预设的按键布局</h3>
 			{(() => {
 				const presets = [];
 				for (const preset in C.PRESETS) {
