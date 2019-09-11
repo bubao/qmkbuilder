@@ -149,33 +149,33 @@ class Compile extends React.Component {
 
     return (
       <div className="pane-compile">
-        Download the .hex file to flash to your keyboard.
+        下载升级包 .zip.
         <div style={{ height: '0.5rem' }} />
         <button
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
-          onClick={this.downloadHex}
+          onClick={this.downloadZip}
         >
-          下载 .hex
+        下载DFU空中升级刷机包
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载 .zip.
+        Or 下载烧录固件 .hex
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
-          onClick={this.downloadZip}
+          onClick={this.downloadHex}
         >
-          下载DFU空中升级的刷机包 .zip
+        下载HEX烧录固件文件
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载源码文件
+        Or 下载源码 .zip
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadH}
         >
-          下载 .zip
+        下载生成的源码文件
         </button>
       </div>
     )
