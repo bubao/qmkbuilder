@@ -72,7 +72,7 @@ class Settings extends React.Component {
 				style={{ width: '8rem' }}
 				type='text'
 				value={ keyboard.settings.name }
-				onChange={ e => keyboard.setSetting('PRODUCT'', e.target.value) }/>
+				onChange={ e => keyboard.setSetting('PRODUCT, e.target.value) }/>
 			<Help>
 				设定你的键盘的名字，蓝牙连接时将显示此名称.
 			</Help>
