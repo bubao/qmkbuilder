@@ -75,41 +75,22 @@ class Compile extends React.Component {
     Request.post(C.LOCAL.API)
       .timeout(99999999000)
       .set('Content-Type', 'application/json')
+      .responseType('blob')
       .send(JSON.stringify(files))
       .end((err, res) => {
         // Download the hex file.
-
         if (err) {
           console.error(err)
           state.error('无法连接到 API 服务.')
           state.ui.set('compile-working', false)
           return
         }
-        res = JSON.parse(res.text)
-        console.log(res)
-
-        // Check if there was an error.
-        if (res.error) {
-          console.error(res.error)
-          state.error('服务错误:\n' + res.error)
-          state.ui.set('compile-working', false)
-          return
-        }
-
-        // Generate a friendly name.
         const friendly = keyboard.settings.PRODUCT
           ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
-
-        // Download the hex file.
-        console.log(res.hex)
-        const blob = new Blob([res.hex.toString()], {
-          type: 'application/octet-stream'
-        })
-        console.log(blob)
-        saveAs(blob, friendly + '.hex')
-
-        // Re-enable buttons.
+        console.log(res.body)
+        console.log(res.body.size)
+        saveAs(res.body, friendly + '.hex')
         state.ui.set('compile-working', false)
       })
   }
