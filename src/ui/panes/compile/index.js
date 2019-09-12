@@ -103,7 +103,9 @@ class Compile extends React.Component {
 
         // Download the hex file.
         console.log(res.hex)
-        const blob = new Blob([res.hex], { type: 'application/octet-stream' })
+        const blob = new Blob([res.hex.toString()], {
+          type: 'application/octet-stream'
+        })
         console.log(blob)
         saveAs(blob, friendly + '.hex')
 
@@ -155,7 +157,7 @@ class Compile extends React.Component {
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadZip}
         >
-        下载DFU空中升级刷机包
+          下载DFU空中升级刷机包
         </button>
         <div style={{ height: '1.5rem' }} />
         Or 下载烧录固件 .hex
@@ -165,7 +167,7 @@ class Compile extends React.Component {
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadHex}
         >
-        下载HEX烧录固件文件
+          下载HEX烧录固件文件
         </button>
         <div style={{ height: '1.5rem' }} />
         Or 下载源码 .zip
@@ -175,7 +177,7 @@ class Compile extends React.Component {
           disabled={!keyboard.valid || state.ui.get('compile-working', false)}
           onClick={this.downloadH}
         >
-        下载生成的源码文件
+          下载生成的源码文件
         </button>
       </div>
     )
