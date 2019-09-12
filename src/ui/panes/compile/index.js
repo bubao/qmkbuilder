@@ -57,7 +57,7 @@ class Compile extends React.Component {
       })
       .catch(e => {
         console.error(e)
-        state.error('Unable to generate files')
+        state.error('无法生成文件')
         state.ui.set('compile-working', false)
       })
   }
@@ -81,7 +81,7 @@ class Compile extends React.Component {
 
         if (err) {
           console.error(err)
-          state.error('Unable to connect to API server.')
+          state.error('无法连接到 API 服务.')
           state.ui.set('compile-working', false)
           return
         }
@@ -91,7 +91,7 @@ class Compile extends React.Component {
         // Check if there was an error.
         if (res.error) {
           console.error(res.error)
-          state.error('Server error:\n' + res.error)
+          state.error('服务错误:\n' + res.error)
           state.ui.set('compile-working', false)
           return
         }
@@ -129,7 +129,7 @@ class Compile extends React.Component {
       .end((err, res) => {
         if (err) {
           console.error(err)
-          state.error('Unable to connect to API server.')
+          state.error('无法连接到 API 服务.')
           state.ui.set('compile-working', false)
           return
         }

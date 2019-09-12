@@ -60,7 +60,7 @@ class Settings extends React.Component {
 		}
 		if (list.length === 0) {
 			list.push(<div style={{ padding: '1rem' }} key={ -1 }>
-				No errors or warnings!
+				没有错误与警告
 			</div>);
 		}
 
