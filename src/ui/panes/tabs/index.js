@@ -41,17 +41,17 @@ class Tabs extends React.Component {
 			<Tab
 				selected={ screen === C.SCREEN_WIRING }
 				onClick={ this.switchTab(C.SCREEN_WIRING) }>
-				Wiring
+				布线
 			</Tab>
 			<Tab
 				selected={ screen === C.SCREEN_PINS }
 				onClick={ this.switchTab(C.SCREEN_PINS) }>
-				Pins
+				针脚
 			</Tab>
 			<Tab
 				selected={ screen === C.SCREEN_KEYMAP }
 				onClick={ this.switchTab(C.SCREEN_KEYMAP) }>
-				Keymap
+				按键映射
 			</Tab>
 			{/* <Tab
 				selected={ screen === C.SCREEN_MACROS }
@@ -66,12 +66,12 @@ class Tabs extends React.Component {
 			<Tab
 				selected={ screen === C.SCREEN_SETTINGS }
 				onClick={ this.switchTab(C.SCREEN_SETTINGS) }>
-				Settings
+				设置
 			</Tab>
 			<Tab
 				selected={ screen === C.SCREEN_COMPILE }
 				onClick={ this.switchTab(C.SCREEN_COMPILE) }>
-				Compile
+				编译生成
 			</Tab>
 		</div>;
 	}

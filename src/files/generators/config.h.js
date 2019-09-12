@@ -15,7 +15,7 @@ class ConfigH extends Generator {
 			'row_pins': keyboard.pins.row.join(', '), // pin口 
 			'col_pins': keyboard.pins.col.join(', '), // pin口
 			'diode_direction': (keyboard.settings.diodeDirection === C.DIODE_COL2ROW ? 'ROW_IN' :'COL_IN'), // 流向
-			'PRODUCT_NAME': keyboard.settings.name || 'ble60',
+			'PRODUCT_NAME': keyboard.settings.PRODUCT || 'ble60',
 			'SLEEP_SLOW_TIMEOUT':keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			'SLEEP_OFF_TIMEOUT':keyboard.settings.SLEEP_OFF_TIMEOUT || 600,
 			'LED_AUTOOFF_TIME':keyboard.settings.LED_AUTOOFF_TIME *1000 || 5000,
@@ -26,6 +26,7 @@ class ConfigH extends Generator {
 			'LED_CAPS': keyboard.pins.caps || 21,// 21
 			'RGB_DI_PIN': keyboard.pins.RGB_DI_PIN || 10,// 21
 			'LED_BLE': keyboard.pins.LED_BLE || 19,// 19
+			'LED_CHARGING': keyboard.pins.LED_CHARGING || 18,// 18
 			'LED_USB': keyboard.pins.LED_USB || 20,// 20
 			'POWER_BUTTON': keyboard.pins.POWER_BUTTON || 3,// 3
 			'UART_RXD': keyboard.pins.UART_RXD || 17,// UART_RX口IO 17

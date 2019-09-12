@@ -104,7 +104,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 启用 LED 状态灯
 #define LED_BLE %LED_BLE%// 19
-//#define LED_CHARGING 10
+#define LED_CHARGING 18
 #define LED_USB %LED_USB% // 20
 
 // 独立硬件按钮

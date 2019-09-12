@@ -2416,9 +2416,8 @@
     "macros": {},
     "settings": {
       "diodeDirection": 0,
-      "name": "BLE60",
-      "bootloaderSize": 2,
-      "rgbNum": 0,
+      "PRODUCT": "BLE60",
+      "RGBLED_NUM": 0,
       "backlightLevels": 3
     }
   }

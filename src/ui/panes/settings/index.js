@@ -23,7 +23,7 @@ class Settings extends React.Component {
 		const keyboard = state.keyboard;
 
 		// Get a friendly name for the keyboard.
-		const friendly = keyboard.settings.name ? Utils.generateFriendly(keyboard.settings.name) : 'layout';
+		const friendly = keyboard.settings.PRODUCT ? Utils.generateFriendly(keyboard.settings.PRODUCT) : 'layout';
 
 		// Serialize the keyboard.
 		const serialized = keyboard.serialize();
@@ -60,19 +60,19 @@ class Settings extends React.Component {
 		}
 		if (list.length === 0) {
 			list.push(<div style={{ padding: '1rem' }} key={ -1 }>
-				No errors or warnings!
+				没有错误与警告
 			</div>);
 		}
 
 		return <div className='pane-settings'>
-			Configure your settings.
+			配置固件相关设置.
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>键盘名称</h2>
 			<input
 				style={{ width: '8rem' }}
 				type='text'
-				value={ keyboard.settings.name }
-				onChange={ e => keyboard.setSetting('name', e.target.value) }/>
+				value={ keyboard.settings.PRODUCT }
+				onChange={ e => keyboard.setSetting('PRODUCT', e.target.value) }/>
 			<Help>
 				设定你的键盘的名字，蓝牙连接时将显示此名称.
 			</Help>
@@ -82,8 +82,8 @@ class Settings extends React.Component {
 				<NumberBox
 					style={{ width: '3.5rem' }}
 					min='0'
-					value={ keyboard.settings.rgbNum }
-					onChange={ v => keyboard.setSetting('rgbNum', v) }/>
+					value={ keyboard.settings.RGBLED_NUM }
+					onChange={ v => keyboard.setSetting('RGBLED_NUM', v) }/>
 			</div>
 			<Help>
 				设定你的 WS2812 LED 灯的数量.

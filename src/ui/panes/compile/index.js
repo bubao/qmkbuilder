@@ -46,8 +46,8 @@ class Compile extends React.Component {
       .generateAsync({ type: 'blob' })
       .then(blob => {
         // Generate a friendly name.
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
 
         saveAs(blob, friendly + '.zip')
@@ -57,7 +57,7 @@ class Compile extends React.Component {
       })
       .catch(e => {
         console.error(e)
-        state.error('Unable to generate files')
+        state.error('无法生成文件')
         state.ui.set('compile-working', false)
       })
   }
@@ -81,7 +81,7 @@ class Compile extends React.Component {
 
         if (err) {
           console.error(err)
-          state.error('Unable to connect to API server.')
+          state.error('无法连接到 API 服务.')
           state.ui.set('compile-working', false)
           return
         }
@@ -91,14 +91,14 @@ class Compile extends React.Component {
         // Check if there was an error.
         if (res.error) {
           console.error(res.error)
-          state.error('Server error:\n' + res.error)
+          state.error('服务错误:\n' + res.error)
           state.ui.set('compile-working', false)
           return
         }
 
         // Generate a friendly name.
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
 
         // Download the hex file.
@@ -131,12 +131,12 @@ class Compile extends React.Component {
       .end((err, res) => {
         if (err) {
           console.error(err)
-          state.error('Unable to connect to API server.')
+          state.error('无法连接到 API 服务.')
           state.ui.set('compile-working', false)
           return
         }
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
         console.log(res.body)
         console.log(res.body.size)
@@ -160,7 +160,7 @@ class Compile extends React.Component {
           下载DFU空中升级刷机包
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载烧录固件 .hex
+        下载烧录固件 .hex
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
@@ -170,7 +170,7 @@ class Compile extends React.Component {
           下载HEX烧录固件文件
         </button>
         <div style={{ height: '1.5rem' }} />
-        Or 下载源码 .zip
+        下载源码 .zip
         <div style={{ height: '0.5rem' }} />
         <button
           className="light"
