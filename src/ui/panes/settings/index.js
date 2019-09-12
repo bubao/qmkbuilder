@@ -72,7 +72,7 @@ class Settings extends React.Component {
 				style={{ width: '8rem' }}
 				type='text'
 				value={ keyboard.settings.name }
-				onChange={ e => keyboard.setSetting('name', e.target.value) }/>
+				onChange={ e => keyboard.setSetting('PRODUCT'', e.target.value) }/>
 			<Help>
 				设定你的键盘的名字，蓝牙连接时将显示此名称.
 			</Help>
@@ -83,7 +83,7 @@ class Settings extends React.Component {
 					style={{ width: '3.5rem' }}
 					min='0'
 					value={ keyboard.settings.rgbNum }
-					onChange={ v => keyboard.setSetting('rgbNum', v) }/>
+					onChange={ v => keyboard.setSetting('RGBLED_NUM', v) }/>
 			</div>
 			<Help>
 				设定你的 WS2812 LED 灯的数量.
