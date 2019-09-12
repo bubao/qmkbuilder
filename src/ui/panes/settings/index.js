@@ -23,7 +23,7 @@ class Settings extends React.Component {
 		const keyboard = state.keyboard;
 
 		// Get a friendly name for the keyboard.
-		const friendly = keyboard.settings.name ? Utils.generateFriendly(keyboard.settings.name) : 'layout';
+		const friendly = keyboard.settings.PRODUCT ? Utils.generateFriendly(keyboard.settings.PRODUCT) : 'layout';
 
 		// Serialize the keyboard.
 		const serialized = keyboard.serialize();

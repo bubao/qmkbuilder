@@ -46,8 +46,8 @@ class Compile extends React.Component {
       .generateAsync({ type: 'blob' })
       .then(blob => {
         // Generate a friendly name.
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
 
         saveAs(blob, friendly + '.zip')
@@ -97,8 +97,8 @@ class Compile extends React.Component {
         }
 
         // Generate a friendly name.
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
 
         // Download the hex file.
@@ -133,8 +133,8 @@ class Compile extends React.Component {
           state.ui.set('compile-working', false)
           return
         }
-        const friendly = keyboard.settings.name
-          ? Utils.generateFriendly(keyboard.settings.name)
+        const friendly = keyboard.settings.PRODUCT
+          ? Utils.generateFriendly(keyboard.settings.PRODUCT)
           : 'layout'
         console.log(res.body)
         console.log(res.body.size)
