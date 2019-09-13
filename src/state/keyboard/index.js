@@ -366,7 +366,7 @@ class Keyboard {
 				missing.push(Keycode.getDefault(recommended).getName());
 			}
 		}
-		if (missing.length) this.warnings.push('你缺少' + (missing.length > 1 ? '一些' : '')  + '按键映射: ' + missing.join(', ') + '.');
+		if (missing.length) this.warnings.push('你未设置' + (missing.length > 1 ? '一些' : '')  + '必要按键: ' + missing.join(', ') + '.');
 
 		// Check to see if there is a soft reset key.
 		// if (!inKeymap.has('RESET')) this.warnings.push('Your keymap is missing a soft reset key.');
