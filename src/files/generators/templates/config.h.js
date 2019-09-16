@@ -1,3 +1,10 @@
+/**
+ * @Description:config
+ * @Author: bubao
+ * @Date: 2019-09-16 13:35:12
+ * @LastEditors: bubao
+ * @LastEditTime: 2019-09-16 13:43:50
+ */
 module.exports = `
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
@@ -95,7 +102,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // LED 配置
 // ws2812 RGB 配置
-#define RGBLED_NUM %RGBLED_NUM% // 8
+%Hiden_RGBLED_NUM%#define RGBLED_NUM %RGBLED_NUM% // 8
 #define LED_CAPS %LED_CAPS% // 21 //caps led ：5 ； led1、2、3、4：19、20、27、26
 #define RGBLIGHT_ENABLE
 #define RGB_DI_PIN %RGB_DI_PIN% // 10
@@ -126,7 +133,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PIN_STANDBY !UCC2 // CH554的充电检测。当UCC2拉低时表示充电完成。若不配置则只使用PIN_CHARGING作为是否充电的检测标志
 
 // 按键阵列配置
-static const uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };
+static c
+onst uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };
 static const uint8_t column_pin_array[MATRIX_COLS] = { %col_pins% };
 #define %diode_direction% // 键盘阵列的二极管方向是从COL->ROW
 

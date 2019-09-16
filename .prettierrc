@@ -1,8 +1,8 @@
 {
     "eslintIntegration": true,
     "stylelintIntegration": true,
-    "tabWidth": 2,
-    "useTabs": false,
+    "tabWidth": 4,
+    "useTabs": true,
     "singleQuote": true,
     "semi": false,
     "trailingComma": "none",
