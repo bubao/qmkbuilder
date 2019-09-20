@@ -103,19 +103,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // LED 配置
 // ws2812 RGB 配置
 %Hiden_RGBLED_NUM%#define RGBLED_NUM %RGBLED_NUM% // 8
-#define LED_CAPS %LED_CAPS% // 21 //caps led ：5 ； led1、2、3、4：19、20、27、26
+%Hiden_LED_CAPS%#define LED_CAPS %LED_CAPS% // 21 //caps led ：5 ； led1、2、3、4：19、20、27、26
 #define RGBLIGHT_ENABLE
-#define RGB_DI_PIN %RGB_DI_PIN% // 10
+%Hiden_RGB_DI_PIN%#define RGB_DI_PIN %RGB_DI_PIN% // 10
 #define PROGMEM // arm-gcc does not interpret PROGMEM
 #define RGBLIGHT_ANIMATIONS
 
 // 启用 LED 状态灯
-#define LED_BLE %LED_BLE%// 19
-#define LED_CHARGING 18
-#define LED_USB %LED_USB% // 20
+%Hiden_LED_BLE%#define LED_BLE %LED_BLE%// 19
+%Hiden_LED_CHARGING%#define LED_CHARGING 18
+%Hiden_LED_USB%#define LED_USB %LED_USB% // 20
 
 // 独立硬件按钮
-#define POWER_BUTTON %POWER_BUTTON% // 3
+%Hiden_POWER_BUTTON%#define POWER_BUTTON %POWER_BUTTON% // 3
 
 // USB UART 传输配置
 #define HAS_USB // 启用与CH554的通信支持
@@ -133,8 +133,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PIN_STANDBY !UCC2 // CH554的充电检测。当UCC2拉低时表示充电完成。若不配置则只使用PIN_CHARGING作为是否充电的检测标志
 
 // 按键阵列配置
-static c
-onst uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };
+static const uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };
 static const uint8_t column_pin_array[MATRIX_COLS] = { %col_pins% };
 #define %diode_direction% // 键盘阵列的二极管方向是从COL->ROW
 
