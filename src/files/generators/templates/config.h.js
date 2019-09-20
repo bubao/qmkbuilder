@@ -104,10 +104,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // ws2812 RGB 配置
 %Hiden_RGBLED_NUM%#define RGBLED_NUM %RGBLED_NUM% // 8
 %Hiden_LED_CAPS%#define LED_CAPS %LED_CAPS% // 21 //caps led ：5 ； led1、2、3、4：19、20、27、26
-#define RGBLIGHT_ENABLE
+%Hiden_RGBLED_NUM%#define RGBLIGHT_ENABLE
 %Hiden_RGB_DI_PIN%#define RGB_DI_PIN %RGB_DI_PIN% // 10
 #define PROGMEM // arm-gcc does not interpret PROGMEM
-#define RGBLIGHT_ANIMATIONS
+%Hiden_RGBLED_NUM%#define RGBLIGHT_ANIMATIONS
 
 // 启用 LED 状态灯
 %Hiden_LED_BLE%#define LED_BLE %LED_BLE%  // 19
