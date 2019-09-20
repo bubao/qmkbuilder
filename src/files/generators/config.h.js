@@ -43,7 +43,9 @@ class ConfigH extends Generator {
 			Hiden_LED_CAPS: keyboard.pins.caps ? '' : '//',
 			Hiden_RGB_DI_PIN: keyboard.pins.RGB_DI_PIN ? '' : '//',
 			Hiden_LED_BLE: keyboard.pins.LED_BLE ? '' : '//',
-			Hiden_NUM: keyboard.settings.RGBLED_NUM ? '' : '//'
+			Hiden_LED_USB: keyboard.settings.LED_USB ? '' : '//',
+			Hiden_LED_CHARGING: keyboard.settings.LED_CHARGING ? '' : '//',
+			Hiden_POWER_BUTTON: keyboard.settings.POWER_BUTTON ? '' : '//'
 		}
 	}
 }
