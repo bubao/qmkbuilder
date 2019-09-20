@@ -110,8 +110,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_ANIMATIONS
 
 // 启用 LED 状态灯
-%Hiden_LED_BLE%#define LED_BLE %LED_BLE%// 19
-%Hiden_LED_CHARGING%#define LED_CHARGING 18
+%Hiden_LED_BLE%#define LED_BLE %LED_BLE%  // 19
+%Hiden_LED_CHARGING%#define LED_CHARGING %LED_CHARGING% //18
 %Hiden_LED_USB%#define LED_USB %LED_USB% // 20
 
 // 独立硬件按钮
