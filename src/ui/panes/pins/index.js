@@ -159,15 +159,7 @@ class Pins extends React.Component {
           onChange={p => keyboard.setPin('POWER_BUTTON', p)}
           pin={keyboard.pins.POWER_BUTTON}
         />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>电量检测</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('BATTERY_ADC_PIN', p)}
-          pin={keyboard.pins.BATTERY_ADC_PIN}
-        />
-      </div >
+      </div>
     )
   }
 }

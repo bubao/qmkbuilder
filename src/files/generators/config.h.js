@@ -37,7 +37,6 @@ class ConfigH extends Generator {
 			LED_CHARGING: keyboard.pins.LED_CHARGING || 18, // 18
 			LED_USB: keyboard.pins.LED_USB || 20, // 20
 			POWER_BUTTON: keyboard.pins.POWER_BUTTON || 3, // 3
-			BATTERY_ADC_PIN: keyboard.pins.BATTERY_ADC_PIN || 2, // 3
 			UART_RXD: keyboard.pins.UART_RXD || 17, // UART_RX口IO 17
 			UART_TXD: keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
 			Hiden_RGBLED_NUM: keyboard.settings.RGBLED_NUM ? '' : '//',
