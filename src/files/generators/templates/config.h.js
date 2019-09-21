@@ -126,7 +126,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CH55X_FREQ_SYS 24000000
 
 // 电量检测配置 Pin 2
-#define BATTERY_ADC_PIN NRF_SAADC_INPUT_AIN0 // 电量检测引脚
+#define BATTERY_ADC_PIN %BATTERY_ADC_PIN% // 电量检测引脚
 
 // 充电检测配置
 #define PIN_CHARGING !UCC1 // CH554的充电检测。当UCC1拉低时表示正在充电

@@ -5468,7 +5468,8 @@
             "LED_BLE": "20",
             "LED_USB": "27",
             "LED_CHARGING": "19",
-            "POWER_BUTTON": "9"
+            "POWER_BUTTON": "9",
+            "BATTERY_ADC_PIN": "2"
         },
         "macros": {},
         "settings": {
