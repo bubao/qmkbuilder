@@ -73,6 +73,7 @@ class Settings extends React.Component {
 				type='text'
 				value={ keyboard.settings.PRODUCT }
 				onChange={ e => keyboard.setSetting('PRODUCT', e.target.value) }/>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
 			<Help>
 				设定你的键盘的名字，蓝牙连接时将显示此名称.
 			</Help>
@@ -96,13 +97,13 @@ class Settings extends React.Component {
 				<NumberBox
 					style={{ width: '3.5rem' }}
 					min='0'
-					max='14400'
+					max='300'
 					value={ keyboard.settings.SLEEP_OFF_TIMEOUT }
 					onChange={ v => keyboard.setSetting('SLEEP_OFF_TIMEOUT', v) }/>
 			</div>
-			<h2 style={{ width: '2rem', textAlign: 'left' }}>秒</h2>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}>分钟</h2>
 			<Help>
-				设定你的键盘无按键行为后自动休眠间隔时间, 单位为秒.
+				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭</h2>
@@ -110,7 +111,7 @@ class Settings extends React.Component {
 				<NumberBox
 					style={{ width: '3.5rem' }}
 					min='0'
-					max='6000'
+					max='900'
 					value={ keyboard.settings.LED_AUTOOFF_TIME }
 					onChange={ v => keyboard.setSetting('LED_AUTOOFF_TIME', v) }/>
 			</div>
