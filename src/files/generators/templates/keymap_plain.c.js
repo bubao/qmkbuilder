@@ -25,7 +25,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const action_t fn_actions[] = {
     /* Poker Layout */
     // ACTION_LAYER_MOMENTARY(1),  // to Fn overlay
-    %FNarr%,
+    %fn%,
     ACTION_FUNCTION(POWER_SLEEP), // sleep
     ACTION_FUNCTION(SWITCH_USB) // switch between usb and ble
 };
