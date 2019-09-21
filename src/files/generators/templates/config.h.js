@@ -130,7 +130,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 充电检测配置
 #define PIN_CHARGING !UCC1 // CH554的充电检测。当UCC1拉低时表示正在充电
-#define PIN_STANDBY !UCC2 // CH554的充电检测。当UCC2拉低时表示充电完成。若不配置则只使用PIN_CHARGING作为是否充电的检测标志
+//#define PIN_STANDBY !UCC2 // CH554的充电检测。当UCC2拉低时表示充电完成。若不配置则只使用PIN_CHARGING作为是否充电的检测标志
 
 // 按键阵列配置
 static const uint8_t row_pin_array[MATRIX_ROWS] = { %row_pins% };

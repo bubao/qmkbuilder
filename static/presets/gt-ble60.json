@@ -5475,8 +5475,8 @@
             "diodeDirection": 0,
             "PRODUCT": "GT_BLE60",
             "RGBLED_NUM": 8,
-            "LED_AUTOOFF_TIME": 700,
-            "SLEEP_OFF_TIMEOUT": 14400
+            "LED_AUTOOFF_TIME": 5,
+            "SLEEP_OFF_TIMEOUT": 20
         }
     }
 }
