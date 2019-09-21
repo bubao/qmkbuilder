@@ -4138,7 +4138,9 @@
             "rgbNum": 0,
             "backlightLevels": 3,
             "PRODUCT": "Omega45",
-            "RGBLED_NUM": 8
+            "RGBLED_NUM": 8,
+            "LED_AUTOOFF_TIME": 700,
+            "SLEEP_OFF_TIMEOUT": 14400
         }
     }
 }
