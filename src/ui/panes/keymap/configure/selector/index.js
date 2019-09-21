@@ -52,8 +52,8 @@ class Selector extends React.Component {
 		const categoryNames = Object.keys(C.KEYCODE_CATEGORIES);
 		if (this.props.limited) {
 			// If this is a limited selector, remove the lighting and fn categories.
-			categoryNames.splice(categoryNames.indexOf('FN'), 1);
 		}
+		categoryNames.splice(categoryNames.indexOf('FN'), 1);
 		categoryNames.splice(categoryNames.indexOf('LIGHTING'), 1);
 		categoryNames.push('OTHER');
 		for (const category of categoryNames) {
