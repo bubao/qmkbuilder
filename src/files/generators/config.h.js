@@ -22,7 +22,10 @@ class ConfigH extends Generator {
 			MATRIX_COLS: keyboard.cols, // 行
 			row_pins: keyboard.pins.row.join(', '), // pin口
 			col_pins: keyboard.pins.col.join(', '), // pin口
-			diode_direction: keyboard.settings.diodeDirection === C.DIODE_COL2ROW ? 'ROW_IN' : 'COL_IN', // 流向
+			diode_direction:
+				keyboard.settings.diodeDirection === C.DIODE_COL2ROW
+					? 'ROW_IN'
+					: 'COL_IN', // 流向
 			PRODUCT_NAME: keyboard.settings.PRODUCT || 'ble60',
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT || 600,
@@ -43,9 +46,9 @@ class ConfigH extends Generator {
 			Hiden_LED_CAPS: keyboard.pins.caps ? '' : '//',
 			Hiden_RGB_DI_PIN: keyboard.pins.RGB_DI_PIN ? '' : '//',
 			Hiden_LED_BLE: keyboard.pins.LED_BLE ? '' : '//',
-			Hiden_LED_USB: keyboard.settings.LED_USB ? '' : '//',
-			Hiden_LED_CHARGING: keyboard.settings.LED_CHARGING ? '' : '//',
-			Hiden_POWER_BUTTON: keyboard.settings.POWER_BUTTON ? '' : '//'
+			Hiden_LED_USB: keyboard.pins.LED_USB ? '' : '//',
+			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
+			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//'
 		}
 	}
 }
