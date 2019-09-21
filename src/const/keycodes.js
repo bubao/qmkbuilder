@@ -296,7 +296,7 @@ const keycodes = {
 	'KC_WH_R': new Keycode('KC_WH_R', 'WH_R', []),
 	'KC_ACL0': new Keycode('KC_ACL0', 'ACL0', []),
 	'KC_ACL1': new Keycode('KC_ACL1', 'ACL1', []),
-	'RESET': new Keycode('RESET', 'RESET', []),
+	'KC_BTLD': new Keycode('KC_BOOTLOADER', 'DFU', []),
 	'BL_0': new Keycode('BL_0', 'BL_0', []),
 	'BL_1': new Keycode('BL_1', 'BL_1', []),
 	'BL_2': new Keycode('BL_2', 'BL_2', []),
@@ -413,7 +413,7 @@ const categories = {
 
 		'KC_LCTL', 'KC_LSFT', 'KC_LALT', 'KC_LGUI', 'KC_RCTL', 'KC_RSFT', 'KC_RALT', 'KC_RGUI', '',
 
-		'KC_TRNS', 'KC_NO', 'RESET'
+		'KC_TRNS', 'KC_NO', 'KC_MENU', 'KC_BTLD'
 	],
 
 	'SECONDARY': [
