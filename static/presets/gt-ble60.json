@@ -3483,7 +3483,7 @@
                 "col": 11,
                 "keycodes": [
                     {
-                        "id": "KC_DQUO",
+                        "id": "KC_QUOT",
                         "fields": []
                     },
                     {
@@ -4373,7 +4373,7 @@
                 "col": 9,
                 "keycodes": [
                     {
-                        "id": "KC_LABK",
+                        "id": "KC_COMM",
                         "fields": []
                     },
                     {
@@ -4462,7 +4462,7 @@
                 "col": 10,
                 "keycodes": [
                     {
-                        "id": "KC_RABK",
+                        "id": "KC_DOT",
                         "fields": []
                     },
                     {
