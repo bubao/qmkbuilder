@@ -327,6 +327,29 @@ const keycodes = {
 	'RGB_VAD': new Keycode('RGB_VAD', 'RGB_VAD', []),
 	'KC_LSPO': new Keycode('KC_LSPO', 'LSPO', []),
 	'KC_RSPC': new Keycode('KC_RSPC', 'RSPC', []),
+	'KC_TILD': new Keycode('KC_TILD', '~', ['TILDE']),
+	'KC_EXLM': new Keycode('KC_EXLM', '!', []),
+	'KC_AT': new Keycode('KC_AT', '@', []),
+	'KC_HASH': new Keycode('KC_HASH', '#', []),
+	'KC_DLR': new Keycode('KC_DLR', '$', []),
+	'KC_PERC': new Keycode('KC_PERC', '%', []),
+	'KC_CIRC': new Keycode('KC_CIRC', '^', []),
+	'KC_AMPR': new Keycode('KC_AMPR', '&', []),
+	'KC_ASTR': new Keycode('KC_ASTR', '*', []),
+	'KC_LPRN': new Keycode('KC_LPRN', '(', []),
+	'KC_RPRN': new Keycode('KC_RPRN', ')', []),
+	'KC_UNDS': new Keycode('KC_UNDS', '_', []),
+	'KC_PLUS': new Keycode('KC_PLUS', '+', []),
+	'KC_LCBR': new Keycode('KC_LCBR', '{', []),
+	'KC_RCBR': new Keycode('KC_RCBR', '}', []),
+	'KC_LABK': new Keycode('KC_LABK', '<', []),
+	'KC_RABK': new Keycode('KC_RABK', '>', []),
+	'KC_COLN': new Keycode('KC_COLN', ':', []),
+	'KC_PIPE': new Keycode('KC_PIPE', '|', []),
+	'KC_SLSH': new Keycode('KC_SLSH', '?', []),
+	'KC_DQUO': new Keycode('KC_DQUO', '"', []),
+	'KC_HYPR': new Keycode('KC_HYPR', 'HYPER', []),
+	'KC_MEH': new Keycode('KC_MEH', 'MEH', []),
 
 	// Modifiers.
 	'LCTL()': new Keycode(new Template(['LCTL', 'KEY'], 'LCTL(%1)'), 'LCTRL + %1', []),
@@ -394,10 +417,6 @@ const categories = {
 	],
 
 	'SECONDARY': [
-		'KC_EXLM', 'KC_AT', 'KC_HASH', 'KC_DLR', 'KC_PERC', 'KC_CIRC', 'KC_AMPR', 'KC_ASTR', 'KC_LPRN', 'KC_RPRN', '',
-
-		'KC_UNDS', 'KC_PLUS', 'KC_LCBR', 'KC_RCBR', 'KC_PIPE', 'KC_COLN', '',
-
 		'KC_F1', 'KC_F2', 'KC_F3', 'KC_F4', 'KC_F5', 'KC_F6', 'KC_F7', 'KC_F8', 'KC_F9', 'KC_F10', 'KC_F11', 'KC_F12',
 		'KC_F13', 'KC_F14', 'KC_F15', 'KC_F16', 'KC_F17', 'KC_F18', 'KC_F19', 'KC_F20', 'KC_F21', 'KC_F22', 'KC_F23', 'KC_F24', '',
 
