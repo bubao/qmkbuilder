@@ -22,8 +22,10 @@ class KeyboardH extends Generator {
 					const key = keyboard.wiring[row + ',' + col]
 					if (!key || !key.length) continue
 					if (key[0].keycodes[layer].getCode().indexOf('MO(') === 0) {
+						console.log('FN' + FNnum)
 						layerMap += 'FN' + FNnum + ', '
 						FNnum += 1
+						console.log(layerMap)
 						FNarr.push(key[0].keycodes[layer].getCode())
 					} else {
 						layerMap += key[0].keycodes[layer].getCode() + ', '
