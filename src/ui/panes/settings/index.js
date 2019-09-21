@@ -82,12 +82,42 @@ class Settings extends React.Component {
 				<NumberBox
 					style={{ width: '3.5rem' }}
 					min='0'
+					max='50'
 					value={ keyboard.settings.RGBLED_NUM }
 					onChange={ v => keyboard.setSetting('RGBLED_NUM', v) }/>
 			</div>
 			<Help>
 				设定你的 WS2812 LED 灯的数量.
 			</Help>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}>颗</h2>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>自动休眠时间</h2>
+			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
+				<NumberBox
+					style={{ width: '3.5rem' }}
+					min='0'
+					max='14400'
+					value={ keyboard.settings.SLEEP_OFF_TIMEOUT }
+					onChange={ v => keyboard.setSetting('SLEEP_OFF_TIMEOUT', v) }/>
+			</div>
+			<Help>
+				设定你的键盘无按键行为后自动休眠间隔时间, 单位为秒.
+			</Help>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}>秒</h2>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭时长</h2>
+			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
+				<NumberBox
+					style={{ width: '3.5rem' }}
+					min='0'
+					max='6000'
+					value={ keyboard.settings.LED_AUTOOFF_TIME }
+					onChange={ v => keyboard.setSetting('LED_AUTOOFF_TIME', v) }/>
+			</div>
+			<Help>
+				设定你的指示灯在蓝牙状态时自动熄灭的时长, 单位为秒；设定为0则为常亮.
+			</Help>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}>秒</h2>
 			<div style={{ height: '1.5rem' }}/>
 			保存按键布局.
 			<div style={{ height: '0.5rem' }}/>
