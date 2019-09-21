@@ -2237,7 +2237,7 @@
                 "col": 11,
                 "keycodes": [
                     {
-                        "id": "KC_LCBR",
+                        "id": "KC_LBRC",
                         "fields": []
                     },
                     {
@@ -2415,7 +2415,7 @@
                 "col": 13,
                 "keycodes": [
                     {
-                        "id": "KC_PIPE",
+                        "id": "KC_BSLS",
                         "fields": []
                     },
                     {
@@ -3394,7 +3394,7 @@
                 "col": 10,
                 "keycodes": [
                     {
-                        "id": "KC_COLN",
+                        "id": "KC_SCLN",
                         "fields": []
                     },
                     {
