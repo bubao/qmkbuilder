@@ -428,7 +428,7 @@ const keycodes = {
 	),
 	'LM()': new Keycode(
 		new Template(['LT', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
-		'LT(%1, %2)',
+		'LM(%1, %2)',
 		[]
 	),
 	'TO()': new Keycode(
@@ -467,10 +467,10 @@ const keycodes = {
 		[]
 	),
 	'MK()': new Keycode(
-		new Template(['MK', 'MOD', 'KEY'], '	ACTION_MODS_KEY(%1, %2)'),
+		new Template(['MK', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MK(%1, %2)',
 		[]
-	),
+	)
 	/*'CTL_T()': new Keycode(
 		new Template(['CTL_T', 'KEY'], 'CTL_T(%1)'),
 		'CTRL_T(%1)',
@@ -710,7 +710,7 @@ const categories = {
 	],
 
 	FN: [
-		'LCTL()',
+		/*'LCTL()',
 		'LSFT()',
 		'LALT()',
 		'LGUI()',
@@ -722,7 +722,7 @@ const categories = {
 		'MEH()',
 		'LCAG()',
 		'ALTG()',
-		'',
+		'', */
 
 		'LT()',
 		'LM()',		
