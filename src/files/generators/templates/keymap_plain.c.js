@@ -26,13 +26,6 @@ const action_t fn_actions[] = {
     /* Poker Layout */
     // ACTION_LAYER_MOMENTARY(1),  // to Fn overlay
     %fn%,
-    ACTION_FUNCTION(POWER_SLEEP), // sleep
-    ACTION_FUNCTION(SWITCH_USB) // switch between usb and ble
 };
 
 `.trim()
-
-///* 0: qwerty */
-// KEYMAP_ANSI(%KEYMAP_ANSI1%),
-// /* 1: Poker Fn */
-// KEYMAP_ANSI(%KEYMAP_ANSI2%),
