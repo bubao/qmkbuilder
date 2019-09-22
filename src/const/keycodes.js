@@ -460,7 +460,7 @@ const keycodes = {
 		new Template(['OSM', 'MOD'], 'ACTION_MODS_ONESHOT(%1)'),
 		'OSM(%1)',
 		[]
-	), */
+	),
 	'MT()': new Keycode(
 		new Template(['MT', 'MOD', 'KEY'], 'ACTION_MODS_TAP_KEY(%1, %2)'),
 		'MT(%1, %2)',
