@@ -427,13 +427,13 @@ const keycodes = {
 		[]
 	),
 	'TO()': new Keycode(
-	new Template(['TO', 'LAYER'], 'TO(%1)'),
-		'ACTION_LAYER_TOGGLE(%1)',
+	new Template(['TO', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
+		'TO(%1)',
 		[]
 	),
 	'MO()': new Keycode(
-		new Template(['MO', 'LAYER'], 'MO(%1)'),
-		'ACTION_LAYER_MOMENTARY(%1)',
+		new Template(['MO', 'LAYER'], 'ACTION_LAYER_MOMENTARY(%1)'),
+		'MO(%1)',
 		[]
 	),
 	'DF()': new Keycode(new Template(['DF', 'LAYER'], 'DF(%1)'), 'DF(%1)', []),
