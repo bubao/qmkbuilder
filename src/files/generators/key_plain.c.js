@@ -28,7 +28,26 @@ class KeyboardH extends Generator {
 							.indexOf('ACTION_LAYER_MOMENTARY') === 0 || 
 						key[0].keycodes[layer]
 							.getCode()
-							.indexOf('ACTION_LAYER_TOGGLE') === 0
+							.indexOf('ACTION_LAYER_TOGGLE') === 0 ||
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_DEFAULT_LAYER_SET') === 0 ||
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_DEFAULT_LAYER_TOGGLE') === 0		
+					) {
+						console.log('FN' + FNnum)
+						layerMap += 'FN' + FNnum + ', '
+						FNnum += 1
+						console.log(layerMap)
+						FNarr.push(key[0].keycodes[layer].getCode())
+					} else if(
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_LAYER_TAP') === 0 || 
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_LAYER_MODS') === 0 		
 					) {
 						console.log('FN' + FNnum)
 						layerMap += 'FN' + FNnum + ', '

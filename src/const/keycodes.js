@@ -422,12 +422,17 @@ const keycodes = {
 		[]
 	),
 	'LT()': new Keycode(
-		new Template(['LT', 'LAYER', 'KEY'], 'LT(%1, %2)'),
+		new Template(['LT', 'LAYER', 'KEY'], 'ACTION_LAYER_TAP(%1, %2)'),
+		'LT(%1, %2)',
+		[]
+	),
+	'LM()': new Keycode(
+		new Template(['LT', 'LAYER', 'KEY'], 'ACTION_LAYER_MODS(%1, %2)'),
 		'LT(%1, %2)',
 		[]
 	),
 	'TO()': new Keycode(
-	new Template(['TO', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
+	new Template(['TO', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
 		'TO(%1)',
 		[]
 	),
@@ -436,24 +441,32 @@ const keycodes = {
 		'MO(%1)',
 		[]
 	),
-	'DF()': new Keycode(new Template(['DF', 'LAYER'], 'DF(%1)'), 'DF(%1)', []),
-	'TG()': new Keycode(new Template(['TG', 'LAYER'], 'TG(%1)'), 'TG(%1)', []),
-	'OSL()': new Keycode(
-		new Template(['OSL', 'LAYER'], 'OSL(%1)'),
-		'OSL(%1)',
+	'DF()': new Keycode(
+		new Template(['DF', 'LAYER'], 'ACTION_DEFAULT_LAYER_SET(%1)'),
+		'DF(%1)',
 		[]
 	),
-	'OSM()': new Keycode(
+	'TG()':new Keycode(
+		new Template(['TG', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
+		'TG(%1)',
+		[]
+	),
+	/* 'OSL()': new Keycode(
+	//	new Template(['OSL', 'LAYER'], 'OSL(%1)'),
+	//	'OSL(%1)',
+	//	[]
+	//),
+	 'OSM()': new Keycode(
 		new Template(['OSM', 'MOD'], 'OSM(%1)'),
 		'OSM(%1)',
 		[]
-	),
+	), */
 	'MT()': new Keycode(
-		new Template(['MT', 'MOD', 'KEY'], 'MT(%1, %2)'),
+		new Template(['MT', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MT(%1, %2)',
 		[]
 	),
-	'CTL_T()': new Keycode(
+	/*'CTL_T()': new Keycode(
 		new Template(['CTL_T', 'KEY'], 'CTL_T(%1)'),
 		'CTRL_T(%1)',
 		[]
@@ -493,7 +506,7 @@ const keycodes = {
 		'ALL_T(%1)',
 		[]
 	),
-	'M()': new Keycode(new Template(['M', 'MACRO'], 'M(%1)'), 'MACRO(%1)', [])
+	'M()': new Keycode(new Template(['M', 'MACRO'], 'M(%1)'), 'MACRO(%1)', []) */
 }
 
 // Generate aliases.
@@ -707,16 +720,17 @@ const categories = {
 		'',
 
 		'LT()',
+		'LM()',		
 		'TO()',
 		'MO()',
 		'DF()',
 		'TG()',
-		'OSL()',
-		'OSM()',
+		//'OSL()',
+		//'OSM()',
 		'MT()',
 		'',
 
-		'CTL_T()',
+		/*'CTL_T()',
 		'SFT_T()',
 		'ALT_T()',
 		'GUI_T()',
@@ -726,7 +740,7 @@ const categories = {
 		'ALL_T()',
 		'',
 
-		'M()'
+		'M()'*/
 	]
 }
 
