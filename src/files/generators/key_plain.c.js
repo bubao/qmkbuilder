@@ -13,7 +13,7 @@ class KeyboardH extends Generator {
 
 		// Generate the keymaps.
 		let keymaps = ''
-		let FNnum = 1
+		let FNnum = 0
 		let FNarr = []
 		for (let layer = 0; layer < C.KEYMAP_MAX_LAYERS; layer++) {
 			let layerMap = '\tKEYMAP(\n\t\t'
@@ -25,7 +25,10 @@ class KeyboardH extends Generator {
 					if (
 						key[0].keycodes[layer]
 							.getCode()
-							.indexOf('ACTION_LAYER_MOMENTARY') === 0
+							.indexOf('ACTION_LAYER_MOMENTARY') === 0 || 
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_LAYER_TOGGLE') === 0
 					) {
 						console.log('FN' + FNnum)
 						layerMap += 'FN' + FNnum + ', '
