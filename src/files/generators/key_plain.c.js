@@ -22,6 +22,7 @@ class KeyboardH extends Generator {
 					const key = keyboard.wiring[row + ',' + col]
 					if (!key || !key.length) continue
 					console.log(key[0].keycodes[layer].getCode())
+					console.log(key[0].keycodes[mod].getCode())
 					if (
 						key[0].keycodes[layer]
 							.getCode()
