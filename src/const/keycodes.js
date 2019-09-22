@@ -361,7 +361,7 @@ const keycodes = {
 	KC_MEH: new Keycode('KC_MEH', 'MEH', []),
 
 	// Modifiers.
-	'LCTL()': new Keycode(
+	/*'LCTL()': new Keycode(
 		new Template(['LCTL', 'KEY'], 'LCTL(%1)'),
 		'LCTRL + %1',
 		[]
@@ -420,14 +420,14 @@ const keycodes = {
 		new Template(['ALTG', 'KEY'], 'ALTG(%1)'),
 		'ALTGR + %1',
 		[]
-	),
+	), */
 	'LT()': new Keycode(
 		new Template(['LT', 'LAYER', 'KEY'], 'ACTION_LAYER_TAP(%1, %2)'),
 		'LT(%1, %2)',
 		[]
 	),
 	'LM()': new Keycode(
-		new Template(['LT', 'LAYER', 'KEY'], 'ACTION_LAYER_MODS(%1, %2)'),
+		new Template(['LT', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
 		'LT(%1, %2)',
 		[]
 	),
@@ -451,19 +451,24 @@ const keycodes = {
 		'TG(%1)',
 		[]
 	),
-	/* 'OSL()': new Keycode(
+	//'OSL()': new Keycode(
 	//	new Template(['OSL', 'LAYER'], 'OSL(%1)'),
 	//	'OSL(%1)',
 	//	[]
 	//),
 	 'OSM()': new Keycode(
-		new Template(['OSM', 'MOD'], 'OSM(%1)'),
+		new Template(['OSM', 'MOD'], 'ACTION_MODS_ONESHOT(%1)'),
 		'OSM(%1)',
 		[]
 	), */
 	'MT()': new Keycode(
-		new Template(['MT', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
+		new Template(['MT', 'MOD', 'KEY'], 'ACTION_MODS_TAP_KEY(%1, %2)'),
 		'MT(%1, %2)',
+		[]
+	),
+	'MK()': new Keycode(
+		new Template(['MK', 'MOD', 'KEY'], '	ACTION_MODS_KEY(%1, %2)'),
+		'MK(%1, %2)',
 		[]
 	),
 	/*'CTL_T()': new Keycode(
@@ -726,8 +731,9 @@ const categories = {
 		'DF()',
 		'TG()',
 		//'OSL()',
-		//'OSM()',
+		'OSM()',
 		'MT()',
+		'MK()',
 		'',
 
 		/*'CTL_T()',
