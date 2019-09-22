@@ -21,7 +21,7 @@ class KeyboardH extends Generator {
 				for (let col = 0; col < keyboard.cols; col++) {
 					const key = keyboard.wiring[row + ',' + col]
 					if (!key || !key.length) continue
-					console.log(key[0].keycodes[layer])
+					console.log(key[0].keycodes[layer].getCode())
 					if (
 						key[0].keycodes[layer]
 							.getCode()
