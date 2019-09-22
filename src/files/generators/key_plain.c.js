@@ -21,12 +21,13 @@ class KeyboardH extends Generator {
 				for (let col = 0; col < keyboard.cols; col++) {
 					const key = keyboard.wiring[row + ',' + col]
 					if (!key || !key.length) continue
-					console.log(key[0].keycodes[layer].getCode())
-					console.log(key[0].keycodes[mod].getCode())
+					// console.log(key[0].keycodes[layer].getCode())
+					console.log(key[0].keycodes)
+					// console.log(key[0].keycodes[mod].getCode())
 					if (
 						key[0].keycodes[layer]
 							.getCode()
-							.indexOf('ACTION_LAYER_MOMENTARY') === 0 || 
+							.indexOf('ACTION_LAYER_MOMENTARY') === 0 ||
 						key[0].keycodes[layer]
 							.getCode()
 							.indexOf('ACTION_LAYER_TOGGLE') === 0 ||
@@ -38,7 +39,7 @@ class KeyboardH extends Generator {
 							.indexOf('ACTION_DEFAULT_LAYER_TOGGLE') === 0 ||
 						key[0].keycodes[layer]
 							.getCode()
-							.indexOf('ACTION_LAYER_TAP') === 0 || 
+							.indexOf('ACTION_LAYER_TAP') === 0 ||
 						key[0].keycodes[layer]
 							.getCode()
 							.indexOf('ACTION_LAYER_MODS') === 0 ||
