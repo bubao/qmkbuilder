@@ -422,32 +422,32 @@ const keycodes = {
 		[]
 	), */
 	'LT()': new Keycode(
-		new Template(['LT', 'LAYER', 'KEY'], 'ACTION_LAYER_TAP(%1, %2)'),
+		new Template(['二合一:按键/瞬时开启', 'LAYER', 'KEY'], 'ACTION_LAYER_TAP(%1, %2)'),
 		'LT(%1, %2)',
 		[]
 	),
 	'LM()': new Keycode(
-		new Template(['切层修饰键', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
+		new Template(['瞬时开启并修饰键', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
 		'LM(%1, %2)',
 		[]
 	),
-	'TO()': new Keycode(
+	/*'TO()': new Keycode(
 	new Template(['TO', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
 		'TO(%1)',
 		[]
-	),
+	), */
 	'MO()': new Keycode(
-		new Template(['MO', 'LAYER'], 'ACTION_LAYER_MOMENTARY(%1)'),
+		new Template(['瞬时开启层', 'LAYER'], 'ACTION_LAYER_MOMENTARY(%1)'),
 		'MO(%1)',
 		[]
 	),
 	'DF()': new Keycode(
-		new Template(['DF', 'LAYER'], 'ACTION_DEFAULT_LAYER_SET(%1)'),
+		new Template(['设置默认层', 'LAYER'], 'ACTION_DEFAULT_LAYER_SET(%1)'),
 		'DF(%1)',
 		[]
 	),
 	'TG()':new Keycode(
-		new Template(['TG', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
+		new Template(['层开关', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
 		'TG(%1)',
 		[]
 	),
@@ -457,17 +457,17 @@ const keycodes = {
 	//	[]
 	//),
 	 'OSM()': new Keycode(
-		new Template(['OSM', 'MOD'], 'ACTION_MODS_ONESHOT(%1)'),
+		new Template(['单发修饰键', 'MOD'], 'ACTION_MODS_ONESHOT(%1)'),
 		'OSM(%1)',
 		[]
 	),
 	'MT()': new Keycode(
-		new Template(['MT', 'MOD', 'KEY'], 'ACTION_MODS_TAP_KEY(%1, %2)'),
+		new Template(['二合一:按键/修饰键', 'MOD', 'KEY'], 'ACTION_MODS_TAP_KEY(%1, %2)'),
 		'MT(%1, %2)',
 		[]
 	),
 	'MK()': new Keycode(
-		new Template(['MK', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
+		new Template(['组合键', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MK(%1, %2)',
 		[]
 	)
@@ -726,7 +726,7 @@ const categories = {
 
 		'LT()',
 		'LM()',		
-		'TO()',
+		//'TO()',
 		'MO()',
 		'DF()',
 		'TG()',
