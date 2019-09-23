@@ -53,8 +53,8 @@ class KeyboardH extends Generator {
 							.getCode()
 							.indexOf('ACTION_MODS_KEY') === 0
 					) {
-						console.log('FN' + FNnum)
-						layerMap += 'FN' + FNnum + ', '
+						console.log('KC_FN' + FNnum)
+						layerMap += 'KC_FN' + FNnum + ', '
 						FNnum += 1
 						console.log(layerMap)
 						FNarr.push(key[0].keycodes[layer].getCode())
