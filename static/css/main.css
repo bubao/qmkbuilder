@@ -520,6 +520,7 @@ select {
 
 .toggle.enabled {
 	font-weight: 600;
+	color: #440202;
 }
 
 
@@ -590,7 +591,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #c8f7ff;
+	background: #e4f5fd;
 	top: 6px;
 	left: 6px;
 	right: 6px;
@@ -600,7 +601,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #f66363;
+	background: #a2f4fa;
 }
 
 .display-key.select1 .display-key-block-inner-background {
@@ -608,7 +609,7 @@ select {
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #fd0505;
+	background: #fd0202;
 }
 
 
