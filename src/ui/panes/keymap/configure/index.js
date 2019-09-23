@@ -96,7 +96,7 @@ class Configure extends React.Component {
 					subfields.push(<div
 						className='pane-keymap-configure-field'
 						key={ i }>
-						&nbsp;&nbsp;Layer&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;层&nbsp;&nbsp;&nbsp;
 						<NumberBox
 							style={{ width: '3rem' }}
 							value={ value }
