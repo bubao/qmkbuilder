@@ -505,7 +505,7 @@ select {
 }
 
 .toggle:hover {
-	background: #fcfcfc !important;
+	background: #dcfafd !important;
 }
 
 .toggle:active {
@@ -520,7 +520,8 @@ select {
 
 .toggle.enabled {
 	font-weight: 600;
-	color: #440202;
+	color: #030303;
+	background-color: #e7e7e7
 }
 
 
@@ -553,7 +554,7 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #f3f3f3;
+	background: #f8f8f8;
 	border: 1px solid #c0392b;
 	border-radius: 5px;
 }
@@ -591,7 +592,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #e4f5fd;
+	background: #f4fafd;
 	top: 6px;
 	left: 6px;
 	right: 6px;
@@ -601,7 +602,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #a2f4fa;
+	background: #dcfafd;
 }
 
 .display-key.select1 .display-key-block-inner-background {
