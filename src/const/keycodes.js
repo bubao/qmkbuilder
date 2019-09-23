@@ -666,7 +666,18 @@ const categories = {
 		'KC_MPLY',
 		'KC_MSTP',
 		'KC_MPRV',
-		'KC_MNXT'
+		'KC_MNXT',
+		'KC_MSEL',
+		'KC_MAIL',
+		'KC_CALC',
+		'KC_MYCM',
+		'KC_WSCH',
+		'KC_WHOM',
+		'KC_WBAK',
+		'KC_WFWD',
+		'KC_WSTP',
+		'KC_WREF',
+		'KC_WFAV'
 	],
 
 	KEYPAD: [
