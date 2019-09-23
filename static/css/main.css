@@ -505,7 +505,7 @@ select {
 }
 
 .toggle:hover {
-	background: #dcfafd !important;
+	background: #e6f6fd !important;
 }
 
 .toggle:active {
@@ -602,7 +602,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #dcfafd;
+	background: #e6f6fd;
 }
 
 .display-key.select1 .display-key-block-inner-background {
