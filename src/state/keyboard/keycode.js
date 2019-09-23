@@ -81,12 +81,14 @@ class Keycode {
 				case 'MOD': {
 					// Get active mods.
 					const active = [];
-					if (field & 0b000001) active.push('CTRL');
-					if (field & 0b000010) active.push('SHIFT');
-					if (field & 0b000100) active.push('ALT');
-					if (field & 0b001000) active.push('GUI');
-					if (field & 0b010000) active.push('HYPER');
-					if (field & 0b100000) active.push('MEH');
+					if (field & 0b0000001) active.push('LCTRL');
+					if (field & 0b0000010) active.push('LSHIFT');
+					if (field & 0b0000100) active.push('LALT');
+					if (field & 0b0001000) active.push('LGUI');
+					if (field & 0b1000001) active.push('RCTRL');
+					if (field & 0b1000010) active.push('RSHIFT');
+					if (field & 0b1000100) active.push('RALT');
+					if (field & 0b1001000) active.push('RGUI');
 					if (active.length === 0) active.push('NONE');
 					fields.push(active.join(' | '));
 					break;

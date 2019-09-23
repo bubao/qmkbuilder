@@ -8,60 +8,78 @@ class Mods extends React.Component {
 
     return (
       <div>
-        &nbsp;&nbsp;Mods&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;修饰键&nbsp;&nbsp;&nbsp;
         <Toggle
-          value={mods & 0b000001}
+          value={mods & 0b0000001}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b000001 : mods & ~0b000001)
+            this.props.onChange(v ? mods | 0b0000001 : mods & ~0b0000001)
           }
         >
-          CTRL
+          LCTRL
         </Toggle>
         <Toggle
-          value={mods & 0b000010}
+          value={mods & 0b0000010}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b000010 : mods & ~0b000010)
+            this.props.onChange(v ? mods | 0b0000010 : mods & ~0b0000010)
           }
         >
-          SHIFT
+          LSHIFT
         </Toggle>
         <Toggle
-          value={mods & 0b000100}
+          value={mods & 0b0000100}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b000100 : mods & ~0b000100)
+            this.props.onChange(v ? mods | 0b0000100 : mods & ~0b0000100)
           }
         >
-          ALT
+          LALT
         </Toggle>
         <Toggle
-          value={mods & 0b001000}
+          value={mods & 0b0001000}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b001000 : mods & ~0b001000)
+            this.props.onChange(v ? mods | 0b0001000 : mods & ~0b0001000)
           }
         >
-          GUI
+          LGUI
         </Toggle>
         <Toggle
-          value={mods & 0b010000}
+          value={mods & 0b1000001}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b010000 : mods & ~0b010000)
+            this.props.onChange(v ? mods | 0b1000001 : mods & ~0b1000001)
           }
         >
-          HYPER
+          RCTRL
         </Toggle>
         <Toggle
-          value={mods & 0b100000}
+          value={mods & 0b1000010}
           onChange={v =>
             this.props.onChange &&
-            this.props.onChange(v ? mods | 0b100000 : mods & ~0b100000)
+            this.props.onChange(v ? mods | 0b1000010 : mods & ~0b1000010)
           }
         >
-          MEH
+          RSHIFT
+        </Toggle>
+        <Toggle
+          value={mods & 0b1000100}
+          onChange={v =>
+            this.props.onChange &&
+            this.props.onChange(v ? mods | 0b1000100 : mods & ~0b1000100)
+          }
+        >
+          RALT
+        </Toggle>
+        <Toggle
+          value={mods & 0b1001000}
+          onChange={v =>
+            this.props.onChange &&
+            this.props.onChange(v ? mods | 0b1001000 : mods & ~0b1001000)
+          }
+        >
+          RGUI
         </Toggle>
       </div>
     )
