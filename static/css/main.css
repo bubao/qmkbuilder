@@ -552,13 +552,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #ffffff;
+	background: #f3f3f3;
 	border: 1px solid #c0392b;
 	border-radius: 5px;
 }
 
 .display.valid {
-	border-color: #dddddd;
+	border-color: #5e5e5e;
 }
 
 .display-inner {
@@ -590,7 +590,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #ffffff;
+	background: #c8f7ff;
 	top: 6px;
 	left: 6px;
 	right: 6px;
@@ -600,7 +600,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #f9f9f9;
+	background: #f66363;
 }
 
 .display-key.select1 .display-key-block-inner-background {
@@ -608,7 +608,7 @@ select {
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #984747;
+	background: #fd0505;
 }
 
 
