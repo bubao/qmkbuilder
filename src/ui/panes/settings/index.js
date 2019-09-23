@@ -96,14 +96,14 @@ class Settings extends React.Component {
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox
 					style={{ width: '3.5rem' }}
-					min='0'
+					min='10'
 					max='300'
 					value={ keyboard.settings.SLEEP_OFF_TIMEOUT }
 					onChange={ v => keyboard.setSetting('SLEEP_OFF_TIMEOUT', v) }/>
 			</div>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}>分钟</h2>
 			<Help>
-				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟.
+				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟，最短设定10分钟，最长设定5小时.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭</h2>
@@ -117,7 +117,7 @@ class Settings extends React.Component {
 			</div>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}>秒</h2>
 			<Help>
-				设定你的指示灯在蓝牙状态时自动熄灭的时长, 单位为秒；设定为0则为常亮.
+				设定你的指示灯在蓝牙状态时自动熄灭的时长, 单位为秒；设定为0则为常亮，最长设定15分钟.
 			</Help>
 			<div style={{ height: '1.5rem' }}/>
 			保存按键布局.
