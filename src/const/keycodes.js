@@ -427,7 +427,7 @@ const keycodes = {
 		[]
 	),
 	'LM()': new Keycode(
-		new Template(['LT', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
+		new Template(['切层修饰键', 'LAYER', 'MOD'], 'ACTION_LAYER_MODS(%1, %2)'),
 		'LM(%1, %2)',
 		[]
 	),
