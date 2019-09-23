@@ -40,14 +40,14 @@ class Keycode {
 				case 'MOD': {
 					// Get active mods.
 					const active = [];
-					if (field & 0b0000001) active.push('MOD_LCTL');
-					if (field & 0b0000010) active.push('MOD_LSFT');
-					if (field & 0b0000100) active.push('MOD_LALT');
-					if (field & 0b0001000) active.push('MOD_LGUI');
-					if (field & 0b1000001) active.push('MOD_RCTL');
-					if (field & 0b1000010) active.push('MOD_RSFT');
-					if (field & 0b1000100) active.push('MOD_RALT');
-					if (field & 0b1001000) active.push('MOD_RGUI');
+					if (field & 0b00000001) active.push('LCTRL');
+					if (field & 0b00000010) active.push('LSHIFT');
+					if (field & 0b00000100) active.push('LALT');
+					if (field & 0b00001000) active.push('LGUI');
+					if (field & 0b00010000) active.push('RCTRL');
+					if (field & 0b00100000) active.push('RSHIFT');
+					if (field & 0b01000000) active.push('RALT');
+					if (field & 0b10000000) active.push('RGUI');
 					if (active.length === 0) active.push(0);
 					fields.push(active.join(' | '));
 					break;
@@ -83,14 +83,14 @@ class Keycode {
 				case 'MOD': {
 					// Get active mods.
 					const active = [];
-					if (field & 0b0000001) active.push('LCTRL');
-					if (field & 0b0000010) active.push('LSHIFT');
-					if (field & 0b0000100) active.push('LALT');
-					if (field & 0b0001000) active.push('LGUI');
-					if (field & 0b1000001) active.push('RCTRL');
-					if (field & 0b1000010) active.push('RSHIFT');
-					if (field & 0b1000100) active.push('RALT');
-					if (field & 0b1001000) active.push('RGUI');
+					if (field & 0b00000001) active.push('LCTRL');
+					if (field & 0b00000010) active.push('LSHIFT');
+					if (field & 0b00000100) active.push('LALT');
+					if (field & 0b00001000) active.push('LGUI');
+					if (field & 0b00010000) active.push('RCTRL');
+					if (field & 0b00100000) active.push('RSHIFT');
+					if (field & 0b01000000) active.push('RALT');
+					if (field & 0b10000000) active.push('RGUI');
 					if (active.length === 0) active.push('NONE');
 					fields.push(active.join(' | '));
 					break;
