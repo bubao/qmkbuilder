@@ -472,7 +472,7 @@ const keycodes = {
 		[]
 	),
 	'SYS_SLEEP': new Keycode(
-		new Template('SYS_SLEEP', 'ACTION_FUNCTION(0)'),
+		new Template(['SYS_SLEEP', ''], 'ACTION_FUNCTION(0)'),
 		'SYS_SLEEP',
 		[]
 	),
