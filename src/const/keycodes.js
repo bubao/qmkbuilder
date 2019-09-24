@@ -472,37 +472,37 @@ const keycodes = {
 		[]
 	),
 	'SYS_SLEEP': new Keycode(
-		new Template(['SYS_SLEEP', ''], 'ACTION_FUNCTION(0)'),
+		new Template(['键盘休眠', ''], 'ACTION_FUNCTION(0)'),
 		'SYS_SLEEP',
 		[]
 	),
 	'SYS_OFF': new Keycode(
-		new Template('SYS_OFF', 'ACTION_FUNCTION(3)'),
+		new Template(['键盘关机', ''], 'ACTION_FUNCTION(3)'),
 		'SYS_OFF',
 		[]
 	),
 	'SYS_SWITCH': new Keycode(
-		new Template('SYS_SWITCH', 'ACTION_FUNCTION(1)'),
+		new Template(['切换输入模式', ''], 'ACTION_FUNCTION(1)'),
 		'SYS_SWITCH',
 		[]
 	),
 	'TRICKY_ESC': new Keycode(
-		new Template('TRICKY_ESC', 'ACTION_FUNCTION(2)'),
+		new Template(['智选ESC', ''], 'ACTION_FUNCTION(2)'),
 		'TRICKY_ESC',
 		[]
 	),
 	'TRICKY_SLSH': new Keycode(
-		new Template('TRICKY_SLSH', 'ACTION_FUNCTION(6)'),
+		new Template(['智选问号', ''], 'ACTION_FUNCTION(6)'),
 		'TRICKY_SLSH',
 		[]
 	),
 	'DEL_BOND': new Keycode(
-		new Template('DEL_BOND', 'ACTION_FUNCTION(4)'),
+		new Template(['清空绑定', ''], 'ACTION_FUNCTION(4)'),
 		'DEL_BOND',
 		[]
 	),
 	'DISPLAY_LED': new Keycode(
-		new Template('DISPLAY_LED', 'ACTION_FUNCTION(5)'),
+		new Template(['显示状态灯', ''], 'ACTION_FUNCTION(5)'),
 		'DISPLAY_LED',
 		[]
 	)
