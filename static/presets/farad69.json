@@ -26,7 +26,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_GRV",
                         "fields": []
                     },
                     {
@@ -957,7 +957,7 @@
                 "col": 11,
                 "keycodes": [
                     {
-                        "id": "KC_GRV",
+                        "id": "KC_MINS",
                         "fields": []
                     },
                     {
@@ -1042,7 +1042,7 @@
                 "col": 12,
                 "keycodes": [
                     {
-                        "id": "KC_NLCK",
+                        "id": "KC_EQL",
                         "fields": []
                     },
                     {
@@ -1127,7 +1127,7 @@
                 "col": 13,
                 "keycodes": [
                     {
-                        "id": "KC_MINS",
+                        "id": "KC_NLCK",
                         "fields": []
                     },
                     {
@@ -1212,7 +1212,7 @@
                 "col": 14,
                 "keycodes": [
                     {
-                        "id": "KC_EQL",
+                        "id": "KC_BSPC",
                         "fields": []
                     },
                     {
@@ -2232,11 +2232,11 @@
                 "col": 11,
                 "keycodes": [
                     {
-                        "id": "KC_BSPC",
+                        "id": "KC_BSLS",
                         "fields": []
                     },
                     {
-                        "id": "KC_BSLS",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -3433,7 +3433,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_QUOT",
+                        "id": "KC_GRV",
                         "fields": []
                     },
                     {
@@ -5333,7 +5333,7 @@
                 "col": 6,
                 "keycodes": [
                     {
-                        "id": "KC_NO",
+                        "id": "KC_SPC",
                         "fields": []
                     },
                     {
@@ -5773,7 +5773,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_PGUP",
                         "fields": []
                     },
                     {
@@ -5859,7 +5859,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_PGDN",
                         "fields": []
                     },
                     {
