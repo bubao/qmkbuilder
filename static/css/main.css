@@ -505,7 +505,7 @@ select {
 }
 
 .toggle:hover {
-	background: #e6f6fd !important;
+	background: #a5a5a5 !important;
 }
 
 .toggle:active {
@@ -554,13 +554,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #f8f8f8;
+	background: #ffffff;
 	border: 1px solid #c0392b;
 	border-radius: 5px;
 }
 
 .display.valid {
-	border-color: #5e5e5e;
+	border-color: #dddddd;
 }
 
 .display-inner {
@@ -581,7 +581,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #cccccc;
+	background: #e0e0e0;
 	top: 5px;
 	left: 5px;
 	right: 5px;
@@ -592,7 +592,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #f4fafd;
+	background: #eeeeee;
 	top: 6px;
 	left: 6px;
 	right: 6px;
@@ -602,7 +602,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #e6f6fd;
+	background: #a5a5a5;
 }
 
 .display-key.select1 .display-key-block-inner-background {
