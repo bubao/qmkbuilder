@@ -470,6 +470,41 @@ const keycodes = {
 		new Template(['组合键', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MK(%1, %2)',
 		[]
+	),
+	'SYS_SLEEP': new Keycode(
+		new Template('键盘休眠', 'ACTION_FUNCTION(0)'),
+		'SYS_SLEEP',
+		[]
+	),
+	'SYS_OFF': new Keycode(
+		new Template('键盘关机', 'ACTION_FUNCTION(3)'),
+		'SYS_OFF',
+		[]
+	),
+	'SYS_SWITCH': new Keycode(
+		new Template('切换输入模式', 'ACTION_FUNCTION(1)'),
+		'SYS_SWITCH',
+		[]
+	),
+	'TRICKY_ESC': new Keycode(
+		new Template('智选ESC', 'ACTION_FUNCTION(2)'),
+		'TRICKY_ESC',
+		[]
+	),
+	'TRICKY_SLSH': new Keycode(
+		new Template('智选问号', 'ACTION_FUNCTION(6)'),
+		'TRICKY_SLSH',
+		[]
+	),
+	'DEL_BOND': new Keycode(
+		new Template('清空绑定', 'ACTION_FUNCTION(4)'),
+		'DEL_BOND',
+		[]
+	),
+	'DISPLAY_LED': new Keycode(
+		new Template('显示状态灯', 'ACTION_FUNCTION(5)'),
+		'DISPLAY_LED',
+		[]
 	)
 	/*'CTL_T()': new Keycode(
 		new Template(['CTL_T', 'KEY'], 'CTL_T(%1)'),
@@ -747,6 +782,13 @@ const categories = {
 		'MK()',
 		'',
 
+		'SYS_SLEEP',
+		'SYS_OFF',
+		'SYS_SWITCH',
+		'DEL_BOND',
+		'TRICKY_ESC',
+		'TRICKY_SLSH',
+		''
 		/*'CTL_T()',
 		'SFT_T()',
 		'ALT_T()',
