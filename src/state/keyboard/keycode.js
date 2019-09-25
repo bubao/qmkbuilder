@@ -40,14 +40,14 @@ class Keycode {
 				case 'MOD': {
 					// Get active mods.
 					const active = [];
-					if (field & 0b00000001) active.push('KC_LCTRL');
-					if (field & 0b00000010) active.push('KC_LSHIFT');
-					if (field & 0b00000100) active.push('KC_LALT');
-					if (field & 0b00001000) active.push('KC_LGUI');
-					if (field & 0b00010000) active.push('KC_RCTRL');
-					if (field & 0b00100000) active.push('KC_RSHIFT');
-					if (field & 0b01000000) active.push('KC_RALT');
-					if (field & 0b10000000) active.push('KC_RGUI');
+					if (field & 0b00000001) active.push('MOD_LCTL');
+					if (field & 0b00000010) active.push('MOD_LSFT');
+					if (field & 0b00000100) active.push('MOD_LALT');
+					if (field & 0b00001000) active.push('MOD_LGUI');
+					if (field & 0b00010000) active.push('MOD_RCTL');
+					if (field & 0b00100000) active.push('MOD_RSFT');
+					if (field & 0b01000000) active.push('MOD_RALT');
+					if (field & 0b10000000) active.push('MOD_RGUI');
 					if (active.length === 0) active.push(0);
 					fields.push(active.join(' | '));
 					break;
