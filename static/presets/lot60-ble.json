@@ -2417,8 +2417,9 @@
     "settings": {
       "diodeDirection": 0,
       "PRODUCT": "BLE60",
-      "RGBLED_NUM": 0,
-      "backlightLevels": 3
+      "RGBLED_NUM": 8,
+      "SLEEP_OFF_TIMEOUT": 20,
+      "LED_AUTOOFF_TIME": 5
     }
   }
 }

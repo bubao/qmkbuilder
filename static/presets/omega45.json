@@ -4133,10 +4133,6 @@
         "macros": {},
         "settings": {
             "diodeDirection": 0,
-            "name": "",
-            "bootloaderSize": 2,
-            "rgbNum": 0,
-            "backlightLevels": 3,
             "PRODUCT": "Omega45",
             "RGBLED_NUM": 8,
             "LED_AUTOOFF_TIME": 5,

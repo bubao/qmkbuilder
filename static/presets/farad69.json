@@ -5977,10 +5977,6 @@
         "macros": {},
         "settings": {
             "diodeDirection": 0,
-            "name": "",
-            "bootloaderSize": 2,
-            "rgbNum": 0,
-            "backlightLevels": 3,
             "PRODUCT": "Farad69",
             "RGBLED_NUM": 8,
             "SLEEP_OFF_TIMEOUT": 20,

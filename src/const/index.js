@@ -39,7 +39,7 @@ const C = {
 
 	// Pins.
 	PINS: {
-		0: [ // CONTROLLER_ATMEGA32U4
+		0: [ // CONTROLLER_NRF52832
 			'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 			'10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
 			'20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
@@ -99,12 +99,6 @@ const C = {
 // bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // 	return true;
 // }`.trim(),
-
-	// Bootloader sizes.
-	BOOTLOADER_512: 0,
-	BOOTLOADER_2048: 1,
-	BOOTLOADER_4096: 2,
-	BOOTLOADER_8192: 3,
 
 	// Presets.
 	PRESETS: Presets,

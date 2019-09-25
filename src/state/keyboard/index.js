@@ -37,10 +37,9 @@ class Keyboard {
 		this.quantum = C.QUANTUM_DEFAULT;
 		this.settings = {
 			diodeDirection: C.DIODE_COL2ROW,
-			name: '',
-			bootloaderSize: C.BOOTLOADER_4096,
-			rgbNum: 0,
-			backlightLevels: 3
+			RGBLED_NUM: 8,
+            SLEEP_OFF_TIMEOUT: 20,
+            LED_AUTOOFF_TIME: 5
 		};
 
 		this.valid = false;
