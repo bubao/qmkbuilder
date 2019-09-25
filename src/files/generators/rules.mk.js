@@ -11,7 +11,7 @@ class RulesMK extends Generator {
 
 		let nrf_chip;
 		switch (keyboard.controller) {
-			case C.CONTROLLER_NRF52832: nrf_chip = 'nRF52832'; break;
+			case C.CONTROLLER_NRF52832: nrf_chip = 'nrf52832'; break;
 		}
 
 		return {
