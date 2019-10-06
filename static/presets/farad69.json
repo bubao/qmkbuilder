@@ -1301,7 +1301,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_SLEP",
+                        "id": "SYS_SLEEP",
                         "fields": []
                     },
                     {
@@ -2406,7 +2406,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_INS",
                         "fields": []
                     },
                     {
@@ -2491,7 +2491,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_DEL",
                         "fields": []
                     },
                     {
@@ -3433,7 +3433,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_GRV",
+                        "id": "KC_QUOT",
                         "fields": []
                     },
                     {
