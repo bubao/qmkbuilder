@@ -510,7 +510,7 @@ const keycodes = {
 		new Template(['输出电池电量', ''], 'ACTION_FUNCTION(6)'),
 		'PRINT_BAT',
 		[]
-	）
+	)
 	/*'CTL_T()': new Keycode(
 		new Template(['CTL_T', 'KEY'], 'CTL_T(%1)'),
 		'CTRL_T(%1)',
