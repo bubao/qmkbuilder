@@ -505,7 +505,12 @@ const keycodes = {
 		new Template(['显示状态灯', ''], 'ACTION_FUNCTION(5)'),
 		'DISPLAY_LED',
 		[]
-	)
+	),
+	'PRINT_BAT': new Keycode(
+		new Template(['输出电池电量', ''], 'ACTION_FUNCTION(6)'),
+		'PRINT_BAT',
+		[]
+	）
 	/*'CTL_T()': new Keycode(
 		new Template(['CTL_T', 'KEY'], 'CTL_T(%1)'),
 		'CTRL_T(%1)',
@@ -788,6 +793,7 @@ const categories = {
 		'DEL_BOND',
 		'TRICKY_ESC',
 		'TRICKY_SLSH',
+		'PRINT_BAT',
 		''
 		/*'CTL_T()',
 		'SFT_T()',
