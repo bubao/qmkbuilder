@@ -446,7 +446,7 @@ const keycodes = {
 		'DF(%1)',
 		[]
 	),
-	'TG()':new Keycode(
+	'TG()': new Keycode(
 		new Template(['层开关', 'LAYER'], 'ACTION_LAYER_TOGGLE(%1)'),
 		'TG(%1)',
 		[]
@@ -456,7 +456,7 @@ const keycodes = {
 	//	'OSL(%1)',
 	//	[]
 	//),
-	 'OSM()': new Keycode(
+	'OSM()': new Keycode(
 		new Template(['单发修饰键', 'MOD'], 'ACTION_MODS_ONESHOT(%1)'),
 		'OSM(%1)',
 		[]
@@ -476,11 +476,6 @@ const keycodes = {
 		'SYS_SLEEP',
 		[]
 	),
-	'SYS_OFF': new Keycode(
-		new Template(['键盘关机', ''], 'ACTION_FUNCTION(3)'),
-		'SYS_OFF',
-		[]
-	),
 	'SYS_SWITCH': new Keycode(
 		new Template(['切换输入模式', ''], 'ACTION_FUNCTION(1)'),
 		'SYS_SWITCH',
@@ -491,9 +486,9 @@ const keycodes = {
 		'TRICKY_ESC',
 		[]
 	),
-	'TRICKY_SLSH': new Keycode(
-		new Template(['智选问号', ''], 'ACTION_FUNCTION(6)'),
-		'TRICKY_SLSH',
+	'SYS_OFF': new Keycode(
+		new Template(['键盘关机', ''], 'ACTION_FUNCTION(3)'),
+		'SYS_OFF',
 		[]
 	),
 	'DEL_BOND': new Keycode(
@@ -506,8 +501,13 @@ const keycodes = {
 		'DISPLAY_LED',
 		[]
 	),
+	'TRICKY_SLSH': new Keycode(
+		new Template(['智选问号', ''], 'ACTION_FUNCTION(6)'),
+		'TRICKY_SLSH',
+		[]
+	),
 	'PRINT_BAT': new Keycode(
-		new Template(['输出电池电量', ''], 'ACTION_FUNCTION(6)'),
+		new Template(['输出电池电量', ''], 'ACTION_FUNCTION(7)'),
 		'PRINT_BAT',
 		[]
 	)
@@ -776,7 +776,7 @@ const categories = {
 		'', */
 
 		'LT()',
-		'LM()',		
+		'LM()',
 		//'TO()',
 		'MO()',
 		'DF()',
