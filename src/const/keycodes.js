@@ -84,13 +84,13 @@ class Keycode {
 const keycodes = {
 	// Raw keycodes.
 	// KC_NO: new Keycode('KC_NO', 'NO', []),
-	'KC_NO': new Keycode(
+	'NO': new Keycode(
 		new Template(['KC_NO', ''], '	'),
 		'	',
 		[]
 	),
 	//KC_TRNS: new Keycode('KC_TRNS', 'TRNS', []),
-	'KC_TRNS': new Keycode(
+	'TRNS': new Keycode(
 		new Template(['KC_TRNS', ''], '_ _'),
 		'_ _',
 		[]
