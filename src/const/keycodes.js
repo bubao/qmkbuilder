@@ -657,8 +657,8 @@ const categories = {
 		'KC_RGUI',
 		'',
 
-		'KC_TRNS',
-		'KC_NO',
+		'TRNS',
+		'NO',
 		'KC_MENU',
 		'KC_BTLD'
 	],
