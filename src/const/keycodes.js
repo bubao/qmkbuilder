@@ -83,8 +83,18 @@ class Keycode {
 
 const keycodes = {
 	// Raw keycodes.
-	KC_NO: new Keycode('KC_NO', ' ', []),
-	KC_TRNS: new Keycode('KC_TRNS', '__', []),
+	// KC_NO: new Keycode('KC_NO', 'NO', []),
+	KC_NO: new Keycode(
+		new Template(['KC_NO', ''], '	'),
+		'	',
+		[]
+	),
+	//KC_TRNS: new Keycode('KC_TRNS', 'TRNS', []),
+	KC_TRNS: new Keycode(
+		new Template(['KC_TRNS', ''], '_ _'),
+		'_ _',
+		[]
+	),
 	KC_ROLL_OVER: new Keycode('KC_ROLL_OVER', 'ROLL_OVER', []),
 	KC_POST_FAIL: new Keycode('KC_POST_FAIL', 'POST_FAIL', []),
 	KC_A: new Keycode('KC_A', 'A', []),
