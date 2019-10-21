@@ -978,6 +978,8 @@ const recommended = [
 	'KC_7',
 	'KC_8',
 	'KC_9',
+	'KC_LSFT',
+	'KC_RSFT',
 	'KC_SPC'
 ]
 
