@@ -84,13 +84,13 @@ class Keycode {
 const keycodes = {
 	// Raw keycodes.
 	// KC_NO: new Keycode('KC_NO', 'NO', []),
-	'NO': new Keycode(
+	'KC_NO': new Keycode(
 		new Template(['空', ''], '[]'),
 		'○',
 		[]
 	),
 	//KC_TRNS: new Keycode('KC_TRNS', 'TRNS', []),
-	'TRNS': new Keycode(
+	'KC_TRNS': new Keycode(
 		new Template(['穿透键', ''], '[]'),
 		'¤',
 		[]
@@ -657,8 +657,8 @@ const categories = {
 		'KC_RGUI',
 		'',
 
-		'TRNS',
-		'NO',
+		'KC_TRNS',
+		'KC_NO',
 		'KC_MENU',
 		'KC_BTLD'
 	],
@@ -988,7 +988,9 @@ const recommended = [
 	'KC_7',
 	'KC_8',
 	'KC_9',
-	'KC_SPC'
+	'KC_SPC',
+	'KC_RSFT',
+	'KC_LSFT'
 ]
 
 module.exports = {
