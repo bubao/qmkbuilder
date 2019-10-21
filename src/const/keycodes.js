@@ -85,14 +85,14 @@ const keycodes = {
 	// Raw keycodes.
 	// KC_NO: new Keycode('KC_NO', 'NO', []),
 	'NO': new Keycode(
-		new Template(['KC_NO', ''], '	'),
-		'	',
+		new Template(['空', ''], '[]'),
+		'○',
 		[]
 	),
 	//KC_TRNS: new Keycode('KC_TRNS', 'TRNS', []),
 	'TRNS': new Keycode(
-		new Template(['KC_TRNS', ''], '_ _'),
-		'_ _',
+		new Template(['穿透键', ''], '[]'),
+		'¤',
 		[]
 	),
 	KC_ROLL_OVER: new Keycode('KC_ROLL_OVER', 'ROLL_OVER', []),
