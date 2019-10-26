@@ -74,8 +74,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // LED自动熄灭时长(5000ms)，设为0则不自动熄灭
 #define LED_AUTOOFF_TIME %LED_AUTOOFF_TIME%
 
-// 需要输入配对码 true?'':'//'
-%PASSKEY_REQUIRED%#define PASSKEY_REQUIRED
+// 需要输入配对码
+%passkey_request%s
 
 // 更改发射功率到+4dBm
 #define HIGH_TX_POWER
@@ -89,9 +89,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 启用keymap存储
 #define KEYMAP_STORAGE
-
-// 直接开机而跳过开机条件检测，用于调试
-// #define DEBUG_SKIP_PWRON_CHECK
 
 /* disable action features */
 //#define NO_ACTION_LAYER

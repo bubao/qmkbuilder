@@ -23,8 +23,6 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 %keymaps%
 };
 const action_t fn_actions[] = {
-    /* Poker Layout */
-    // ACTION_LAYER_MOMENTARY(1),  // to Fn overlay
     %fn%,
 };
 
