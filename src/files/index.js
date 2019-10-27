@@ -1,6 +1,6 @@
 const RulesMKGenerator = require('./generators/rules.mk');
 const ConfigHGenerator = require('./generators/config.h')
-const KeyPlainCGenerator = require('./generators/key_plain.c')
+const KeymapPlainCGenerator = require('./generators/keymap_plain.c')
 const KeymapCommonHGenerator = require('./generators/keymap.common.h')
 class Files {
 	/*
@@ -14,7 +14,7 @@ class Files {
 		return {
 			'tmk_firmware/rules.mk': new RulesMKGenerator(keyboard).generate(),
 			'tmk_firmware/config.h': new ConfigHGenerator(keyboard).generate(),
-			'tmk_firmware/keymap_plain.c': new KeyPlainCGenerator(
+			'tmk_firmware/keymap_plain.c': new KeymapPlainCGenerator(
 				keyboard
 			).generate(),
 			'tmk_firmware/keymap_common.h': new KeymapCommonHGenerator(

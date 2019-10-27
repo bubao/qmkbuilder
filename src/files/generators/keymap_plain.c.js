@@ -5,7 +5,7 @@ const Utils = require('utils')
 const C = require('const')
 class KeyboardH extends Generator {
 	loadTemplate() {
-		return require('./templates/key_plain.c')
+		return require('./templates/keymap_plain.c')
 	}
 
 	fillTemplate() {
