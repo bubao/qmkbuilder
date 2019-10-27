@@ -78,6 +78,20 @@ class Settings extends React.Component {
 				设定你的键盘的名字，蓝牙连接时将显示此名称.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>绑定PIN码</h2>
+			<select
+				style={{ width: '8rem' }}
+				value={ keyboard.settings.PASSKEY }
+				onChange={ e => keyboard.setSetting('PASSKEY', parseInt(e.target.value)) }>
+				<option value={ C.PASSKEY_REQUIRED_YES }>启用</option>
+				<option value={ C.PASSKEY_REQUIRED_NO }>禁用</option>
+			</select>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
+			<Help>
+				设定蓝牙绑定时是否需要键盘输入PIN码.
+				<br></br>
+			</Help>
+			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>WS2812 LEDs</h2>
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox
@@ -96,14 +110,14 @@ class Settings extends React.Component {
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox
 					style={{ width: '3.5rem' }}
-					min='10'
+					min='9'
 					max='300'
 					value={ keyboard.settings.SLEEP_OFF_TIMEOUT }
 					onChange={ v => keyboard.setSetting('SLEEP_OFF_TIMEOUT', v) }/>
 			</div>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}>分钟</h2>
 			<Help>
-				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟，最短设定10分钟，最长设定5小时.
+				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟，最短设定9分钟，最长设定5小时.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭</h2>

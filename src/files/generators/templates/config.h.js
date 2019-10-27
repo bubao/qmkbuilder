@@ -75,7 +75,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_AUTOOFF_TIME %LED_AUTOOFF_TIME%
 
 // 需要输入配对码
-%passkey_request%s
+%passkey_required%
 
 // 更改发射功率到+4dBm
 #define HIGH_TX_POWER

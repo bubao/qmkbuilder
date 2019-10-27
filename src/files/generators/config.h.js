@@ -15,7 +15,13 @@ class ConfigH extends Generator {
 	}
 
 	fillTemplate() {
-		const keyboard = this.keyboard
+		const keyboard = this.keyboard;
+
+		let passkey_required;
+		switch (keyboard.settings.PASSKEY) {
+			case C.PASSKEY_REQUIRED_YES: passkey_required = '#define PASSKEY_REQUIRED'; break;
+			case C.PASSKEY_REQUIRED_NO: passkey_required = '//#define PASSKEY_REQUIRED'; break;
+		}
 
 		return {
 			MATRIX_ROWS: keyboard.rows, // 列
@@ -30,7 +36,6 @@ class ConfigH extends Generator {
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT * 60 || 1200,
 			LED_AUTOOFF_TIME: keyboard.settings.LED_AUTOOFF_TIME * 1000 || 5000,
-			PASSKEY_REQUIRED: keyboard.settings.PASSKEY_REQUIRED ? '' : '//',
 			RGBLIGHT_ENABLE: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
 			RGBLIGHT_ANIMATIONS: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
 			RGBLED_NUM: keyboard.settings.RGBLED_NUM || 8, // 8
@@ -48,7 +53,8 @@ class ConfigH extends Generator {
 			Hiden_LED_BLE: keyboard.pins.LED_BLE ? '' : '//',
 			Hiden_LED_USB: keyboard.pins.LED_USB ? '' : '//',
 			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
-			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//'
+			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
+			'passkey_required': passkey_required
 		}
 	}
 }
