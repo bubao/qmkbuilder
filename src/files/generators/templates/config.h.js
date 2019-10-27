@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER 0x0001 /* 硬件版本 */
 #define MANUFACTURER "Lotlab" /* 硬件制造商，用于蓝牙显示 */
 #define PRODUCT "%PRODUCT_NAME%" /* 硬件名词，用于蓝牙显示 */
-#define MACADDR_SEPRATOR '_' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
+%macaddr_name% MACADDR_SEPRATOR ' ' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
 
 /* USB HID report parameter */
 #define KEYBOARD_EPSIZE 8 /* 键盘上传端点大小，请不要修改 */
@@ -60,10 +60,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
-// 定义Bootmagic按键
-#define BOOTMAGIC_KEY_BOOT KC_U /* 开机按键 */
-#define BOOTMAGIC_KEY_ERASE_BOND KC_E /* 删除所有绑定的按键 */
-
 // 键盘省电参数
 #define SLEEP_SLOW_TIMEOUT %SLEEP_SLOW_TIMEOUT% // 键盘闲置多久后转入慢速扫描模式 (15s)
 #define SLEEP_OFF_TIMEOUT %SLEEP_OFF_TIMEOUT% // 键盘闲置多久后转入自动关机 (600s)
@@ -78,7 +74,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %passkey_required%
 
 // 更改发射功率到+4dBm
-#define HIGH_TX_POWER
+%high_tx_power%
 // 动态连接功率
 // #define DYNAMIC_TX_POWER
 // 启用多设备切换
