@@ -75,7 +75,22 @@ class Settings extends React.Component {
 				onChange={ e => keyboard.setSetting('PRODUCT', e.target.value) }/>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
 			<Help>
-				设定你的键盘的名字，蓝牙连接时将显示此名称.
+				设定你的蓝牙键盘的名字，蓝牙广播及设备连接后将显示此名称.
+			</Help>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>MAC地址后缀</h2>
+			<select
+				style={{ width: '8rem' }}
+				value={ keyboard.settings.MACADDR_NAME }
+				onChange={ e => keyboard.setSetting('MACADDR_NAME', parseInt(e.target.value)) }>
+				<option value={ C.MACADDR_NAME_YES }>启用</option>
+				<option value={ C.MACADDR_NAME_NO }>禁用</option>
+			</select>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
+			<Help>
+				键盘名称后面是否附加MAC地址后缀.
+				<br/>
+				启用后，键盘名称后将附加6位MAC地址后缀，如:Omega45 2C61FO. 禁用后，键盘名称不附加MAC地址后缀
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>绑定PIN码</h2>
@@ -88,8 +103,24 @@ class Settings extends React.Component {
 			</select>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
 			<Help>
-				设定蓝牙绑定时是否需要键盘输入PIN码.
-				<br></br>
+				蓝牙绑定时是否启用键盘输入PIN码.
+				<br/>
+				启用后，每次绑定设备时，都会要求键盘输入6位数字PIN码进行确认,这样可以避免键盘被他人搜索绑定.禁用时，绑定过程将不需要输入PIN码
+			</Help>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>高发射功率</h2>
+			<select
+				style={{ width: '8rem' }}
+				value={ keyboard.settings.TX_POWER }
+				onChange={ e => keyboard.setSetting('TX_POWER', parseInt(e.target.value)) }>
+				<option value={ C.HIGH_TX_POWER_YES }>启用</option>
+				<option value={ C.HIGH_TX_POWER_NO }>禁用</option>
+			</select>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
+			<Help>
+				发射功率提高到+4dBm.
+				<br/>
+				启用后,信号发射功率将提高到+4dBm.连接将更稳定，但功耗将提高，续航将会小幅下降.当禁用时,信号发射功率采用默认的0dBm.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>WS2812 LEDs</h2>
@@ -110,14 +141,16 @@ class Settings extends React.Component {
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox
 					style={{ width: '3.5rem' }}
-					min='9'
-					max='300'
+					min='0'
+					max='600'
 					value={ keyboard.settings.SLEEP_OFF_TIMEOUT }
 					onChange={ v => keyboard.setSetting('SLEEP_OFF_TIMEOUT', v) }/>
 			</div>
 			<h2 style={{ width: '2rem', textAlign: 'left' }}>分钟</h2>
 			<Help>
-				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟，最短设定9分钟，最长设定5小时.
+				设定你的键盘无按键行为后自动休眠间隔时间, 单位为分钟.
+				<br/>
+				最短设定1分钟，最长设定10小时.当设定为0时将不自动休眠.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭</h2>
