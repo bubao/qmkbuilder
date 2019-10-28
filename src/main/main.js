@@ -114,7 +114,7 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h3>或 选择一个预设的按键布局</h3>
+			<h3>选择一个预设的按键布局</h3>
 			{(() => {
 				const presets = [];
 				for (const preset in C.PRESETS) {
@@ -129,6 +129,13 @@ class Main extends React.Component {
 				return presets;
 			})()}
 			<br/><br/>
+			<h3>或 上传键盘配置文件</h3>
+			<button
+				className='block'
+				onClick={ this.upload }>
+				上传
+			</button>
+			<br/><br/>
 			<h3>或 从keyboard-layout-editor.com导入</h3>
 			<textarea
 				className='kle'
@@ -139,13 +146,6 @@ class Main extends React.Component {
 				className='block'
 				onClick={ this.useKLE }>
 				导入
-			</button>
-			<br/><br/>
-			<h3>上传键盘配置文件</h3>
-			<button
-				className='block'
-				onClick={ this.upload }>
-				上传
 			</button>
 		</div>;
 	}
