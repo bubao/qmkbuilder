@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER 0x0001 /* 硬件版本 */
 #define MANUFACTURER "Lotlab" /* 硬件制造商，用于蓝牙显示 */
 #define PRODUCT "%PRODUCT_NAME%" /* 硬件名词，用于蓝牙显示 */
-%macaddr_name% MACADDR_SEPRATOR ' ' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
+%macaddr_name%#define MACADDR_SEPRATOR ' ' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
 
 /* USB HID report parameter */
 #define KEYBOARD_EPSIZE 8 /* 键盘上传端点大小，请不要修改 */
@@ -71,10 +71,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_AUTOOFF_TIME %LED_AUTOOFF_TIME%
 
 // 需要输入配对码
-%passkey_required%
+%passkey_required%#define PASSKEY_REQUIRED
 
 // 更改发射功率到+4dBm
-%high_tx_power%
+%high_tx_power%#define HIGH_TX_POWER
 // 动态连接功率
 // #define DYNAMIC_TX_POWER
 // 启用多设备切换
