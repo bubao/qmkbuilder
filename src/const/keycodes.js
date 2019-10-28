@@ -475,7 +475,7 @@ const keycodes = {
 		new Template(['自定义宏', 'MACRO'], 'ACTION_MACRO(%1)'), 
 		'MACRO(%1)', 
 		[]
-	)，
+	),
 	'SYS_SLEEP': new Keycode(
 		new Template(['键盘休眠', ''], 'ACTION_FUNCTION(0)'),
 		'SYS_SLEEP',
