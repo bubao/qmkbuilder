@@ -120,12 +120,14 @@ class Main extends React.Component {
 				for (const preset in C.PRESETS) {
 					presets.push(<button
 						className='light block'
-						onClick={ () => this.usePreset(preset) }
-						key={ preset }>
-						{ C.PRESETS[preset] }
+						onClick={() => this.usePreset(preset)}
+						key={preset}>
+						{C.PRESETS[preset]}
 					</button>);
-					presets.push(<div style={{ height: '0.5rem' }} key={ '-key-' + preset }/>);
+					presets.push(<div style={{ height: '0.5rem' }} key={'-key-' + preset} />);
 				}
+				return presets;
+			})()}
 			<br/><br/>
 			<h3>或 从keyboard-layout-editor.com导入</h3>
 			<textarea
@@ -145,8 +147,6 @@ class Main extends React.Component {
 				onClick={ this.upload }>
 				上传
 			</button>
-				return presets;
-			})()}
 		</div>;
 	}
 
