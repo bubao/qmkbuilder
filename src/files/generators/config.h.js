@@ -19,20 +19,20 @@ class ConfigH extends Generator {
 
 		let passkey_required;
 		switch (keyboard.settings.PASSKEY) {
-			case C.PASSKEY_REQUIRED_YES: passkey_required = '#define PASSKEY_REQUIRED'; break;
-			case C.PASSKEY_REQUIRED_NO: passkey_required = '//#define PASSKEY_REQUIRED'; break;
+			case C.PASSKEY_REQUIRED_YES: passkey_required = ''; break;
+			case C.PASSKEY_REQUIRED_NO: passkey_required = '//'; break;
 		}
 
 		let high_tx_power;
 		switch (keyboard.settings.TX_POWER) {
-			case C.HIGH_TX_POWER_YES: high_tx_power = '#define HIGH_TX_POWER'; break;
-			case C.HIGH_TX_POWER_NO: high_tx_power = '//#define HIGH_TX_POWER'; break;
+			case C.HIGH_TX_POWER_YES: high_tx_power = ''; break;
+			case C.HIGH_TX_POWER_NO: high_tx_power = '//'; break;
 		}
 
 		let macaddr_name;
 		switch (keyboard.settings.MACADDR_NAME) {
-			case C.MACADDR_NAME_YES: macaddr_name = '#define'; break;
-			case C.MACADDR_NAME_NO: macaddr_name = '//#define'; break;
+			case C.MACADDR_NAME_YES: macaddr_name = ''; break;
+			case C.MACADDR_NAME_NO: macaddr_name = '//'; break;
 		}
 
 		return {
@@ -66,9 +66,9 @@ class ConfigH extends Generator {
 			Hiden_LED_USB: keyboard.pins.LED_USB ? '' : '//',
 			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
 			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
-			'passkey_required': passkey_required,
-			'high_tx_power': high_tx_power,
-			'macaddr_name': macaddr_name
+			'passkey_required': passkey_required || '',
+			'high_tx_power': high_tx_power || '',
+			'macaddr_name': macaddr_name || ''
 		}
 	}
 }
