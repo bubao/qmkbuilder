@@ -54,7 +54,10 @@ class KeyboardH extends Generator {
 							.indexOf('ACTION_MODS_KEY') === 0 ||
 						key[0].keycodes[layer]
 							.getCode()
-							.indexOf('ACTION_FUNCTION') === 0
+							.indexOf('ACTION_FUNCTION') === 0 ||
+						key[0].keycodes[layer]
+							.getCode()
+							.indexOf('ACTION_MACRO') === 0
 					) {
 						console.log('KC_FN' + FNnum)
 						layerMap += 'KC_FN' + FNnum + ', '
