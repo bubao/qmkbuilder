@@ -114,12 +114,18 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h3>上传键盘配置文件</h3>
-			<button
-				className='block'
-				onClick={ this.upload }>
-				上传
-			</button>
+			<h3>或 选择一个预设的按键布局</h3>
+			{(() => {
+				const presets = [];
+				for (const preset in C.PRESETS) {
+					presets.push(<button
+						className='light block'
+						onClick={ () => this.usePreset(preset) }
+						key={ preset }>
+						{ C.PRESETS[preset] }
+					</button>);
+					presets.push(<div style={{ height: '0.5rem' }} key={ '-key-' + preset }/>);
+				}
 			<br/><br/>
 			<h3>或 从keyboard-layout-editor.com导入</h3>
 			<textarea
@@ -133,18 +139,12 @@ class Main extends React.Component {
 				导入
 			</button>
 			<br/><br/>
-			<h3>或 选择一个预设的按键布局</h3>
-			{(() => {
-				const presets = [];
-				for (const preset in C.PRESETS) {
-					presets.push(<button
-						className='light block'
-						onClick={ () => this.usePreset(preset) }
-						key={ preset }>
-						{ C.PRESETS[preset] }
-					</button>);
-					presets.push(<div style={{ height: '0.5rem' }} key={ '-key-' + preset }/>);
-				}
+			<h3>上传键盘配置文件</h3>
+			<button
+				className='block'
+				onClick={ this.upload }>
+				上传
+			</button>
 				return presets;
 			})()}
 		</div>;
