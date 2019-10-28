@@ -67,8 +67,8 @@ class ConfigH extends Generator {
 			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
 			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
 			'passkey_required': passkey_required,
-			'high_tx_power' : high_tx_power,
-			'macaddr_name' : macaddr_name
+			'high_tx_power': high_tx_power,
+			'macaddr_name': macaddr_name
 		}
 	}
 }
