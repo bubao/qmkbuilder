@@ -35,6 +35,12 @@ class ConfigH extends Generator {
 			case C.MACADDR_NAME_NO: macaddr_name = '//'; break;
 		}
 
+		let rgb_enable;
+		switch (keyboard.settings.RGBLIGHT_ENABLE) {
+			case C.RGBLIGHT_ENABLE_YES: rgb_enable = ''; break;
+			case C.RGBLIGHT_ENABLE_NO: rgb_enable = '//'; break;
+		}
+
 		return {
 			MATRIX_ROWS: keyboard.rows, // 列
 			MATRIX_COLS: keyboard.cols, // 行
@@ -48,7 +54,6 @@ class ConfigH extends Generator {
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT * 60 || 1200,
 			LED_AUTOOFF_TIME: keyboard.settings.LED_AUTOOFF_TIME * 1000 || 5000,
-			RGBLIGHT_ENABLE: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
 			RGBLIGHT_ANIMATIONS: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
 			RGBLED_NUM: keyboard.settings.RGBLED_NUM || 8, // 8
 			LED_CAPS: keyboard.pins.caps || 21, // 21
@@ -68,7 +73,8 @@ class ConfigH extends Generator {
 			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
 			'passkey_required': passkey_required || '',
 			'high_tx_power': high_tx_power || '',
-			'macaddr_name': macaddr_name || ''
+			'macaddr_name': macaddr_name || '',
+			'rgb_enable': rgb_enable || ''
 		}
 	}
 }
