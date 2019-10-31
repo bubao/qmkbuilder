@@ -26,7 +26,9 @@ class Index extends React.Component {
 
 		return <div>
 			<div className='header'>
-				Lot Keyboard Builder
+			Lot Keyboard Builder
+			<br/>
+			<a href="http://glab.online" target="_blank"><img src="images/logo.png" /></a>
 			</div>
 			<Screen
 				state={ this.state }/>
