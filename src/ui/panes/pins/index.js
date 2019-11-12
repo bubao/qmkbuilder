@@ -21,6 +21,7 @@ class Pins extends React.Component {
           onChange={e => (keyboard.controller = parseInt(e.target.value))}
         >
           <option value={C.CONTROLLER_NRF52832}>nRF52832</option>
+          <option value={C.CONTROLLER_NRF52810}>nRF52810</option>
         </select>
         <Help>
           设置你的蓝牙主控芯片型号，当前仅支持nRF52832.

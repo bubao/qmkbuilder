@@ -41,6 +41,12 @@ class ConfigH extends Generator {
 			case C.RGBLIGHT_ENABLE_NO: rgb_enable = '//'; break;
 		}
 
+		let chip_func;  //是否开启相关功能
+		switch (keyboard.controller) {
+			case C.CONTROLLER_NRF52832: chip_func = ''; break;
+			case C.CONTROLLER_NRF52810: chip_func = '//'; break;
+		}
+
 		return {
 			MATRIX_ROWS: keyboard.rows, // 列
 			MATRIX_COLS: keyboard.cols, // 行
@@ -74,7 +80,8 @@ class ConfigH extends Generator {
 			'passkey_required': passkey_required || '',
 			'high_tx_power': high_tx_power || '',
 			'macaddr_name': macaddr_name || '',
-			'rgb_enable': rgb_enable || ''
+			'rgb_enable': rgb_enable || '',
+			'chip_func': chip_func || ''
 		}
 	}
 }

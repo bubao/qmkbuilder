@@ -97,10 +97,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %Hiden_LED_CAPS%#define LED_CAPS %LED_CAPS% // 21
 
 // ws2812 RGB 配置
-%rgb_enable%#define RGBLIGHT_ENABLE
-%rgb_enable%#define RGBLED_NUM %RGBLED_NUM% // 8
-%rgb_enable%#define RGB_DI_PIN %RGB_DI_PIN% // 10
-%rgb_enable%#define RGBLIGHT_ANIMATIONS
+%chip_func%%rgb_enable%#define RGBLIGHT_ENABLE
+%chip_func%%rgb_enable%#define RGBLED_NUM %RGBLED_NUM% // 8
+%chip_func%%rgb_enable%#define RGB_DI_PIN %RGB_DI_PIN% // 10
+%chip_func%%rgb_enable%#define RGBLIGHT_ANIMATIONS
 
 // 启用 LED 状态灯
 %Hiden_LED_BLE%#define LED_BLE %LED_BLE%  // 19

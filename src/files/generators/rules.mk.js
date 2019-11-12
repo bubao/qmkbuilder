@@ -12,6 +12,7 @@ class RulesMK extends Generator {
 		let nrf_chip;
 		switch (keyboard.controller) {
 			case C.CONTROLLER_NRF52832: nrf_chip = 'nrf52832'; break;
+			case C.CONTROLLER_NRF52810: nrf_chip = 'nrf52810'; break;
 		}
 
 		let rgblight_enable;
