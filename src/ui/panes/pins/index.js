@@ -24,7 +24,9 @@ class Pins extends React.Component {
           <option value={C.CONTROLLER_NRF52810}>nRF52810</option>
         </select>
         <Help>
-          设置你的蓝牙主控芯片型号，当前仅支持nRF52832.
+          设置你的蓝牙主控芯片型号，当前支持nRF52832、nRF52810.
+          <br/>
+          注：nRF52810由于硬件资源限制，无法支持RGB,将自动禁用RGB.
         </Help>
         <div style={{ height: '1.5rem' }} />
         配置行和列的针脚.
