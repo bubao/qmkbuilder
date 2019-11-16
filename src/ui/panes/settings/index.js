@@ -123,6 +123,21 @@ class Settings extends React.Component {
 				启用后,信号发射功率将提高到+4dBm.连接将更稳定，但功耗将提高，续航将会小幅下降.当禁用时,信号发射功率采用默认的0dBm.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>RGB灯光</h2>
+			<select
+				style={{ width: '8rem' }}
+				value={ keyboard.settings.RGBLIGHT_ENABLE }
+				onChange={ e => keyboard.setSetting('RGBLIGHT_ENABLE', parseInt(e.target.value)) }>
+				<option value={ C.RGBLIGHT_ENABLE_YES }>启用</option>
+				<option value={ C.RGBLIGHT_ENABLE_NO }>禁用</option>
+			</select>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
+			<Help>
+				是否启用RGB灯驱动支持.
+				<br/>
+				启用后,将支持RGB WS2812灯光，但功耗将提高，续航将大幅下降.当禁用时,将不支持RGB灯光，相关配置项也将无效.
+			</Help>
+			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>WS2812 LEDs</h2>
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox

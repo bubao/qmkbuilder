@@ -12,11 +12,18 @@ class RulesMK extends Generator {
 		let nrf_chip;
 		switch (keyboard.controller) {
 			case C.CONTROLLER_NRF52832: nrf_chip = 'nrf52832'; break;
+			case C.CONTROLLER_NRF52810: nrf_chip = 'nrf52810'; break;
+		}
+
+		let rgblight_enable;
+		switch (keyboard.settings.RGBLIGHT_ENABLE) {
+			case C.RGBLIGHT_ENABLE_YES: rgblight_enable = ''; break;
+			case C.RGBLIGHT_ENABLE_NO: rgblight_enable = '#'; break;
 		}
 
 		return {
 			'nrf_chip': nrf_chip,
-			'use_rgb': keyboard.pins.RGB_DI_PIN ? 'yes' : 'no'
+			'rgblight_enable': rgblight_enable || '',
 		};
 	}
 
