@@ -47,6 +47,14 @@ class ConfigH extends Generator {
 			case C.CONTROLLER_NRF52810: chip_func = '//'; break;
 		}
 
+		let scan_interval;  //键盘回报率
+		switch (keyboard.settings.FAST_SCAN_INTERVAL) {
+			case C.SCAN_INTERVAL_10ms: scan_interval = '10'; break;
+			case C.SCAN_INTERVAL_8ms: scan_interval = '8'; break;
+			case C.SCAN_INTERVAL_4ms: scan_interval = '4'; break;
+			case C.SCAN_INTERVAL_2ms: scan_interval = '2'; break;
+		}
+
 		return {
 			MATRIX_ROWS: keyboard.rows, // 列
 			MATRIX_COLS: keyboard.cols, // 行
@@ -81,7 +89,8 @@ class ConfigH extends Generator {
 			'high_tx_power': high_tx_power || '',
 			'macaddr_name': macaddr_name || '',
 			'rgb_enable': rgb_enable || '',
-			'chip_func': chip_func || ''
+			'chip_func': chip_func || '',
+			'scan_interval': scan_interval || '10'
 		}
 	}
 }

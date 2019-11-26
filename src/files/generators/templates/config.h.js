@@ -64,7 +64,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SLEEP_SLOW_TIMEOUT %SLEEP_SLOW_TIMEOUT% // 键盘闲置多久后转入慢速扫描模式 (15s)
 #define SLEEP_OFF_TIMEOUT %SLEEP_OFF_TIMEOUT% // 键盘闲置多久后转入自动关机 (600s)
 #define KEYBOARD_SCAN_INTERVAL 1 // 按键消抖时长 (ms)
-#define KEYBOARD_FAST_SCAN_INTERVAL 10 // 通常模式下，多久扫描一次键盘 (ms)
+#define KEYBOARD_FAST_SCAN_INTERVAL %scan_interval% // 通常模式下，多久扫描一次键盘 (ms)
 #define KEYBOARD_SLOW_SCAN_INTERVAL 100 // 慢速模式下，多久扫描一次键盘 (ms)
 
 // LED自动熄灭时长(5000ms)，设为0则不自动熄灭
