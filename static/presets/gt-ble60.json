@@ -5506,7 +5506,10 @@
             "PRODUCT": "GT_BLE60",
             "RGBLED_NUM": 8,
             "LED_AUTOOFF_TIME": 5,
-            "SLEEP_OFF_TIMEOUT": 20
+            "SLEEP_OFF_TIMEOUT": 20,
+            "SLEEP_SLOW_TIMEOUT": 15,
+            "PASSKEY": 1,
+            "RGBLIGHT_ENABLE": 1
         }
     }
 }

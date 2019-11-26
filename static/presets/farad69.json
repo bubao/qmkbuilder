@@ -5980,7 +5980,10 @@
             "PRODUCT": "Farad69",
             "RGBLED_NUM": 8,
             "SLEEP_OFF_TIMEOUT": 20,
-            "LED_AUTOOFF_TIME": 5
+            "LED_AUTOOFF_TIME": 5,
+            "RGBLIGHT_ENABLE": 1,
+            "PASSKEY": 1,
+            "SLEEP_SLOW_TIMEOUT": 15
         }
     }
 }
