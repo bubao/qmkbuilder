@@ -90,7 +90,8 @@ class ConfigH extends Generator {
 			'macaddr_name': macaddr_name || '',
 			'rgb_enable': rgb_enable || '',
 			'chip_func': chip_func || '',
-			'scan_interval': scan_interval || '10'
+			'scan_interval': scan_interval || '10',
+			'chargeing_detect': keyboard.pins.LED_CHARGING ? '' : '//'
 		}
 	}
 }
