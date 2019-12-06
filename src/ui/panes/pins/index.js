@@ -148,6 +148,38 @@ class Pins extends React.Component {
           pin={keyboard.pins.LED_CHARGING}
         />
         <div style={{ height: '0.5rem' }} />
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>自定义状态灯</h2>
+        <Chooser
+          noPin
+          state={state}
+          onChange={p => keyboard.setPin('LED_USER', p)}
+          pin={keyboard.pins.LED_USER}
+        />
+        <div style={{ height: '0.5rem' }} />
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备1状态灯</h2>
+        <Chooser
+          noPin
+          state={state}
+          onChange={p => keyboard.setPin('BLE_LED_1', p)}
+          pin={keyboard.pins.BLE_LED_1}
+        />
+                <div style={{ height: '0.5rem' }} />
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备2状态灯</h2>
+        <Chooser
+          noPin
+          state={state}
+          onChange={p => keyboard.setPin('BLE_LED_2', p)}
+          pin={keyboard.pins.BLE_LED_2}
+        />
+                <div style={{ height: '0.5rem' }} />
+        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备3状态灯</h2>
+        <Chooser
+          noPin
+          state={state}
+          onChange={p => keyboard.setPin('BLE_LED_3', p)}
+          pin={keyboard.pins.BLE_LED_3}
+        />
+        <div style={{ height: '0.5rem' }} />
         <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Power按钮</h2>
         <Chooser
           noPin
