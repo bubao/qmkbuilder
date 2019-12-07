@@ -5972,7 +5972,10 @@
             "LED_BLE": "7",
             "LED_USB": "6",
             "LED_CHARGING": "5",
-            "POWER_BUTTON": "3"
+            "POWER_BUTTON": "3",
+            "BLE_LED_1": "7",
+            "BLE_LED_2": "6",
+            "BLE_LED_3": "5"
         },
         "macros": {},
         "settings": {
