@@ -100,6 +100,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %chip_func%%rgb_enable%#define RGBLED_NUM %RGBLED_NUM% // 8
 %chip_func%%rgb_enable%#define RGB_DI_PIN %RGB_DI_PIN% // 10
 %chip_func%%rgb_enable%#define RGBLIGHT_ANIMATIONS
+%Hiden_RGB_PWR_PIN%#define RGB_PWR_PIN %RGB_PWR_PIN% // P-mos
+%Hiden_RGB_PWR_PIN_REVERSE%#define RGB_PWR_PIN_REVERSE %RGB_PWR_PIN_REVERSE% // N-mos
 
 // 启用 LED 状态灯
 %Hiden_LED_BLE%#define LED_BLE %LED_BLE%

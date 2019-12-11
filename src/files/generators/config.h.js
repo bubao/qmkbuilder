@@ -79,6 +79,8 @@ class ConfigH extends Generator {
 			BLE_LED_1: keyboard.pins.BLE_LED_1 || 20, // 20
 			BLE_LED_2: keyboard.pins.BLE_LED_2 || 20, // 20
 			BLE_LED_3: keyboard.pins.BLE_LED_3 || 20, // 20
+			RGB_PWR_PIN: keyboard.pins.RGB_PWR_PIN || 20, // 20
+			RGB_PWR_PIN_REVERSE: keyboard.pins.RGB_PWR_PIN_REVERSE || 20, // 20
 			POWER_BUTTON: keyboard.pins.POWER_BUTTON || 3, // 3
 			UART_RXD: keyboard.pins.UART_RXD || 17, // UART_RX口IO 17
 			UART_TXD: keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
@@ -93,6 +95,8 @@ class ConfigH extends Generator {
 			Hiden_BLE_LED_3: keyboard.pins.BLE_LED_3 ? '' : '//',
 			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
 			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
+			Hiden_RGB_PWR_PIN: keyboard.pins.RGB_PWR_PIN ? '' : '//',
+			Hiden_RGB_PWR_PIN_REVERSE: keyboard.pins.RGB_PWR_PIN_REVERSE ? '' : '//',
 			'passkey_required': passkey_required || '',
 			'high_tx_power': high_tx_power || '',
 			'macaddr_name': macaddr_name || '',
