@@ -185,22 +185,6 @@ class Settings extends React.Component {
 				最短设定1分钟，最长设定10小时.当设定为0时将不自动休眠.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>慢速扫描间隔</h2>
-			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
-				<NumberBox
-					style={{ width: '3.5rem' }}
-					min='0'
-					max='600'
-					value={ keyboard.settings.SLEEP_SLOW_TIMEOUT }
-					onChange={ v => keyboard.setSetting('SLEEP_SLOW_TIMEOUT', v) }/>
-			</div>
-			<h2 style={{ width: '2rem', textAlign: 'left' }}>秒</h2>
-			<Help>
-				设定你的键盘无按键行为后转入慢速扫描的间隔时间, 单位为秒.
-				<br/>
-				最短设定1秒，最长设定10分钟.当设定为0时将不转入慢速扫描.
-			</Help>
-			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>指示灯自动熄灭</h2>
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox
