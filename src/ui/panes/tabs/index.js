@@ -56,7 +56,7 @@ class Tabs extends React.Component {
 			<Tab
 				selected={ screen === C.SCREEN_MACROS }
 				onClick={ this.switchTab(C.SCREEN_MACROS) }>
-				Macros
+				按键宏
 			</Tab>
 			{/* <Tab
 				selected={ screen === C.SCREEN_QUANTUM }
