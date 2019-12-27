@@ -722,7 +722,24 @@ const categories = {
 		'KC_WFWD',
 		'KC_WSTP',
 		'KC_WREF',
-		'KC_WFAV'
+		'KC_WFAV',
+		'',
+
+		'KC_MS_U',
+		'KC_MS_D',
+		'KC_MS_L',
+		'KC_MS_R',
+		'KC_BTN1',
+		'KC_BTN2',
+		'KC_BTN3',
+		'KC_BTN4',
+		'KC_BTN5',
+		'KC_WH_U',
+		'KC_WH_D',
+		'KC_WH_L',
+		'KC_WH_R',
+		'KC_ACL0',
+		'KC_ACL1'
 	],
 
 	KEYPAD: [
