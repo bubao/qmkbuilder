@@ -15,7 +15,7 @@ class Macros extends React.Component {
 		const current = state.ui.get('macros-current', 0);
 
 		return <div className='pane-keymap'>
-			Select a macro to modify.
+			选择一个宏编号进行修改.
 			<div style={{ height: '0.5rem' }}/>
 			<NumberBox
 				style={{ width: '3rem' }}
@@ -25,7 +25,7 @@ class Macros extends React.Component {
 				plus='chevron-up'
 				onChange={ v => state.ui.set('macros-current', v) }/>
 			<div style={{ height: '1.5rem' }}/>
-			Edit the macro.
+			编辑这个宏.
 			<div style={{ height: '0.5rem' }}/>
 			<Editor
 				key={ current }

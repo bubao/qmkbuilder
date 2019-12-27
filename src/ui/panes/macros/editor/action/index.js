@@ -144,9 +144,9 @@ class Action extends React.Component {
 				<option value={ C.MACRO_TYPE }>输出</option>
 				<option value={ C.MACRO_WAIT }>等待</option>
 			</select>
-			{ action === C.MACRO_INTERVAL && <span>&nbsp;&nbsp;to&nbsp;&nbsp;</span> }
-			{ (action === C.MACRO_DOWN || action === C.MACRO_UP || action === C.MACRO_TYPE) && <span>&nbsp;key&nbsp;</span> }
-			{ action === C.MACRO_WAIT && <span>&nbsp;&nbsp;for&nbsp;&nbsp;</span> }
+			{ action === C.MACRO_INTERVAL && <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span> }
+			{ (action === C.MACRO_DOWN || action === C.MACRO_UP || action === C.MACRO_TYPE) && <span>&nbsp;按键&nbsp;</span> }
+			{ action === C.MACRO_WAIT && <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span> }
 			{ (action === C.MACRO_INTERVAL || action === C.MACRO_WAIT) && <span>
 					<input
 						style={{ width: '4rem' }}

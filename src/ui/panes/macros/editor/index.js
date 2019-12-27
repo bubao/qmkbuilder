@@ -254,7 +254,7 @@ class Editor extends React.Component {
 				清除宏
 			</button>
 			<div className='pane-macros-editor-content'>
-				{ actions.length === 0 && <div className='pane-macros-editor-empty'>No actions yet</div> }
+				{ actions.length === 0 && <div className='pane-macros-editor-empty'>无宏动作</div> }
 				{ actions }
 			</div>
 			<div
