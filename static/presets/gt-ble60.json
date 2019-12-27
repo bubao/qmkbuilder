@@ -5498,7 +5498,10 @@
             "LED_BLE": "20",
             "LED_USB": "27",
             "LED_CHARGING": "19",
-            "POWER_BUTTON": "9"
+            "POWER_BUTTON": "9",
+            "BLE_LED_1": "19",
+            "BLE_LED_2": "20",
+            "BLE_LED_3": "27"
         },
         "macros": {},
         "settings": {
@@ -5506,7 +5509,10 @@
             "PRODUCT": "GT_BLE60",
             "RGBLED_NUM": 8,
             "LED_AUTOOFF_TIME": 5,
-            "SLEEP_OFF_TIMEOUT": 20
+            "SLEEP_OFF_TIMEOUT": 20,
+            "SLEEP_SLOW_TIMEOUT": 15,
+            "PASSKEY": 1,
+            "RGBLIGHT_ENABLE": 1
         }
     }
 }

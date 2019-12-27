@@ -13,5 +13,6 @@ COMMAND_ENABLE = yes        # 启用调试和配置的命令
 ifeq (nrf52832,$(strip $(NRF_CHIP)))
 %rgblight_enable%RGBLIGHT_ENABLE = yes       #启用RGB灯
 endif
+STATUS_LED_ENABLE = yes     #启用键盘运行状态灯
 
 `.trim();

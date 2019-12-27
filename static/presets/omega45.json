@@ -4164,15 +4164,21 @@
             "LED_BLE": "19",
             "LED_USB": "20",
             "LED_CHARGING": "18",
-            "POWER_BUTTON": "3"
+            "POWER_BUTTON": "3",
+            "BLE_LED_1": "19",
+            "BLE_LED_2": "20",
+            "BLE_LED_3": "18"
         },
         "macros": {},
         "settings": {
             "diodeDirection": 0,
             "PRODUCT": "Omega45",
             "RGBLED_NUM": 8,
+            "SLEEP_OFF_TIMEOUT": 20,
             "LED_AUTOOFF_TIME": 5,
-            "SLEEP_OFF_TIMEOUT": 20
+            "RGBLIGHT_ENABLE": 1,
+            "PASSKEY": 1,
+            "SLEEP_SLOW_TIMEOUT": 15
         }
     }
 }

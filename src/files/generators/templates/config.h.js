@@ -64,8 +64,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SLEEP_SLOW_TIMEOUT %SLEEP_SLOW_TIMEOUT% // 键盘闲置多久后转入慢速扫描模式 (15s)
 #define SLEEP_OFF_TIMEOUT %SLEEP_OFF_TIMEOUT% // 键盘闲置多久后转入自动关机 (600s)
 #define KEYBOARD_SCAN_INTERVAL 1 // 按键消抖时长 (ms)
-#define KEYBOARD_FAST_SCAN_INTERVAL 10 // 通常模式下，多久扫描一次键盘 (ms)
-#define KEYBOARD_SLOW_SCAN_INTERVAL 100 // 慢速模式下，多久扫描一次键盘 (ms)
+#define KEYBOARD_FAST_SCAN_INTERVAL %scan_interval% // 通常模式下，多久扫描一次键盘 (ms)
+#define KEYBOARD_SLOW_SCAN_INTERVAL 80 // 慢速模式下，多久扫描一次键盘 (ms)
 
 // LED自动熄灭时长(5000ms)，设为0则不自动熄灭
 #define LED_AUTOOFF_TIME %LED_AUTOOFF_TIME%
@@ -97,15 +97,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %Hiden_LED_CAPS%#define LED_CAPS %LED_CAPS% // 21
 
 // ws2812 RGB 配置
-%chip_func%%rgb_enable%#define RGBLIGHT_ENABLE
 %chip_func%%rgb_enable%#define RGBLED_NUM %RGBLED_NUM% // 8
 %chip_func%%rgb_enable%#define RGB_DI_PIN %RGB_DI_PIN% // 10
 %chip_func%%rgb_enable%#define RGBLIGHT_ANIMATIONS
+%Hiden_RGB_PWR_PIN%#define RGB_PWR_PIN %RGB_PWR_PIN% // P-mos
+%Hiden_RGB_PWR_PIN_REVERSE%#define RGB_PWR_PIN_REVERSE %RGB_PWR_PIN_REVERSE% // N-mos
 
 // 启用 LED 状态灯
-%Hiden_LED_BLE%#define LED_BLE %LED_BLE%  // 19
-%Hiden_LED_CHARGING%#define LED_CHARGING %LED_CHARGING% //18
-%Hiden_LED_USB%#define LED_USB %LED_USB% // 20
+%Hiden_LED_BLE%#define LED_BLE %LED_BLE%
+%Hiden_LED_CHARGING%#define LED_CHARGING %LED_CHARGING%
+%Hiden_LED_USB%#define LED_USB %LED_USB%
+%Hiden_LED_USER%#define LED_USER %LED_USER%
+%Hiden_BLE_LED_1%#define BLE_LED_1 %BLE_LED_1%
+%Hiden_BLE_LED_2%#define BLE_LED_2 %BLE_LED_2%
+%Hiden_BLE_LED_3%#define BLE_LED_3 %BLE_LED_3%
+
 
 // 独立硬件按钮
 %Hiden_POWER_BUTTON%#define POWER_BUTTON %POWER_BUTTON% // 3
@@ -122,6 +128,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BATTERY_ADC_PIN NRF_SAADC_INPUT_AIN0 // 电量检测引脚
 
 // 充电检测配置
+%chargeing_detect%#define CHARGING_DETECT
 #define PIN_CHARGING !UCC1 // CH554的充电检测。当UCC1拉低时表示正在充电
 //#define PIN_STANDBY !UCC2 // CH554的充电检测。当UCC2拉低时表示充电完成。若不配置则只使用PIN_CHARGING作为是否充电的检测标志
 

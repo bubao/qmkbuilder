@@ -25,7 +25,7 @@ class Pins extends React.Component {
         </select>
         <Help>
           设置你的蓝牙主控芯片型号，当前支持nRF52832、nRF52810.
-          <br/>
+          <br />
           注：nRF52810由于硬件资源限制，无法支持RGB,将自动禁用RGB.
         </Help>
         <div style={{ height: '1.5rem' }} />
@@ -83,78 +83,133 @@ class Pins extends React.Component {
         </div>
         <div style={{ height: '1.5rem' }} />
         配置其他针脚.
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Num Lock灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('num', p)}
-          pin={keyboard.pins.num}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Caps Lock灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('caps', p)}
-          pin={keyboard.pins.caps}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_RXD</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('UART_RXD', p)}
-          pin={keyboard.pins.UART_RXD}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_TXD</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('UART_TXD', p)}
-          pin={keyboard.pins.UART_TXD}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>RGB灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('RGB_DI_PIN', p)}
-          pin={keyboard.pins.RGB_DI_PIN}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>BLE状态灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('LED_BLE', p)}
-          pin={keyboard.pins.LED_BLE}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>USB状态灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('LED_USB', p)}
-          pin={keyboard.pins.LED_USB}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>充电状态灯</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('LED_CHARGING', p)}
-          pin={keyboard.pins.LED_CHARGING}
-        />
-        <div style={{ height: '0.5rem' }} />
-        <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Power按钮</h2>
-        <Chooser
-          noPin
-          state={state}
-          onChange={p => keyboard.setPin('POWER_BUTTON', p)}
-          pin={keyboard.pins.POWER_BUTTON}
-        />
+        <div className="clear">
+          <div className="float-left" style={{ width: '50%' }}>
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Num Lock灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('num', p)}
+              pin={keyboard.pins.num}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Caps Lock灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('caps', p)}
+              pin={keyboard.pins.caps}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_RXD</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('UART_RXD', p)}
+              pin={keyboard.pins.UART_RXD}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>UART_TXD</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('UART_TXD', p)}
+              pin={keyboard.pins.UART_TXD}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>RGB灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('RGB_DI_PIN', p)}
+              pin={keyboard.pins.RGB_DI_PIN}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>P RGB PWR</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('RGB_PWR_PIN', p)}
+              pin={keyboard.pins.RGB_PWR_PIN}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>N RGB PWR</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('RGB_PWR_PIN_REVERSE', p)}
+              pin={keyboard.pins.RGB_PWR_PIN_REVERSE}
+            />
+            <div style={{ height: '0.5rem' }} />
+          </div>
+          <div className="float-right" style={{ width: '50%' }}>
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>BLE状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('LED_BLE', p)}
+              pin={keyboard.pins.LED_BLE}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>USB状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('LED_USB', p)}
+              pin={keyboard.pins.LED_USB}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>充电状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('LED_CHARGING', p)}
+              pin={keyboard.pins.LED_CHARGING}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>自定义状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('LED_USER', p)}
+              pin={keyboard.pins.LED_USER}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备1状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('BLE_LED_1', p)}
+              pin={keyboard.pins.BLE_LED_1}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备2状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('BLE_LED_2', p)}
+              pin={keyboard.pins.BLE_LED_2}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备3状态灯</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('BLE_LED_3', p)}
+              pin={keyboard.pins.BLE_LED_3}
+            />
+            <div style={{ height: '0.5rem' }} />
+            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>Power按钮</h2>
+            <Chooser
+              noPin
+              state={state}
+              onChange={p => keyboard.setPin('POWER_BUTTON', p)}
+              pin={keyboard.pins.POWER_BUTTON}
+            />
+          </div>
+        </div>
       </div>
     )
   }

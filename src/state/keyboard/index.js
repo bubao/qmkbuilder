@@ -36,10 +36,15 @@ class Keyboard {
 		this.macros = {};
 		this.quantum = C.QUANTUM_DEFAULT;
 		this.settings = {
-			diodeDirection: C.DIODE_COL2ROW,
-			RGBLED_NUM: 8,
-            SLEEP_OFF_TIMEOUT: 20,
-            LED_AUTOOFF_TIME: 5
+			"diodeDirection": C.DIODE_COL2ROW,
+            "diodeDirection": 0,
+            "PRODUCT": "Lotkb",
+            "RGBLED_NUM": 8,
+            "SLEEP_OFF_TIMEOUT": 20,
+            "LED_AUTOOFF_TIME": 5,
+            "RGBLIGHT_ENABLE": 1,
+            "PASSKEY": 1,
+            "SLEEP_SLOW_TIMEOUT": 15
 		};
 
 		this.valid = false;

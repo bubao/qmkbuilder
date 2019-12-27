@@ -138,6 +138,23 @@ class Settings extends React.Component {
 				启用后,将支持RGB WS2812灯光，但功耗将提高，续航将大幅下降.当禁用时,将不支持RGB灯光，相关配置项也将无效.
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>回报率</h2>
+			<select
+				style={{ width: '8rem' }}
+				value={ keyboard.settings.FAST_SCAN_INTERVAL }
+				onChange={ e => keyboard.setSetting('FAST_SCAN_INTERVAL', parseInt(e.target.value)) }>
+				<option value={ C.SCAN_INTERVAL_10ms }>100Hz</option>
+				<option value={ C.SCAN_INTERVAL_8ms }>125Hz</option>
+				<option value={ C.SCAN_INTERVAL_4ms }>250Hz</option>
+				<option value={ C.SCAN_INTERVAL_2ms }>500Hz</option>
+			</select>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}></h2>
+			<Help>
+				设定键盘的回报率.
+				<br/>
+				回报率越高，响应按键行为越快，但是耗电将增加，并且太高的回报率可能导致故障. 默认为100Hz.
+			</Help>
+			<div style={{ height: '0.5rem' }}/>
 			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>WS2812 LEDs</h2>
 			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
 				<NumberBox

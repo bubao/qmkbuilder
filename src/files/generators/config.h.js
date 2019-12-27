@@ -47,6 +47,14 @@ class ConfigH extends Generator {
 			case C.CONTROLLER_NRF52810: chip_func = '//'; break;
 		}
 
+		let scan_interval;  //键盘回报率
+		switch (keyboard.settings.FAST_SCAN_INTERVAL) {
+			case C.SCAN_INTERVAL_10ms: scan_interval = '10'; break;
+			case C.SCAN_INTERVAL_8ms: scan_interval = '8'; break;
+			case C.SCAN_INTERVAL_4ms: scan_interval = '4'; break;
+			case C.SCAN_INTERVAL_2ms: scan_interval = '2'; break;
+		}
+
 		return {
 			MATRIX_ROWS: keyboard.rows, // 列
 			MATRIX_COLS: keyboard.cols, // 行
@@ -67,6 +75,12 @@ class ConfigH extends Generator {
 			LED_BLE: keyboard.pins.LED_BLE || 19, // 19
 			LED_CHARGING: keyboard.pins.LED_CHARGING || 18, // 18
 			LED_USB: keyboard.pins.LED_USB || 20, // 20
+			LED_USER: keyboard.pins.LED_USER || 20, // 20
+			BLE_LED_1: keyboard.pins.BLE_LED_1 || 20, // 20
+			BLE_LED_2: keyboard.pins.BLE_LED_2 || 20, // 20
+			BLE_LED_3: keyboard.pins.BLE_LED_3 || 20, // 20
+			RGB_PWR_PIN: keyboard.pins.RGB_PWR_PIN || 20, // 20
+			RGB_PWR_PIN_REVERSE: keyboard.pins.RGB_PWR_PIN_REVERSE || 20, // 20
 			POWER_BUTTON: keyboard.pins.POWER_BUTTON || 3, // 3
 			UART_RXD: keyboard.pins.UART_RXD || 17, // UART_RX口IO 17
 			UART_TXD: keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
@@ -75,13 +89,21 @@ class ConfigH extends Generator {
 			Hiden_RGB_DI_PIN: keyboard.pins.RGB_DI_PIN ? '' : '//',
 			Hiden_LED_BLE: keyboard.pins.LED_BLE ? '' : '//',
 			Hiden_LED_USB: keyboard.pins.LED_USB ? '' : '//',
+			Hiden_LED_USER: keyboard.pins.LED_USER ? '' : '//',
+			Hiden_BLE_LED_1: keyboard.pins.BLE_LED_1 ? '' : '//',
+			Hiden_BLE_LED_2: keyboard.pins.BLE_LED_2 ? '' : '//',
+			Hiden_BLE_LED_3: keyboard.pins.BLE_LED_3 ? '' : '//',
 			Hiden_LED_CHARGING: keyboard.pins.LED_CHARGING ? '' : '//',
 			Hiden_POWER_BUTTON: keyboard.pins.POWER_BUTTON ? '' : '//',
+			Hiden_RGB_PWR_PIN: keyboard.pins.RGB_PWR_PIN ? '' : '//',
+			Hiden_RGB_PWR_PIN_REVERSE: keyboard.pins.RGB_PWR_PIN_REVERSE ? '' : '//',
 			'passkey_required': passkey_required || '',
 			'high_tx_power': high_tx_power || '',
 			'macaddr_name': macaddr_name || '',
 			'rgb_enable': rgb_enable || '',
-			'chip_func': chip_func || ''
+			'chip_func': chip_func || '',
+			'scan_interval': scan_interval || '10',
+			'chargeing_detect': keyboard.pins.LED_CHARGING ? '' : '//'
 		}
 	}
 }

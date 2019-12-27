@@ -49,7 +49,7 @@ class Keymap extends React.Component {
                 <br />
                 阅读{' '}
                 <a
-                  href="https://docs.qmk.fm/#/keycodes?id=keycodes-overview"
+                  href="https://glab.online/tmk-keycode"
                   target="_blank"
                 >
                   帮助文档

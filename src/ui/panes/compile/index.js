@@ -168,6 +168,18 @@ class Compile extends React.Component {
 				>
 					下载生成的源码文件
 				</button>
+				<div>
+					<br />
+					<br />
+					阅读{' '}
+					<a
+						href="https://glab.online/update-log"
+						target="_blank"
+					>
+						更新日志
+					</a>{' '}
+					了解当前固件源码更新情况.
+		  		</div>
 			</div>
 		)
 	}
