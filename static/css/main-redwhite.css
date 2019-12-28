@@ -555,13 +555,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #ecf7e4;
+	background: #fffefc;
 	border: 0.1rem solid #c0392b;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #00d034;
+	border-color: #ffecb5;
 }
 
 .display-inner {
@@ -582,7 +582,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #e8f1de;
+	background: #fdf6e2;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -593,7 +593,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #fffffa;
+	background: #ffffff;
 	top: 4px;
 	left: 7px;
 	right: 7px;
@@ -603,11 +603,11 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #fffca4;
+	background: #ff445b;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #ffef96;
+	background: #b90016;
 }
 
 .display-key.select2 .display-key-block-inner {
@@ -618,8 +618,12 @@ select {
 	background: #f7e580;
 }
 
+.display-key.select1 .display-key-block-inner {
+	background: #fff2a6;
+}
+
 .display-key.select1 .display-key-block-inner-background {
-	background: #ffef96;
+	background: #f7e580;
 }
 
 
