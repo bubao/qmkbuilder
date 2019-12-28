@@ -555,13 +555,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #777777;
+	background: #f9f5df;
 	border: 0.1rem solid #e4dfc3;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #92a4ab;
+	border-color: #e6dfb6;
 }
 
 .display-inner {
@@ -582,7 +582,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #94c0d0;
+	background: #bd0017;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -593,7 +593,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #a2d9ec;
+	background: #ed354b;
 	top: 4px;
 	left: 7px;
 	right: 7px;
@@ -603,27 +603,27 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #68cff3;
+	background: #ff8896;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #469ebd;
+	background: #920012;
 }
 
 .display-key.select2 .display-key-block-inner {
-	background: #88daf7;
+	background: #ed8f35;
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #6cb2cc;
+	background: #a24f00;
 }
 
 .display-key.select1 .display-key-block-inner {
-	background: #eca056;
+	background: #ec8f36;
 }
 
 .display-key.select1 .display-key-block-inner-background {
-	background: #b56c26;
+	background: #a24f00;
 }
 
 
@@ -697,7 +697,7 @@ select {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	pointer-events: none;
-	color:#000d15;
+	color:#fff2a6;
 }
 
 
