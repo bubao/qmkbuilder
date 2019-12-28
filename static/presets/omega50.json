@@ -5320,7 +5320,8 @@
             "LED_USER": "5",
             "BLE_LED_1": "7",
             "BLE_LED_2": "6",
-            "BLE_LED_3": "5"
+            "BLE_LED_3": "5",
+            "RGB_PWR_PIN": "12"
         },
         "macros": {},
         "settings": {
