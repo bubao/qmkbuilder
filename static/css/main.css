@@ -531,7 +531,7 @@ select {
 	font-weight: 600;
 	text-align: center;
 	padding: 2rem;
-	color: #830000;
+	color: #ed354b;
 }
 
 .kle {
@@ -581,7 +581,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #e0e0e0;
+	background: #900000;
 	top: 5px;
 	left: 5px;
 	right: 5px;
@@ -592,7 +592,7 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #eeeeee;
+	background: #fff7e7;
 	top: 6px;
 	left: 6px;
 	right: 6px;
@@ -602,7 +602,7 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #d4d4d4;
+	background: #fffb85;
 }
 
 .display-key.select1 .display-key-block-inner-background {
