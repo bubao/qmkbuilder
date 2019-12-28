@@ -273,7 +273,7 @@ button {
 	max-width: 500px;
 	margin: auto;
 	outline: none;
-	background: #34495e;
+	background: #c0392b;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 0.2rem;
 	line-height: 1.9rem;
@@ -285,15 +285,15 @@ button {
 }
 
 button:hover {
-	background: #455a6f !important;
+	background: #eb210a !important;
 }
 
 button:active {
-	background: #23384d;
+	background: #f0301b;
 }
 
 button:disabled {
-	background: #566b7f !important;
+	background: #f53924 !important;
 	cursor: initial;
 }
 
@@ -372,7 +372,7 @@ input[type="checkbox"] + label:before {
 
 input[type="checkbox"]:checked + label:before {
 	content: '\2713'; /* Check mark. */
-	color: #2c3e50;
+	color: #960606;
 	font-size: 0.8rem;
 	line-height: 1rem;
 	text-align: center;
@@ -509,7 +509,7 @@ select {
 }
 
 .toggle:active {
-	background: #23384d;
+	background: #701212;
 }
 
 .toggle:disabled {
@@ -531,7 +531,7 @@ select {
 	font-weight: 600;
 	text-align: center;
 	padding: 2rem;
-	color: #2c3e50;
+	color: #830000;
 }
 
 .kle {
@@ -719,11 +719,11 @@ select {
 }
 
 .panes-tab:hover {
-	color: #5c6e82;
+	color: #dd5100;
 }
 
 .panes-tab.selected {
-	color: #2c3e52;
+	color: #d80000;
 }
 
 .panes-content {
@@ -825,11 +825,11 @@ select {
 }
 
 .pane-keymap-selector-tab:hover {
-	color: #5c6e82;
+	color: #f74141;
 }
 
 .pane-keymap-selector-tab.selected {
-	color: #2c3e52;
+	color: #ff2d2d;
 }
 
 .pane-keymap-selector-buttons {
