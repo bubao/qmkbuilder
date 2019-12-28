@@ -618,6 +618,10 @@ select {
 	background: #f7e580;
 }
 
+.display-key.select1 .display-key-block-inner {
+	background: #fff2a6;
+}
+
 .display-key.select1 .display-key-block-inner-background {
 	background: #f7e580;
 }
