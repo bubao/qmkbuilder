@@ -273,7 +273,7 @@ button {
 	max-width: 500px;
 	margin: auto;
 	outline: none;
-	background: #c0392b;
+	background: #34495e;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 0.2rem;
 	line-height: 1.9rem;
@@ -285,15 +285,15 @@ button {
 }
 
 button:hover {
-	background: #eb210a !important;
+	background: #455a6f !important;
 }
 
 button:active {
-	background: #f0301b;
+	background: #23384d;
 }
 
 button:disabled {
-	background: #f53924 !important;
+	background: #566b7f !important;
 	cursor: initial;
 }
 
@@ -372,7 +372,7 @@ input[type="checkbox"] + label:before {
 
 input[type="checkbox"]:checked + label:before {
 	content: '\2713'; /* Check mark. */
-	color: #960606;
+	color: #2c3e50;
 	font-size: 0.8rem;
 	line-height: 1rem;
 	text-align: center;
@@ -509,7 +509,7 @@ select {
 }
 
 .toggle:active {
-	background: #701212;
+	background: #23384d;
 }
 
 .toggle:disabled {
@@ -531,7 +531,7 @@ select {
 	font-weight: 600;
 	text-align: center;
 	padding: 2rem;
-	color: #ed354b;
+	color: #2c3e50;
 }
 
 .kle {
@@ -549,19 +549,18 @@ select {
 
 .display-wrapper button {
 	line-height:1.9rem;
-	color: red
 }
 
 .display {
 	position: relative;
 	margin: auto;
-	background: #777777;
+	background: #b72525;
 	border: 0.1rem solid #e4dfc3;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #92a4ab;
+	border-color: #ffdc3c;
 }
 
 .display-inner {
@@ -582,7 +581,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #94c0d0;
+	background: #a1bbd4;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -593,8 +592,8 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #a2d9ec;
-	top: 4px;
+	background: #fafafa;
+	top: 5px;
 	left: 7px;
 	right: 7px;
 	bottom: 9px;
@@ -603,27 +602,32 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #68cff3;
+	background: #ffe6e6;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #469ebd;
+	background: #ff6262;
 }
 
 .display-key.select2 .display-key-block-inner {
-	background: #88daf7;
+	background: #ffa6a6;
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #6cb2cc;
+	background: #ff6262;
 }
 
 .display-key.select1 .display-key-block-inner {
-	background: #eca056;
+	top:5px;
+	left: 6px;
+	right: 6px;
+	bottom: 8px;
+	border-radius: 6px;
+	background: #ffb9b9;
 }
 
 .display-key.select1 .display-key-block-inner-background {
-	background: #b56c26;
+	background: #ff7777;
 }
 
 
@@ -655,7 +659,7 @@ select {
 }
 
 .display-wire-col {
-	background: #2c3e52;
+	background: #23384d;
 }
 
 .display-wire-label {
@@ -732,11 +736,11 @@ select {
 }
 
 .panes-tab:hover {
-	color: #dd5100;
+	color: #5c6e82;
 }
 
 .panes-tab.selected {
-	color: #d80000;
+	color: #2c3e52;
 }
 
 .panes-content {
@@ -838,11 +842,11 @@ select {
 }
 
 .pane-keymap-selector-tab:hover {
-	color: #f74141;
+	color: #5c6e82;
 }
 
 .pane-keymap-selector-tab.selected {
-	color: #ff2d2d;
+	color: #2c3e52;
 }
 
 .pane-keymap-selector-buttons {
