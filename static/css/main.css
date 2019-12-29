@@ -554,13 +554,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #777777;
+	background: #34495e;
 	border: 0.1rem solid #e4dfc3;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #92a4ab;
+	border-color: #7397bb;
 }
 
 .display-inner {
@@ -581,7 +581,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #94c0d0;
+	background: #a1bbd4;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -592,8 +592,8 @@ select {
 .display-key-block-inner {
 	position: absolute;
 	display: block;
-	background: #a2d9ec;
-	top: 4px;
+	background: #fafafa;
+	top: 5px;
 	left: 7px;
 	right: 7px;
 	bottom: 9px;
@@ -602,27 +602,32 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #68cff3;
+	background: #d9f4fd;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #469ebd;
+	background: #80ddff;
 }
 
 .display-key.select2 .display-key-block-inner {
-	background: #88daf7;
+	background: #a6e8ff;
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #6cb2cc;
+	background: #80ddff;
 }
 
 .display-key.select1 .display-key-block-inner {
-	background: #eca056;
+	top:5px;
+	left: 6px;
+	right: 6px;
+	bottom: 8px;
+	border-radius: 6px;
+	background: #aacbea;
 }
 
 .display-key.select1 .display-key-block-inner-background {
-	background: #b56c26;
+	background: #5491b9;
 }
 
 
@@ -654,7 +659,7 @@ select {
 }
 
 .display-wire-col {
-	background: #2c3e52;
+	background: #23384d;
 }
 
 .display-wire-label {
