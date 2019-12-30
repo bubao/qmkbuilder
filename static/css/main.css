@@ -554,13 +554,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #34495e;
+	background: #5284b5;
 	border: 0.1rem solid #e4dfc3;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #7397bb;
+	border-color: #abcdef;
 }
 
 .display-inner {
@@ -602,19 +602,19 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #d9f4fd;
+	background: #ffe6e6;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #80ddff;
+	background: #ff6262;
 }
 
 .display-key.select2 .display-key-block-inner {
-	background: #a6e8ff;
+	background: #ffa6a6;
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #80ddff;
+	background: #ff6262;
 }
 
 .display-key.select1 .display-key-block-inner {
@@ -623,11 +623,11 @@ select {
 	right: 6px;
 	bottom: 8px;
 	border-radius: 6px;
-	background: #aacbea;
+	background: #ffb9b9;
 }
 
 .display-key.select1 .display-key-block-inner-background {
-	background: #5491b9;
+	background: #ff7777;
 }
 
 
