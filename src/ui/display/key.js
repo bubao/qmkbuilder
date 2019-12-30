@@ -11,7 +11,12 @@ class Key extends React.Component {
 
     const keySize = state.ui.get('keySize', C.KEY_SIZE)
 
-    const className = classNames('display-key', {
+    const className1 = classNames('display-key', {
+      select1: data.selected == 1,
+      select2: data.selected == 2
+    })
+
+    const className2 = classNames('display-key2', {
       select1: data.selected == 1,
       select2: data.selected == 2
     })
@@ -45,25 +50,45 @@ class Key extends React.Component {
         (flipped ? data.size.w - data.size2.w - data.offset.x : data.offset.x) *
         keySize
     }
-
-    return (
-      <div
-        className={className}
-        style={style}
-        onClick={this.props.onClick}
-        onMouseEnter={this.props.onMouseEnter}
-        onMouseLeave={this.props.onMouseLeave}
-      >
-        <div className="display-key-block" style={block1Style}>
-          <div className="display-key-block-inner-background" />
-          <div className="display-key-block-inner" />
+    if (data.state.st != 0) {
+      return (
+        <div
+          className={className1}
+          style={style}
+          onClick={this.props.onClick}
+          onMouseEnter={this.props.onMouseEnter}
+          onMouseLeave={this.props.onMouseLeave}
+        >
+          <div className="display-key-block" style={block1Style}>
+            <div className="display-key-block-inner-background" />
+            <div className="display-key-block-inner" />
+          </div>
+          <div className="display-key-block" style={block2Style}>
+            <div className="display-key-block-inner-background" />
+            <div className="display-key-block-inner" />
+          </div>
         </div>
-        <div className="display-key-block" style={block2Style}>
-          <div className="display-key-block-inner-background" />
-          <div className="display-key-block-inner" />
+      )
+    } else {
+      return (
+        <div
+          className={className2}
+          style={style}
+          onClick={this.props.onClick}
+          onMouseEnter={this.props.onMouseEnter}
+          onMouseLeave={this.props.onMouseLeave}
+        >
+          <div className="display-key-block2" style={block1Style}>
+            <div className="display-key-block-inner-background2" />
+            <div className="display-key-block-inner2" />
+          </div>
+          <div className="display-key-block2" style={block2Style}>
+            <div className="display-key-block-inner-background2" />
+            <div className="display-key-block-inner2" />
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
 }
 
