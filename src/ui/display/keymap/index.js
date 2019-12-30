@@ -36,14 +36,25 @@ class Keymap extends React.Component {
         height: key.size.h * keySize - 12,
         lineHeight: key.size.h * keySize - 9 + 'px'
       }
-
-      return (
-        <div className="display-keycode" key={index} style={style}>
-          <div className="display-keycode-block" style={blockStyle}>
-            {key.keycodes[layer].getName()}
+      if (key.state.st != 0) {
+        return (
+          // 普通键字体颜色
+          <div className="display-keycode" key={index} style={style}>
+            <div className="display-keycode-block" style={blockStyle}>
+              {key.keycodes[layer].getName()}
+            </div>
           </div>
-        </div>
-      )
+        )
+      } else {
+        // 大键字体颜色
+        return (
+          <div className="display-keycode2" key={index} style={style}>
+            <div className="display-keycode-block2" style={blockStyle}>
+              {key.keycodes[layer].getName()}
+            </div>
+          </div>
+        )
+      }
     })
 
     return <div className="display-inner">{keys}</div>
