@@ -632,6 +632,68 @@ select {
 }
 
 
+.display-key2 {
+	position: absolute;
+	cursor: pointer;
+}
+
+.display-key-block2 {
+	position: absolute;
+}
+
+.display-key-block-inner-background2 {
+	position: absolute;
+	display: block;
+	background: #91d2e2;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border-radius: 4px;
+}
+
+.display-key-block-inner2 {
+	position: absolute;
+	display: block;
+	background: #dcf8ff;
+	top: 5px;
+	left: 7px;
+	right: 7px;
+	bottom: 9px;
+	border-radius: 7px;
+	z-index: 1;
+}
+
+.display-key2:hover .display-key-block-inner2 {
+	background: #ffe6e6;
+}
+
+.display-key2:hover .display-key-block-inner-background2 {
+	background: #ff6262;
+}
+
+.display-key2.select2 .display-key-block-inner2 {
+	background: #ffa6a6;
+}
+
+.display-key2.select2 .display-key-block-inner-background2 {
+	background: #ff6262;
+}
+
+.display-key2.select1 .display-key-block-inner2 {
+	top:5px;
+	left: 6px;
+	right: 6px;
+	bottom: 8px;
+	border-radius: 6px;
+	background: #ffb9b9;
+}
+
+.display-key2.select1 .display-key-block-inner-background2 {
+	background: #ff7777;
+}
+
+
 .display-pad {
 	position: absolute;
 	width: 6px;
@@ -687,6 +749,10 @@ select {
 	position: absolute;
 }
 
+.display-keycode2 {
+	position: absolute;
+}
+
 .display-keycode-block {
 	position: absolute;
 	display: block;
@@ -705,6 +771,23 @@ select {
 	color:#000d15;
 }
 
+.display-keycode-block2 {
+	position: absolute;
+	display: block;
+	top: 5px;
+	left: 10px;
+	right: 10px;
+	bottom: 7px;
+	z-index: 1;
+	font-family: Hind;
+	font-size: 1.1rem;
+	line-height: 3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	pointer-events: none;
+	color:#2f4800;
+}
 
 .panes-wrapper {
 	width: 100%;
