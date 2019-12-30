@@ -4,7 +4,7 @@
         "keys": [
             {
                 "id": 0,
-                "legend": "ESC",
+                "legend": "~\n`",
                 "state": {
                     "x": 0,
                     "y": 0,
@@ -17,7 +17,9 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "st": 0
+                    "st": 0,
+                    "c": "#c13828",
+                    "t": "#ffffff"
                 },
                 "row": 0,
                 "col": 0,
@@ -31,7 +33,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "SYS_OFF",
                         "fields": []
                     },
                     {
@@ -102,7 +104,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 1,
@@ -116,7 +121,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MYCM",
                         "fields": []
                     },
                     {
@@ -187,7 +192,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 2,
@@ -201,7 +209,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MAIL",
                         "fields": []
                     },
                     {
@@ -272,7 +280,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 3,
@@ -286,7 +297,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_CALC",
                         "fields": []
                     },
                     {
@@ -357,7 +368,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 4,
@@ -371,7 +385,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MSEL",
                         "fields": []
                     },
                     {
@@ -442,7 +456,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 5,
@@ -527,7 +544,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 6,
@@ -612,7 +632,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 7,
@@ -697,7 +720,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 8,
@@ -711,7 +737,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MPLY",
                         "fields": []
                     },
                     {
@@ -782,7 +808,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 9,
@@ -796,7 +825,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MPRV",
                         "fields": []
                     },
                     {
@@ -867,7 +896,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 10,
@@ -881,7 +913,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_MNXT",
                         "fields": []
                     },
                     {
@@ -952,7 +984,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 11,
@@ -1037,7 +1072,10 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4
                 },
                 "row": 0,
                 "col": 12,
@@ -1110,34 +1148,38 @@
             },
             {
                 "id": 13,
-                "legend": "bs",
+                "legend": "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>",
                 "state": {
                     "x": 13,
                     "y": 0,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 2,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "st": 0
+                    "c": "#373535",
+                    "t": "#dd1126",
+                    "st": 0,
+                    "f": 9,
+                    "a": 5
                 },
                 "row": 0,
                 "col": 13,
                 "keycodes": [
                     {
-                        "id": "KC_NLCK",
+                        "id": "KC_BSPC",
                         "fields": []
                     },
                     {
-                        "id": "KC_PSCR",
+                        "id": "KC_DEL",
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "SYS_SLEEP",
                         "fields": []
                     },
                     {
@@ -1196,26 +1238,30 @@
             },
             {
                 "id": 14,
-                "legend": "~\n`",
+                "legend": "<i class='fa fa-cc'></i>",
                 "state": {
-                    "x": 14,
-                    "y": 0,
+                    "x": 0,
+                    "y": 1,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 1.5,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "st": 0
+                    "c": "#373535",
+                    "t": "#dd1126",
+                    "st": 0,
+                    "f": 9,
+                    "a": 5
                 },
-                "row": 0,
-                "col": 14,
+                "row": 1,
+                "col": 0,
                 "keycodes": [
                     {
-                        "id": "KC_BSPC",
+                        "id": "KC_TAB",
                         "fields": []
                     },
                     {
@@ -1282,94 +1328,9 @@
             },
             {
                 "id": 15,
-                "legend": "Tab",
-                "state": {
-                    "x": 0,
-                    "y": 1,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0
-                },
-                "row": 1,
-                "col": 0,
-                "keycodes": [
-                    {
-                        "id": "KC_TAB",
-                        "fields": []
-                    },
-                    {
-                        "id": "SYS_SLEEP",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 16,
                 "legend": "Q",
                 "state": {
-                    "x": 1,
+                    "x": 1.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1379,7 +1340,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 1,
@@ -1451,10 +1416,10 @@
                 ]
             },
             {
-                "id": 17,
+                "id": 16,
                 "legend": "W",
                 "state": {
-                    "x": 2,
+                    "x": 2.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1464,7 +1429,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 2,
@@ -1536,10 +1505,10 @@
                 ]
             },
             {
-                "id": 18,
+                "id": 17,
                 "legend": "E",
                 "state": {
-                    "x": 3,
+                    "x": 3.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1549,7 +1518,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 3,
@@ -1621,10 +1594,10 @@
                 ]
             },
             {
-                "id": 19,
+                "id": 18,
                 "legend": "R",
                 "state": {
-                    "x": 4,
+                    "x": 4.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1634,7 +1607,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 4,
@@ -1706,10 +1683,10 @@
                 ]
             },
             {
-                "id": 20,
+                "id": 19,
                 "legend": "T",
                 "state": {
-                    "x": 5,
+                    "x": 5.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1719,7 +1696,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 5,
@@ -1791,10 +1772,10 @@
                 ]
             },
             {
-                "id": 21,
+                "id": 20,
                 "legend": "Y",
                 "state": {
-                    "x": 6,
+                    "x": 6.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1804,7 +1785,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 6,
@@ -1876,10 +1861,10 @@
                 ]
             },
             {
-                "id": 22,
+                "id": 21,
                 "legend": "U",
                 "state": {
-                    "x": 7,
+                    "x": 7.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1889,7 +1874,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 7,
@@ -1961,10 +1950,10 @@
                 ]
             },
             {
-                "id": 23,
+                "id": 22,
                 "legend": "I",
                 "state": {
-                    "x": 8,
+                    "x": 8.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -1974,7 +1963,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 8,
@@ -2046,10 +2039,10 @@
                 ]
             },
             {
-                "id": 24,
+                "id": 23,
                 "legend": "O",
                 "state": {
-                    "x": 9,
+                    "x": 9.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -2059,7 +2052,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 1,
                 "col": 9,
@@ -2069,7 +2066,96 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_LBRC",
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 24,
+                "legend": "P",
+                "state": {
+                    "x": 10.5,
+                    "y": 1,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
+                },
+                "row": 1,
+                "col": 10,
+                "keycodes": [
+                    {
+                        "id": "KC_P",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -2132,9 +2218,9 @@
             },
             {
                 "id": 25,
-                "legend": "P",
+                "legend": "[\n\n\n\n\n\n\n\n{",
                 "state": {
-                    "x": 10,
+                    "x": 11.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -2144,21 +2230,25 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
                 },
                 "row": 1,
-                "col": 10,
+                "col": 11,
                 "keycodes": [
                     {
-                        "id": "KC_P",
+                        "id": "KC_LBRC",
                         "fields": []
                     },
                     {
-                        "id": "KC_RBRC",
+                        "id": "KC_PGUP",
                         "fields": []
                     },
                     {
-                        "id": "KC_TRNS",
+                        "id": "KC_PGUP",
                         "fields": []
                     },
                     {
@@ -2217,9 +2307,9 @@
             },
             {
                 "id": 26,
-                "legend": "{\n[",
+                "legend": "}\n\n\n\n\n\n\n\n]",
                 "state": {
-                    "x": 11,
+                    "x": 12.5,
                     "y": 1,
                     "r": 0,
                     "rx": 0,
@@ -2229,10 +2319,103 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
                 },
                 "row": 1,
-                "col": 11,
+                "col": 12,
+                "keycodes": [
+                    {
+                        "id": "KC_RBRC",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_PGDN",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_PGDN",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 27,
+                "legend": "\\\n\n\n\n\n\n\n\n|",
+                "state": {
+                    "x": 13.5,
+                    "y": 1,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1.5,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 5,
+                    "a": 4
+                },
+                "row": 1,
+                "col": 13,
                 "keycodes": [
                     {
                         "id": "KC_BSLS",
@@ -2301,115 +2484,35 @@
                 ]
             },
             {
-                "id": 27,
-                "legend": "7\nHOME",
-                "state": {
-                    "x": 12,
-                    "y": 1,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0
-                },
-                "row": 1,
-                "col": 12,
-                "keycodes": [
-                    {
-                        "id": "KC_P7",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
                 "id": 28,
-                "legend": "8\n↑",
+                "legend": "<i class='fa fa-foursquare'></i>",
                 "state": {
-                    "x": 13,
-                    "y": 1,
+                    "x": 0,
+                    "y": 2,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 1.75,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
+                    "st": 0,
+                    "f": 9,
+                    "a": 5
                 },
-                "row": 1,
-                "col": 13,
+                "row": 2,
+                "col": 0,
                 "keycodes": [
                     {
-                        "id": "KC_P8",
+                        "id": "KC_CAPS",
                         "fields": []
                     },
                     {
-                        "id": "KC_INS",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -2472,196 +2575,23 @@
             },
             {
                 "id": 29,
-                "legend": "9\nPgUp",
+                "legend": "A",
                 "state": {
-                    "x": 14,
-                    "y": 1,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0
-                },
-                "row": 1,
-                "col": 14,
-                "keycodes": [
-                    {
-                        "id": "KC_P9",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_DEL",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 30,
-                "legend": "Caps Lock",
-                "state": {
-                    "x": 0,
+                    "x": 1.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1.25,
+                    "w": 1,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "st": 0
-                },
-                "row": 2,
-                "col": 0,
-                "keycodes": [
-                    {
-                        "id": "MT()",
-                        "fields": [
-                            1,
-                            {
-                                "id": "KC_CAPS",
-                                "fields": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 31,
-                "legend": "A",
-                "state": {
-                    "x": 1.25,
-                    "y": 2,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 1,
@@ -2733,10 +2663,10 @@
                 ]
             },
             {
-                "id": 32,
+                "id": 30,
                 "legend": "S",
                 "state": {
-                    "x": 2.25,
+                    "x": 2.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -2746,7 +2676,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 2,
@@ -2818,10 +2752,10 @@
                 ]
             },
             {
-                "id": 33,
+                "id": 31,
                 "legend": "D",
                 "state": {
-                    "x": 3.25,
+                    "x": 3.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -2831,7 +2765,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 3,
@@ -2903,10 +2841,10 @@
                 ]
             },
             {
-                "id": 34,
+                "id": 32,
                 "legend": "F",
                 "state": {
-                    "x": 4.25,
+                    "x": 4.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -2916,7 +2854,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 4,
@@ -2988,10 +2930,10 @@
                 ]
             },
             {
-                "id": 35,
+                "id": 33,
                 "legend": "G",
                 "state": {
-                    "x": 5.25,
+                    "x": 5.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -3001,7 +2943,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 5,
@@ -3073,10 +3019,10 @@
                 ]
             },
             {
-                "id": 36,
+                "id": 34,
                 "legend": "H",
                 "state": {
-                    "x": 6.25,
+                    "x": 6.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -3086,7 +3032,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 6,
@@ -3158,10 +3108,10 @@
                 ]
             },
             {
-                "id": 37,
+                "id": 35,
                 "legend": "J",
                 "state": {
-                    "x": 7.25,
+                    "x": 7.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -3171,7 +3121,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 7,
@@ -3243,10 +3197,10 @@
                 ]
             },
             {
-                "id": 38,
+                "id": 36,
                 "legend": "K",
                 "state": {
-                    "x": 8.25,
+                    "x": 8.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -3256,7 +3210,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 8,
@@ -3328,10 +3286,10 @@
                 ]
             },
             {
-                "id": 39,
+                "id": 37,
                 "legend": "L",
                 "state": {
-                    "x": 9.25,
+                    "x": 9.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
@@ -3341,7 +3299,11 @@
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
-                    "h2": 0
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 2,
                 "col": 9,
@@ -3351,7 +3313,7 @@
                         "fields": []
                     },
                     {
-                        "id": "KC_SCLN",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -3413,32 +3375,213 @@
                 ]
             },
             {
-                "id": 40,
-                "legend": "ENTER",
+                "id": 38,
+                "legend": ";\n\n\n\n\n\n\n\n:",
                 "state": {
-                    "x": 10.25,
+                    "x": 10.75,
                     "y": 2,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1.75,
+                    "w": 1,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "st": 0,
-                    "a": 7
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
+                },
+                "row": 2,
+                "col": 10,
+                "keycodes": [
+                    {
+                        "id": "KC_SCLN",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_HOME",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_HOME",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "legend": "'\n\n\n\n\n\n\n\n\"",
+                "state": {
+                    "x": 11.75,
+                    "y": 2,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
                 },
                 "row": 2,
                 "col": 11,
+                "keycodes": [
+                    {
+                        "id": "KC_QUOT",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_END",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_END",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 40,
+                "legend": "<i class='kb kb-Symbol-Keyboard'></i>",
+                "state": {
+                    "x": 12.75,
+                    "y": 2,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 2.25,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#373535",
+                    "t": "#c13828",
+                    "st": 0,
+                    "f": 9,
+                    "a": 5
+                },
+                "row": 2,
+                "col": 13,
                 "keycodes": [
                     {
                         "id": "KC_ENT",
                         "fields": []
                     },
                     {
-                        "id": "KC_QUOT",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -3501,279 +3644,24 @@
             },
             {
                 "id": 41,
-                "legend": "4\n←",
-                "state": {
-                    "x": 12,
-                    "y": 2,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 2,
-                "col": 12,
-                "keycodes": [
-                    {
-                        "id": "KC_P4",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_MPRV",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 42,
-                "legend": "5",
-                "state": {
-                    "x": 13,
-                    "y": 2,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 2,
-                "col": 13,
-                "keycodes": [
-                    {
-                        "id": "KC_P5",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_MPLY",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 43,
-                "legend": "6\n→",
-                "state": {
-                    "x": 14,
-                    "y": 2,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 2,
-                "col": 14,
-                "keycodes": [
-                    {
-                        "id": "KC_P6",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_MNXT",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 44,
-                "legend": "Shift",
+                "legend": "<i class='fa fa-arrow-up'></i>",
                 "state": {
                     "x": 0,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1.75,
+                    "w": 2.25,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 4
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 3,
                 "col": 0,
@@ -3845,10 +3733,10 @@
                 ]
             },
             {
-                "id": 45,
+                "id": 42,
                 "legend": "Z",
                 "state": {
-                    "x": 1.75,
+                    "x": 2.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -3859,17 +3747,20 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 1,
+                "col": 2,
                 "keycodes": [
                     {
                         "id": "KC_Z",
                         "fields": []
                     },
                     {
-                        "id": "KC_MYCM",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -3931,10 +3822,10 @@
                 ]
             },
             {
-                "id": 46,
+                "id": 43,
                 "legend": "X",
                 "state": {
-                    "x": 2.75,
+                    "x": 3.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -3945,17 +3836,20 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 2,
+                "col": 3,
                 "keycodes": [
                     {
                         "id": "KC_X",
                         "fields": []
                     },
                     {
-                        "id": "KC_CALC",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -4017,10 +3911,10 @@
                 ]
             },
             {
-                "id": 47,
+                "id": 44,
                 "legend": "C",
                 "state": {
-                    "x": 3.75,
+                    "x": 4.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -4031,10 +3925,13 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 3,
+                "col": 4,
                 "keycodes": [
                     {
                         "id": "KC_C",
@@ -4103,10 +4000,10 @@
                 ]
             },
             {
-                "id": 48,
+                "id": 45,
                 "legend": "V",
                 "state": {
-                    "x": 4.75,
+                    "x": 5.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -4117,10 +4014,13 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 4,
+                "col": 5,
                 "keycodes": [
                     {
                         "id": "KC_V",
@@ -4189,10 +4089,10 @@
                 ]
             },
             {
-                "id": 49,
+                "id": 46,
                 "legend": "B",
                 "state": {
-                    "x": 5.75,
+                    "x": 6.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -4203,10 +4103,13 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 5,
+                "col": 6,
                 "keycodes": [
                     {
                         "id": "KC_B",
@@ -4275,10 +4178,10 @@
                 ]
             },
             {
-                "id": 50,
+                "id": 47,
                 "legend": "N",
                 "state": {
-                    "x": 6.75,
+                    "x": 7.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -4289,10 +4192,13 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 6,
+                "col": 7,
                 "keycodes": [
                     {
                         "id": "KC_N",
@@ -4361,10 +4267,10 @@
                 ]
             },
             {
-                "id": 51,
+                "id": 48,
                 "legend": "M",
                 "state": {
-                    "x": 7.75,
+                    "x": 8.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
@@ -4375,13 +4281,283 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 6,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 7,
+                "col": 8,
                 "keycodes": [
                     {
                         "id": "KC_M",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_MUTE",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_MUTE",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 49,
+                "legend": ",\n\n\n\n\n\n\n\n<",
+                "state": {
+                    "x": 9.25,
+                    "y": 3,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
+                },
+                "row": 3,
+                "col": 9,
+                "keycodes": [
+                    {
+                        "id": "KC_COMM",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_VOLD",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_VOLD",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 50,
+                "legend": ".\n\n\n\n\n\n\n\n>",
+                "state": {
+                    "x": 10.25,
+                    "y": 3,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
+                },
+                "row": 3,
+                "col": 10,
+                "keycodes": [
+                    {
+                        "id": "KC_DOT",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_VOLU",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_VOLU",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    },
+                    {
+                        "id": "KC_TRNS",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": 51,
+                "legend": "/\n\n\n\n\n\n\n\n?",
+                "state": {
+                    "x": 11.25,
+                    "y": 3,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "w": 1,
+                    "h": 1,
+                    "x2": 0,
+                    "y2": 0,
+                    "w2": 0,
+                    "h2": 0,
+                    "c": "#f1ede6",
+                    "t": "#cd2f2c",
+                    "f": 4,
+                    "a": 4
+                },
+                "row": 3,
+                "col": 11,
+                "keycodes": [
+                    {
+                        "id": "KC_SLSH",
                         "fields": []
                     },
                     {
@@ -4448,30 +4624,40 @@
             },
             {
                 "id": 52,
-                "legend": "<\n,",
+                "legend": "<i class='fa fa-arrow-up'></i>",
                 "state": {
-                    "x": 8.75,
+                    "x": 12.25,
                     "y": 3,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 2.75,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
-                    "a": 4
+                    "c": "#373535",
+                    "t": "#dd1126",
+                    "st": 0,
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 3,
-                "col": 8,
+                "col": 13,
                 "keycodes": [
                     {
-                        "id": "KC_COMM",
-                        "fields": []
+                        "id": "MT()",
+                        "fields": [
+                            32,
+                            {
+                                "id": "KC_UP",
+                                "fields": []
+                            }
+                        ]
                     },
                     {
-                        "id": "KC_SLSH",
+                        "id": "KC_UP",
                         "fields": []
                     },
                     {
@@ -4534,443 +4720,6 @@
             },
             {
                 "id": 53,
-                "legend": "?\n/",
-                "state": {
-                    "x": 9.75,
-                    "y": 3,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1.25,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 3,
-                "col": 9,
-                "keycodes": [
-                    {
-                        "id": "MT()",
-                        "fields": [
-                            32,
-                            {
-                                "id": "KC_DOT",
-                                "fields": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 54,
-                "legend": "FN4",
-                "state": {
-                    "x": 11,
-                    "y": 3,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "st": 0,
-                    "a": 7
-                },
-                "row": 3,
-                "col": 11,
-                "keycodes": [
-                    {
-                        "id": "KC_UP",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 55,
-                "legend": "1\nEnd",
-                "state": {
-                    "x": 12,
-                    "y": 3,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 3,
-                "col": 12,
-                "keycodes": [
-                    {
-                        "id": "KC_P1",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_VOLU",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 56,
-                "legend": "2\n↓",
-                "state": {
-                    "x": 13,
-                    "y": 3,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 3,
-                "col": 13,
-                "keycodes": [
-                    {
-                        "id": "KC_P2",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_VOLD",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 57,
-                "legend": "3\nPgDn",
-                "state": {
-                    "x": 14,
-                    "y": 3,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
-                },
-                "row": 3,
-                "col": 14,
-                "keycodes": [
-                    {
-                        "id": "KC_P3",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_MUTE",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 58,
                 "legend": "Ctrl",
                 "state": {
                     "x": 0,
@@ -4984,8 +4733,11 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 4
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
                 "col": 0,
@@ -5057,8 +4809,8 @@
                 ]
             },
             {
-                "id": 59,
-                "legend": "Win",
+                "id": 54,
+                "legend": "<i class='fa fa-windows'></i>",
                 "state": {
                     "x": 1.25,
                     "y": 4,
@@ -5071,8 +4823,11 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 4
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
                 "col": 1,
@@ -5144,7 +4899,7 @@
                 ]
             },
             {
-                "id": 60,
+                "id": 55,
                 "legend": "Alt",
                 "state": {
                     "x": 2.5,
@@ -5158,8 +4913,11 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 4
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
                 "col": 2,
@@ -5231,118 +4989,28 @@
                 ]
             },
             {
-                "id": 61,
-                "legend": "SPC",
+                "id": 56,
+                "legend": "<i class='fa fa-cc-visa'></i>",
                 "state": {
                     "x": 3.75,
                     "y": 4,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 2.25,
+                    "w": 6.25,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 7
+                    "f": 9,
+                    "a": 5
                 },
                 "row": 4,
-                "col": 3,
-                "keycodes": [
-                    {
-                        "id": "LT()",
-                        "fields": [
-                            1,
-                            {
-                                "id": "KC_SPC",
-                                "fields": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 62,
-                "legend": "SPC",
-                "state": {
-                    "x": 6,
-                    "y": 4,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 2.75,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "st": 0,
-                    "a": 7
-                },
-                "row": 4,
-                "col": 6,
+                "col": 5,
                 "keycodes": [
                     {
                         "id": "KC_SPC",
@@ -5411,10 +5079,10 @@
                 ]
             },
             {
-                "id": 63,
-                "legend": "FN0",
+                "id": 57,
+                "legend": "Alt",
                 "state": {
-                    "x": 8.75,
+                    "x": 10,
                     "y": 4,
                     "r": 0,
                     "rx": 0,
@@ -5425,16 +5093,19 @@
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 7
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
-                "col": 8,
+                "col": 10,
                 "keycodes": [
                     {
-                        "id": "MT()",
+                        "id": "LT()",
                         "fields": [
-                            16,
+                            1,
                             {
                                 "id": "KC_DEL",
                                 "fields": []
@@ -5504,26 +5175,39 @@
                 ]
             },
             {
-                "id": 64,
-                "legend": "FN1",
+                "id": 58,
+                "legend": "<i class='fa fa-list'></i>",
                 "state": {
-                    "x": 10,
+                    "x": 11.25,
                     "y": 4,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 1.25,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 7
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
-                "col": 9,
+                "col": 11,
                 "keycodes": [
+                    {
+                        "id": "MT()",
+                        "fields": [
+                            64,
+                            {
+                                "id": "KC_LEFT",
+                                "fields": []
+                            }
+                        ]
+                    },
                     {
                         "id": "KC_LEFT",
                         "fields": []
@@ -5583,34 +5267,43 @@
                     {
                         "id": "KC_TRNS",
                         "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
                     }
                 ]
             },
             {
-                "id": 65,
-                "legend": "FN2",
+                "id": 59,
+                "legend": "Menu",
                 "state": {
-                    "x": 11,
+                    "x": 12.5,
                     "y": 4,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 1.25,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 7
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
-                "col": 11,
+                "col": 12,
                 "keycodes": [
+                    {
+                        "id": "LT()",
+                        "fields": [
+                            2,
+                            {
+                                "id": "KC_DOWN",
+                                "fields": []
+                            }
+                        ]
+                    },
                     {
                         "id": "KC_DOWN",
                         "fields": []
@@ -5670,212 +5363,45 @@
                     {
                         "id": "KC_TRNS",
                         "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
                     }
                 ]
             },
             {
-                "id": 66,
-                "legend": "FN3",
+                "id": 60,
+                "legend": "Ctrl",
                 "state": {
-                    "x": 12,
+                    "x": 13.75,
                     "y": 4,
                     "r": 0,
                     "rx": 0,
                     "ry": 0,
-                    "w": 1,
+                    "w": 1.25,
                     "h": 1,
                     "x2": 0,
                     "y2": 0,
                     "w2": 0,
                     "h2": 0,
+                    "c": "#373535",
+                    "t": "#dd1126",
                     "st": 0,
-                    "a": 7
-                },
-                "row": 4,
-                "col": 12,
-                "keycodes": [
-                    {
-                        "id": "KC_RGHT",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 67,
-                "legend": "0\nIns",
-                "state": {
-                    "x": 13,
-                    "y": 4,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 4
+                    "f": 5,
+                    "a": 5
                 },
                 "row": 4,
                 "col": 13,
                 "keycodes": [
                     {
-                        "id": "KC_P0",
-                        "fields": []
+                        "id": "MT()",
+                        "fields": [
+                            16,
+                            {
+                                "id": "KC_RGHT",
+                                "fields": []
+                            }
+                        ]
                     },
                     {
-                        "id": "KC_PGUP",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_TRNS",
-                        "fields": []
-                    }
-                ]
-            },
-            {
-                "id": 68,
-                "legend": "DEL",
-                "state": {
-                    "x": 14,
-                    "y": 4,
-                    "r": 0,
-                    "rx": 0,
-                    "ry": 0,
-                    "w": 1,
-                    "h": 1,
-                    "x2": 0,
-                    "y2": 0,
-                    "w2": 0,
-                    "h2": 0,
-                    "a": 7
-                },
-                "row": 4,
-                "col": 14,
-                "keycodes": [
-                    {
-                        "id": "KC_PDOT",
-                        "fields": []
-                    },
-                    {
-                        "id": "KC_PGDN",
+                        "id": "KC_RGHT",
                         "fields": []
                     },
                     {
@@ -5949,60 +5475,59 @@
             }
         },
         "rows": 5,
-        "cols": 15,
+        "cols": 14,
         "pins": {
             "row": [
-                "27",
-                "26",
-                "30",
                 "29",
-                "28"
+                "25",
+                "23",
+                "4",
+                "3"
             ],
             "col": [
-                "21",
-                "22",
-                "23",
+                "30",
+                "28",
                 "24",
-                "25",
-                "20",
-                "19",
-                "18",
-                "17",
-                "16",
-                "15",
-                "14",
-                "13",
+                "22",
+                "21",
+                "10",
+                "11",
                 "12",
-                "11"
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18"
             ],
             "num": null,
-            "caps": "4",
+            "caps": "26",
             "scroll": null,
             "compose": null,
             "kana": null,
             "led": null,
             "rgb": null,
-            "UART_RXD": "8",
-            "UART_TXD": "9",
-            "RGB_DI_PIN": "10",
-            "LED_BLE": "7",
-            "LED_USB": "6",
-            "LED_CHARGING": "5",
-            "POWER_BUTTON": "3",
-            "BLE_LED_1": "7",
-            "BLE_LED_2": "6",
-            "BLE_LED_3": "5"
+            "UART_RXD": "6",
+            "UART_TXD": "7",
+            "RGB_DI_PIN": "8",
+            "LED_BLE": "20",
+            "LED_USB": "27",
+            "LED_CHARGING": "19",
+            "POWER_BUTTON": "9",
+            "BLE_LED_1": "19",
+            "BLE_LED_2": "20",
+            "BLE_LED_3": "27"
         },
         "macros": {},
         "settings": {
             "diodeDirection": 0,
-            "PRODUCT": "Farad69",
+            "PRODUCT": "GT_BLE60",
             "RGBLED_NUM": 8,
-            "SLEEP_OFF_TIMEOUT": 20,
             "LED_AUTOOFF_TIME": 5,
-            "RGBLIGHT_ENABLE": 1,
+            "SLEEP_OFF_TIMEOUT": 20,
+            "SLEEP_SLOW_TIMEOUT": 15,
             "PASSKEY": 1,
-            "SLEEP_SLOW_TIMEOUT": 15
+            "RGBLIGHT_ENABLE": 1
         }
     }
 }
