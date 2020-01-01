@@ -32,7 +32,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
 }
 
 const action_t fn_actions[] = {
-    %fn%,
+    %fn%
 };
 
 `.trim()
