@@ -106,7 +106,7 @@ class KeyboardH extends Generator {
 
 		return {
 			keymaps: keymaps,
-			fn: FNarr.toString(),
+			fn: FNarr.length ? FNarr.toString() + ',' : '',
 			// 'macros': macros,
 			quantum: keyboard.quantum,
 			led_on_num: this.generateLedOn(keyboard.pins.num),

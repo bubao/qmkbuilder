@@ -23,7 +23,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 %keymaps%
 };
 const action_t fn_actions[] = {
-    %fn%,
+    %fn%
 };
 
 `.trim()
