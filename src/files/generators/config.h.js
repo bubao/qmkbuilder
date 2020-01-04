@@ -66,6 +66,7 @@ class ConfigH extends Generator {
 					: 'COL_IN', // 流向
 			PRODUCT_NAME: keyboard.settings.PRODUCT || 'ble60',
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
+			KEYBOARD_SLOW_SCAN_INTERVAL: keyboard.settings.KEYBOARD_SLOW_SCAN_INTERVAL || 100,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT * 60 || 1200,
 			LED_AUTOOFF_TIME: keyboard.settings.LED_AUTOOFF_TIME * 1000 || 5000,
 			RGBLIGHT_ANIMATIONS: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
