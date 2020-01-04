@@ -555,13 +555,13 @@ select {
 .display {
 	position: relative;
 	margin: auto;
-	background: #b72525;
+	background: #b90016;
 	border: 0.1rem solid #e4dfc3;
 	border-radius: 9px;
 }
 
 .display.valid {
-	border-color: #ffdc3c;
+	border-color: #ffda30;
 }
 
 .display-inner {
@@ -582,7 +582,7 @@ select {
 .display-key-block-inner-background {
 	position: absolute;
 	display: block;
-	background: #e2b6b6;
+	background: #ffdede;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -603,19 +603,19 @@ select {
 }
 
 .display-key:hover .display-key-block-inner {
-	background: #ffe6e6;
+	background: #fcffdf;
 }
 
 .display-key:hover .display-key-block-inner-background {
-	background: #ff6262;
+	background: #f7f69b;
 }
 
 .display-key.select2 .display-key-block-inner {
-	background: #ffa6a6;
+	background: #fcffdf;
 }
 
 .display-key.select2 .display-key-block-inner-background {
-	background: #ff6262;
+	background: #f7f69b;
 }
 
 .display-key.select1 .display-key-block-inner {
@@ -624,11 +624,11 @@ select {
 	right: 6px;
 	bottom: 8px;
 	border-radius: 6px;
-	background: #ffb9b9;
+	background: #fcffdf;
 }
 
 .display-key.select1 .display-key-block-inner-background {
-	background: #ff7777;
+	background: #f7f69b;
 }
 
 
@@ -644,7 +644,7 @@ select {
 .display-key-block-inner-background2 {
 	position: absolute;
 	display: block;
-	background: #91d2e2;
+	background: #ff9292;
 	top: 2px;
 	left: 2px;
 	right: 2px;
@@ -655,7 +655,7 @@ select {
 .display-key-block-inner2 {
 	position: absolute;
 	display: block;
-	background: #dcf8ff;
+	background: #ffd0d0;
 	top: 5px;
 	left: 7px;
 	right: 7px;
@@ -665,19 +665,19 @@ select {
 }
 
 .display-key2:hover .display-key-block-inner2 {
-	background: #ffe6e6;
+	background: #fcffdf;
 }
 
 .display-key2:hover .display-key-block-inner-background2 {
-	background: #ff6262;
+	background: #f7f69b;
 }
 
 .display-key2.select2 .display-key-block-inner2 {
-	background: #ffa6a6;
+	background: #fcffdf;
 }
 
 .display-key2.select2 .display-key-block-inner-background2 {
-	background: #ff6262;
+	background: #f7f69b;
 }
 
 .display-key2.select1 .display-key-block-inner2 {
@@ -686,11 +686,11 @@ select {
 	right: 6px;
 	bottom: 8px;
 	border-radius: 6px;
-	background: #ffb9b9;
+	background: #fcffdf;
 }
 
 .display-key2.select1 .display-key-block-inner-background2 {
-	background: #ff7777;
+	background: #f7f69b;
 }
 
 
@@ -768,7 +768,7 @@ select {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	pointer-events: none;
-	color:#000d15;
+	color:#980012;
 }
 
 .display-keycode-block2 {
@@ -786,7 +786,7 @@ select {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	pointer-events: none;
-	color:#2f4800;
+	color:#e05300;
 }
 
 .panes-wrapper {
