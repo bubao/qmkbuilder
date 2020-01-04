@@ -5348,7 +5348,8 @@
             "PRODUCT": "Omega50",
             "PASSKEY": 1,
             "SLEEP_SLOW_TIMEOUT": 15,
-            "RGBLIGHT_ENABLE": 1
+            "RGBLIGHT_ENABLE": 1,
+            "KEYBOARD_SLOW_SCAN_INTERVAL": 100
         }
     }
 }

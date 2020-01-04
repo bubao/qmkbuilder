@@ -5528,7 +5528,8 @@
             "SLEEP_OFF_TIMEOUT": 20,
             "SLEEP_SLOW_TIMEOUT": 15,
             "PASSKEY": 1,
-            "RGBLIGHT_ENABLE": 0
+            "RGBLIGHT_ENABLE": 0,
+            "KEYBOARD_SLOW_SCAN_INTERVAL": 100
         }
     }
 }
