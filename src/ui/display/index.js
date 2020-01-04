@@ -110,7 +110,7 @@ class Display extends React.Component {
 
     return (
       <div className="display-wrapper">
-        <h4>Board Size&nbsp;&nbsp;&nbsp;</h4>
+        <h4>缩放&nbsp;&nbsp;&nbsp;</h4>
         <button className="small light" onClick={this.zoom(-1)}>
           <i className="fa fa-search-minus" />
         </button>
@@ -119,7 +119,7 @@ class Display extends React.Component {
           <i className="fa fa-search-plus" />
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h4>Flip&nbsp;&nbsp;</h4>
+        <h4>翻转&nbsp;&nbsp;</h4>
         <input type="checkbox" checked={state.ui.get('display-flip', false)} />
         <label
           onClick={() => {
