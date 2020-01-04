@@ -198,6 +198,22 @@ class Settings extends React.Component {
 			<Help>
 				设定你的指示灯在蓝牙状态时自动熄灭的时长, 单位为秒；设定为0则为常亮，最长设定15分钟.
 			</Help>
+			<div style={{ height: '0.5rem' }}/>
+			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>慢速扫描间隔</h2>
+			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
+				<NumberBox
+					style={{ width: '3.5rem' }}
+					min='0'
+					max='120'
+					value={ keyboard.settings.KEYBOARD_SLOW_SCAN_INTERVAL }
+					onChange={ v => keyboard.setSetting('KEYBOARD_SLOW_SCAN_INTERVAL', v) }/>
+			</div>
+			<h2 style={{ width: '2rem', textAlign: 'left' }}>毫秒</h2>
+			<Help>
+				你的键盘无按键行为后将转入慢速扫描以节约电量.
+				<br/>
+				此处设定慢速扫描的时间间隔，时间间隔越长越省电，但可能导致第一个按键丢键。默认为100ms，如果有丢键可以适当调低.
+			</Help>
 			<div style={{ height: '1.5rem' }}/>
 			保存按键布局.
 			<div style={{ height: '0.5rem' }}/>
