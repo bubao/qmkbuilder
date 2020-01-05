@@ -7,6 +7,7 @@ const Keycode = require('state/keyboard/keycode')
 
 const Wiring = require('./wiring')
 const Keymap = require('./keymap')
+// const Settings = require('./setting')
 
 const C = require('const')
 
@@ -159,9 +160,9 @@ class Display extends React.Component {
 					state.screen === C.SCREEN_KEYMAP && (
 						<Keymap state={state} />
 					)}
-					{// Keymap.
+					{// Settings.
 					state.screen === C.SCREEN_SETTINGS && (
-						<Keymap state={state} selectType="settings" />
+						<Keymap selectType="settings" state={state} />
 					)}
 				</div>
 			</div>
