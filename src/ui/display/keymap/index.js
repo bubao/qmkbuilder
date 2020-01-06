@@ -5,6 +5,7 @@ const C = require('const')
 class Keymap extends React.Component {
   render() {
     const state = this.props.state
+    const selectType = this.props.selectType
     const keyboard = state.keyboard
     const flipped = state.ui.get('display-flip', false)
 
@@ -41,7 +42,7 @@ class Keymap extends React.Component {
           // 普通键字体颜色
           <div className="display-keycode" key={index} style={style}>
             <div className="display-keycode-block" style={blockStyle}>
-              {key.keycodes[layer].getName()}
+              {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
             </div>
           </div>
         )
@@ -50,7 +51,7 @@ class Keymap extends React.Component {
         return (
           <div className="display-keycode2" key={index} style={style}>
             <div className="display-keycode-block2" style={blockStyle}>
-              {key.keycodes[layer].getName()}
+              {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
             </div>
           </div>
         )

@@ -146,6 +146,8 @@ class Display extends React.Component {
           state.screen === C.SCREEN_WIRING && <Wiring state={state} />}
           {// Keymap.
           state.screen === C.SCREEN_KEYMAP && <Keymap state={state} />}
+          {// Settings.
+          state.screen === C.SCREEN_SETTINGS && <Keymap selectType="settings" state={state} />}
         </div>
       </div>
     )
