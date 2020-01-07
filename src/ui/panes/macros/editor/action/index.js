@@ -137,23 +137,23 @@ class Action extends React.Component {
 			<select
 				value={ action }
 				onChange={ this.onChange }>
-				<option value={ C.MACRO_NONE }>No Action</option>
-				<option value={ C.MACRO_INTERVAL }>Set Interval</option>
-				<option value={ C.MACRO_DOWN }>Press</option>
-				<option value={ C.MACRO_UP }>Release</option>
-				<option value={ C.MACRO_TYPE }>Type</option>
-				<option value={ C.MACRO_WAIT }>Wait</option>
+				<option value={ C.MACRO_NONE }>无动作</option>
+				<option value={ C.MACRO_INTERVAL }>设置间隔</option>
+				<option value={ C.MACRO_DOWN }>按下</option>
+				<option value={ C.MACRO_UP }>释放</option>
+				<option value={ C.MACRO_TYPE }>输出</option>
+				<option value={ C.MACRO_WAIT }>等待</option>
 			</select>
-			{ action === C.MACRO_INTERVAL && <span>&nbsp;&nbsp;to&nbsp;&nbsp;</span> }
-			{ (action === C.MACRO_DOWN || action === C.MACRO_UP || action === C.MACRO_TYPE) && <span>&nbsp;key&nbsp;</span> }
-			{ action === C.MACRO_WAIT && <span>&nbsp;&nbsp;for&nbsp;&nbsp;</span> }
+			{ action === C.MACRO_INTERVAL && <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span> }
+			{ (action === C.MACRO_DOWN || action === C.MACRO_UP || action === C.MACRO_TYPE) && <span>&nbsp;按键&nbsp;</span> }
+			{ action === C.MACRO_WAIT && <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span> }
 			{ (action === C.MACRO_INTERVAL || action === C.MACRO_WAIT) && <span>
 					<input
 						style={{ width: '4rem' }}
 						type="text"
 						value={ argument }
 						onChange={ this.changeTime }/>
-					&nbsp;&nbsp;milliseconds
+					&nbsp;&nbsp;毫秒
 				</span>}
 			{ (action === C.MACRO_DOWN || action === C.MACRO_UP || action === C.MACRO_TYPE) && <span>
 					<button

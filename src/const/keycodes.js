@@ -431,11 +431,11 @@ const keycodes = {
 		'LM(%1, %2)',
 		[]
 	),
-	/*'TO()': new Keycode(
-	new Template(['TO', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
+	'TO()': new Keycode(
+	new Template(['切换默认层', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
 		'TO(%1)',
 		[]
-	), */
+	),
 	'MO()': new Keycode(
 		new Template(['瞬时开启层', 'LAYER'], 'ACTION_LAYER_MOMENTARY(%1)'),
 		'MO(%1)',
@@ -469,6 +469,11 @@ const keycodes = {
 	'MK()': new Keycode(
 		new Template(['组合键', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MK(%1, %2)',
+		[]
+	),
+	'MACRO()': new Keycode(
+		new Template(['自定义宏', 'MACRO'], 'ACTION_MACRO(%1)'), 
+		'MACRO(%1)', 
 		[]
 	),
 	'SYS_SLEEP': new Keycode(
@@ -777,7 +782,7 @@ const categories = {
 
 		'LT()',
 		'LM()',
-		//'TO()',
+		'TO()',
 		'MO()',
 		'DF()',
 		'TG()',
@@ -785,6 +790,7 @@ const categories = {
 		'OSM()',
 		'MT()',
 		'MK()',
+		'MACRO()',
 		'',
 
 		'SYS_SLEEP',
