@@ -114,6 +114,10 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
+			<h6>请尽快升级新的USB固件，并使用新的在线编辑界面</h6>
+			<h6>旧版在线编辑将在2020年3月30日下线...</h6>
+			<h6><a href="https://glab.online/download" target="_blank">下载新的USB固件</a></h6>
+			<br/><br/>
 			<h3>选择一个预设的按键布局</h3>
 			{(() => {
 				const presets = [];
