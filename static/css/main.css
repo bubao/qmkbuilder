@@ -259,6 +259,18 @@ h5 {
 	text-align: center;
 }
 
+h6 {
+	font-family: Hind;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #d10606;
+	margin: auto;
+	margin-bottom: 0.3rem;
+	text-align: left;
+	width: 100%;
+	max-width: 500px;
+}
+
 a {
 	color: #566b7f;
 	text-decoration: none;

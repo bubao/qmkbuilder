@@ -114,7 +114,7 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h2>使用此网站前，请确认您升级了新的USB固件：</h2><h3><a href="https://glab.online/download" target="_blank">下载新的USB固件</a></h3>
+			<h6>使用此网站前，请确认您升级了新的USB固件：<a href="https://glab.online/download" target="_blank">下载新的USB固件</a></h6>
 			<br/><br/>
 			<h3>选择一个预设的按键布局</h3>
 			{(() => {
