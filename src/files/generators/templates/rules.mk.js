@@ -7,6 +7,7 @@ NRF_CHIP := %nrf_chip%
 # 配置项：功能选项
 # BOOTMAGIC_ENABLE = yes	# 启用Bootmagic
 EXTRAKEY_ENABLE = yes	    # 启用媒体键功能
+MOUSEKEY_ENABLE = yes       # 启用鼠标键功能
 NKRO_ENABLE = yes	        # 启用USB的全键无冲功能
 USB_6KRO_ENABLE = yes     # 启用USB的六键无冲功能
 COMMAND_ENABLE = yes        # 启用调试和配置的命令
