@@ -21,6 +21,11 @@ class Key extends React.Component {
       select2: data.selected == 2
     })
 
+    const className3 = classNames('display-key3', {
+      select1: data.selected == 1,
+      select2: data.selected == 2
+    })
+
     const style = {
       top: data.pos.y * keySize,
       left:
@@ -50,7 +55,48 @@ class Key extends React.Component {
         (flipped ? data.size.w - data.size2.w - data.offset.x : data.offset.x) *
         keySize
     }
-    if (data.state.st != 0) {
+    if (data.state.st == 1) {
+      // 大键样式1
+      return (
+        <div
+          className={className2}
+          style={style}
+          onClick={this.props.onClick}
+          onMouseEnter={this.props.onMouseEnter}
+          onMouseLeave={this.props.onMouseLeave}
+        >
+          <div className="display-key2-block" style={block1Style}>
+            <div className="display-key2-block-inner-background" />
+            <div className="display-key2-block-inner" />
+          </div>
+          <div className="display-key2-block" style={block2Style}>
+            <div className="display-key2-block-inner-background" />
+            <div className="display-key2-block-inner" />
+          </div>
+        </div>
+      )
+    } else if (data.state.st == 2) {
+      // 大键样式2
+      return (
+        <div
+          className={className3}
+          style={style}
+          onClick={this.props.onClick}
+          onMouseEnter={this.props.onMouseEnter}
+          onMouseLeave={this.props.onMouseLeave}
+        >
+          <div className="display-key3-block" style={block1Style}>
+            <div className="display-key3-block-inner-background" />
+            <div className="display-key3-block-inner" />
+          </div>
+          <div className="display-key3-block" style={block2Style}>
+            <div className="display-key3-block-inner-background" />
+            <div className="display-key3-block-inner" />
+          </div>
+        </div>
+      )
+    } else {
+      //普通按键
       return (
         <div
           className={className1}
@@ -69,27 +115,8 @@ class Key extends React.Component {
           </div>
         </div>
       )
-    } else {
-      return (
-        <div
-          className={className2}
-          style={style}
-          onClick={this.props.onClick}
-          onMouseEnter={this.props.onMouseEnter}
-          onMouseLeave={this.props.onMouseLeave}
-        >
-          <div className="display-key-block2" style={block1Style}>
-            <div className="display-key-block-inner-background2" />
-            <div className="display-key-block-inner2" />
-          </div>
-          <div className="display-key-block2" style={block2Style}>
-            <div className="display-key-block-inner-background2" />
-            <div className="display-key-block-inner2" />
-          </div>
-        </div>
-      )
     }
-  }
+}
 }
 
 module.exports = Key

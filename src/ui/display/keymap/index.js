@@ -37,20 +37,29 @@ class Keymap extends React.Component {
         height: key.size.h * keySize - 12,
         lineHeight: key.size.h * keySize - 9 + 'px'
       }
-      if (key.state.st != 0) {
+      if (key.state.st == 1) {
+        // 大键字体颜色1
         return (
-          // 普通键字体颜色
-          <div className="display-keycode" key={index} style={style}>
-            <div className="display-keycode-block" style={blockStyle}>
+          <div className="display-keycode2" key={index} style={style}>
+            <div className="display-keycode2-block" style={blockStyle}>
+              {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
+            </div>
+          </div>
+        )
+      } else if (key.state.st == 2) {
+        // 大键字体颜色2
+        return (
+          <div className="display-keycode3" key={index} style={style}>
+            <div className="display-keycode3-block" style={blockStyle}>
               {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
             </div>
           </div>
         )
       } else {
-        // 大键字体颜色
         return (
-          <div className="display-keycode2" key={index} style={style}>
-            <div className="display-keycode-block2" style={blockStyle}>
+          // 普通键字体颜色
+          <div className="display-keycode" key={index} style={style}>
+            <div className="display-keycode-block" style={blockStyle}>
               {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
             </div>
           </div>
