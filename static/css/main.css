@@ -286,9 +286,9 @@ h3 {
 
 h4 {
 	font-family: Hind;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	font-weight: 500;
-	color: #666666;
+	color: #ffffff;
 	display: inline;
 	vertical-align: middle;
 }
@@ -324,27 +324,40 @@ a:hover {
 }
 
 button {
-	display:inline-block;
+	display: inline-block;
 	max-width: 500px;
 	margin: auto;
 	outline: none;
-	background: #34495e;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 0.2rem;
-	line-height: 1.9rem;
-	padding: 0 0.7rem;
-	font-family: Lato;
-	font-size: 0.9rem;
+	border: none;
+	border-radius: .3em;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.25em 0 rgba(0, 0, 0, 0.25), 0 0.25em 0.25em rgba(0, 0, 0, 0.05);
 	color: #ffffff;
+	background: #3498db;
 	cursor: pointer;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	padding: .5em 1.5em .75em;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 button:hover {
-	background: #455a6f !important;
+	background: #ff4646 !important;
 }
 
 button:active {
-	background: #23384d;
+	outline: none;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.1), inset 0 0.25em 0.5em rgba(0, 0, 0, 0.05);
+	margin-top: .25em;
+	padding-bottom: .5em;
 }
 
 button:disabled {
@@ -353,18 +366,17 @@ button:disabled {
 }
 
 button.light {
-	background: #ffffff;
-	border: 1px solid #dddddd;
-	color: #444444;
+	background: #1abc9c;
+	color: #ffffff;
 }
 
 button.light:hover {
-	background: #fcfcfc !important;
+	background: #2fe4c0 !important;
 }
 
 button.light:disabled {
-	background: #ffffff !important;
-	color: #888888 !important;
+	background: #b3b3b3 !important;
+	color: #ffffff !important;
 	cursor: initial;
 }
 
@@ -374,11 +386,13 @@ button.block {
 }
 
 button.small {
-	line-height: 1.7rem;
+	line-height: 2.0rem;
 	padding: 0 0.6rem;
-	font-size: 0.7rem;
+	font-size: 0.8rem;
+	font-weight: 500;
 	box-sizing: border-box;
 	vertical-align: middle;
+	background: #2fe4c0;
 }
 
 textarea {
