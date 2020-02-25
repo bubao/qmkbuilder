@@ -26,7 +26,7 @@ class Index extends React.Component {
 
 		return <div>
 			<div className='header'>
-			LotKB Builder
+			<a href="http://lotkb.glab.online"><img src="images/lotkb.png" /></a>
 			</div>
 			<Screen
 				state={ this.state }/>
