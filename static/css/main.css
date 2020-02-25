@@ -265,7 +265,7 @@ h2 {
 	font-family: Hind;
 	font-size: 1rem;
 	font-weight: 500;
-	color: #666666;
+	color: #ffffff;
 	margin: 0;
 	display: inline-block;
 	text-align: right;
@@ -276,7 +276,7 @@ h3 {
 	font-family: Hind;
 	font-size: 0.9rem;
 	font-weight: 500;
-	color: #666666;
+	color: #ffffff;
 	margin: auto;
 	margin-bottom: 0.3rem;
 	text-align: left;
@@ -297,7 +297,7 @@ h5 {
 	font-family: Hind;
 	font-size: 0.9rem;
 	font-weight: 400;
-	color: #888888;
+	color: #ffffff;
 	display: block;
 	text-align: center;
 }
@@ -315,12 +315,13 @@ h6 {
 }
 
 a {
-	color: #566b7f;
+	color: #cafffe;
 	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: underline;
+	color: #cafff5;
 }
 
 button {
@@ -386,14 +387,20 @@ button.block {
 }
 
 button.small {
-	line-height: 2.0rem;
+	line-height: 1.7rem;
 	padding: 0 0.6rem;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	font-weight: 500;
 	box-sizing: border-box;
 	vertical-align: middle;
 	background: #2fe4c0;
 }
+
+button.small:active {
+	margin-top: 0em;
+	padding-bottom: 0em;
+}
+
 
 textarea {
 	outline: none;
@@ -413,8 +420,8 @@ input[type="text"] {
 	outline:none;
 	background:#ffffff;
 	border:1px solid #dddddd;
-	border-radius:0.2rem;
-	padding:0.3rem 0.5rem 0.4rem 0.5rem;
+	border-radius:0.4rem;
+	padding: 0.4rem 1.8rem 0.4rem 0.5rem;
 	font-family:Lato;
 	font-size:0.9rem;
 	vertical-align:middle;
@@ -461,11 +468,12 @@ select {
 	font-size: 0.9rem;
 	border: 1px solid #dddddd;
 	outline: none;
-	border-radius: 0.2rem;
+	border-radius: 0.4rem;
 	padding: 0.4rem 1.8rem 0.4rem 0.5rem;
 	vertical-align: middle;
 	margin: 0;
 	color: #444444;
+    position: relative;
 }
 
 .float-left {
@@ -517,7 +525,7 @@ select {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 1rem;
-	color: #888888;
+	color: #43a0b7;
 	margin-left: 0.8rem;
 	cursor: help;
 }
@@ -530,8 +538,10 @@ select {
 	font-size: 0.8rem;
 	text-align: left;
 	color: #ffffff;
-	background: #444444;
+	background: #a5a5a55e;
+	border: 1px solid #ddddddc7;
 	padding: 0.3rem 0.5rem;
+	border-radius:0.3rem;
 	pointer-events: none;
 	max-width: 300px;
 	display: none;
@@ -557,9 +567,9 @@ select {
 	border-radius: 1px;
 	font-family: Lato;
 	cursor: pointer;
-	background: #ffffff;
-	border: 1px solid #dddddd;
-	color: #444444;
+	background: #1abc9c;
+	border: 1px solid #ffffffb5;
+	color: #ffffff;
 	line-height: 1.7rem;
 	padding: 0 0.6rem;
 	font-size: 0.7rem;
@@ -574,11 +584,11 @@ select {
 }
 
 .toggle:hover {
-	background: #a5a5a5 !important;
+	background: #2fe4c0 !important;
 }
 
 .toggle:active {
-	background: #23384d;
+	background: #ffffff;
 }
 
 .toggle:disabled {
@@ -590,7 +600,7 @@ select {
 .toggle.enabled {
 	font-weight: 600;
 	color: #030303;
-	background-color: #e7e7e7
+	background-color: #ffff5c
 }
 
 
@@ -954,21 +964,23 @@ select {
 }
 
 .panes {
-	background: #ffffff;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
+	background: #a7e0ff52;
+	border: 6px solid #ffffff54;
+	border-radius: 1.2rem;
 }
 
 .panes-tabs {
 	padding: 0 0.5rem 0.5rem 0.5rem;
+	background: #c9ecff42;
+	border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 
 .panes-tab {
 	font-family: Lato;
-	font-size: 0.9rem;
-	font-weight: 600;
+	font-size: 1rem;
+	font-weight: 700;
 	text-transform: uppercase;
-	color: #bbbbbb;
+	color: #ffffff;
 	cursor: pointer;
 	padding: 1rem 0.5rem 0.5rem 0.5rem;
 	margin: 0 0.5rem;
@@ -976,11 +988,15 @@ select {
 }
 
 .panes-tab:hover {
-	color: #5c6e82;
+	color: #0069a2;
 }
 
 .panes-tab.selected {
-	color: #2c3e52;
+	color: #ffff00;
+	padding: 0.4rem 0.5rem 0.5rem 0.5rem;
+	background: #ffffff38;
+	border: 1px solid #ffff5c;
+	border-radius: 0.4rem;
 }
 
 .panes-content {
@@ -988,7 +1004,7 @@ select {
 	font-family: Hind;
 	font-weight: 500;
 	font-size: 0.9rem;
-	color: #666666;
+	color: #ffffff;
 }
 
 
@@ -1011,8 +1027,8 @@ select {
 
 .pane-keymap-key {
 	padding: 0.5rem;
-	border: 1px solid #e0e0e0;
-	border-radius: 0.2rem;
+	border: 6px solid #ffffff4d;
+	border-radius: 1.2rem;
 	display: inline-block;
 }
 
@@ -1052,10 +1068,10 @@ select {
 	max-width: 500px;
 	padding: 0.4rem;
 	box-sizing: border-box;
-	border: 1px solid #dddddd;
-	border-radius: 0.2rem;
+	border: 1px solid #dddddd00;
+	border-radius: 0.8rem;
 	margin-top: 0.4rem;
-	background: #fcfcfc;
+	background: #ffffff17;
 	z-index: 1;
 }
 
@@ -1064,8 +1080,8 @@ select {
 	top: 0;
 	right: 0;
 	padding: 0.4rem 0.8rem;
-	font-size: 1rem;
-	color: #bbbbbb;
+	font-size: 2rem;
+	color: #ff000075;
 	cursor: pointer;
 }
 
@@ -1077,16 +1093,18 @@ select {
 	display: inline-block;
 	margin: 0 0.3rem;
 	padding: 0.2rem;
-	color: #bbbbbb;
+	color: #ffffff;
 	cursor: pointer;
 }
 
 .pane-keymap-selector-tab:hover {
-	color: #5c6e82;
+	color: #59a1b3;
 }
 
 .pane-keymap-selector-tab.selected {
-	color: #2c3e52;
+	color: #ffff01;
+	background: #ff000012;
+	border-radius: 0.2rem;
 }
 
 .pane-keymap-selector-buttons {
@@ -1105,8 +1123,8 @@ select {
 	max-width: 500px;
 	margin: auto;
 	margin-top: 1rem;
-	border: 1px solid #dddddd;
-	border-radius: 0.2rem;
+	border: 3px solid #ffffff61;
+	border-radius: 0.6rem;
 	overflow: hidden;
 }
 
@@ -1118,7 +1136,7 @@ select {
 	position: relative;
 	text-align: left;
 	padding: 0.4rem 1rem;
-	border-top: 1px solid #dddddd;
+	border-top: 3px solid #ffffff61;
 }
 
 .pane-macros-editor-action:first-child {
@@ -1142,7 +1160,7 @@ select {
 	right: 0;
 	padding: 0.6rem 1rem;
 	font-size: 1rem;
-	color: #bbbbbb;
+	color: #2eff44;
 	cursor: pointer;
 }
 
@@ -1156,7 +1174,7 @@ select {
 }
 
 .pane-macros-editor-record.recording {
-	border: 1px solid #c0392b;
+	border: 3px solid #c0392bcc;
 }
 
 .pane-macros-editor-screen {
@@ -1238,6 +1256,6 @@ select {
 	font-family:Lato;
 	font-size:0.9rem;
 	line-height:1.5rem;
-	color:#444444;
+	color:#ffffff;
 	margin:2rem 0;
 }
