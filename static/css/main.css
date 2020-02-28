@@ -1258,12 +1258,12 @@ select {
 
 .footer {
   z-index: 1;
-  --footer-background:#3e98af;
+  --footer-background:#06c7a1;
   display: grid;
   position: relative;
   grid-area: footer;
   min-height: 12rem;
-  margin:2rem 0 0 0;
+  margin:5rem 0 0 0;
 }
 
 .footer .bubbles {
