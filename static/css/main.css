@@ -216,8 +216,7 @@ body, html  {
 	height: 100%;
 	font-size: 100%;
 	color: #fff;
-	background: repeating-linear-gradient(-45deg, #3e98af 0 3px, #59a1b3 0 6px);
-	background-size: 400% 400%;
+	background:#5aa5ce;
 }
 
 @keyframes gradientBG {
