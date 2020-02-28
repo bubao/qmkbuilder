@@ -216,9 +216,8 @@ body, html  {
 	height: 100%;
 	font-size: 100%;
 	color: #fff;
-	background: linear-gradient(-45deg, #ee7752, #f3a4c2, #23a6d5, #23d5ab);
+	background: repeating-linear-gradient(-45deg, #3e98af 0 3px, #59a1b3 0 6px);
 	background-size: 400% 400%;
-	animation: gradientBG 15s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -422,6 +421,7 @@ input[type="text"] {
 	border:1px solid #dddddd;
 	border-radius:0.4rem;
 	padding: 0.4rem 1.8rem 0.4rem 0.5rem;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.15em 0 rgba(0, 0, 0, 0.25), 0 0.15em 0.15em rgba(0, 0, 0, 0.05);
 	font-family:Lato;
 	font-size:0.9rem;
 	vertical-align:middle;
@@ -470,6 +470,7 @@ select {
 	outline: none;
 	border-radius: 0.4rem;
 	padding: 0.4rem 1.8rem 0.4rem 0.5rem;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.15em 0 rgba(0, 0, 0, 0.25), 0 0.15em 0.15em rgba(0, 0, 0, 0.05);
 	vertical-align: middle;
 	margin: 0;
 	color: #444444;
@@ -525,7 +526,7 @@ select {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 1rem;
-	color: #43a0b7;
+	color: #0f718a;
 	margin-left: 0.8rem;
 	cursor: help;
 }
@@ -839,10 +840,10 @@ select {
 
 .display-pad {
 	position: absolute;
-	width: 6px;
-	height: 6px;
-	border-radius: 3px;
-	background: #888888;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #ff0000;
 	z-index: 1;
 	margin-top: -3px;
 	margin-left: -3px;
@@ -851,7 +852,7 @@ select {
 
 .display-wire {
 	position: absolute;
-	height: 1px;
+	height: 2px;
 	z-index: 1;
 	-webkit-transform-origin: 0 0.5px;
 	-moz-transform-origin: 0 0.5px;
@@ -861,11 +862,11 @@ select {
 }
 
 .display-wire-row {
-	background: #c0392b;
+	background: #ff1800;
 }
 
 .display-wire-col {
-	background: #23384d;
+	background: #004080;
 }
 
 .display-wire-label {
@@ -880,11 +881,11 @@ select {
 }
 
 .display-wire-label.row {
-	color: #c0392b;
+	color: #acf9ff;
 }
 
 .display-wire-label.col {
-	color: #2c3e52;
+	color: #ffca5c;
 }
 
 

@@ -48,13 +48,13 @@ class Settings extends React.Component {
 		let index = 0;
 		for (const error of keyboard.errors) {
 			list.push(<div className='pane-settings-list-element' key={ index ++ }>
-				<span style={{ color: '#c0392b' }}><i className='fa fa-times-circle'/></span>
+				<span style={{ color: '#ff1800' }}><i className='fa fa-times-circle'/></span>
 				{ error }
 			</div>);
 		}
 		for (const warning of keyboard.warnings) {
 			list.push(<div className='pane-settings-list-element' key={ index ++ }>
-				<span style={{ color: '#c6cc33' }}><i className='fa fa-exclamation-triangle'/></span>
+				<span style={{ color: '#f5ff00' }}><i className='fa fa-exclamation-triangle'/></span>
 				{ warning }
 			</div>);
 		}
