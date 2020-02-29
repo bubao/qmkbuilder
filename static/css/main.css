@@ -932,7 +932,7 @@ select {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	pointer-events: none;
-	color:#ffff5cba;
+	color:#ffff8a;
 }
 
 .display-keycode3 {
@@ -968,14 +968,14 @@ select {
 }
 
 .panes {
-	background: #a7e0ff52;
-	border: 6px solid #ffffff54;
+	background: #72afd0;
+	border: 6px solid #90c7e5;
 	border-radius: 1.2rem;
 }
 
 .panes-tabs {
 	padding: 0 0.5rem 0.5rem 0.5rem;
-	background: #c9ecff42;
+	background: #90c7e5;
 	border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 
@@ -996,10 +996,11 @@ select {
 }
 
 .panes-tab.selected {
-	color: #ffff00;
+	color: #ffffff;
 	padding: 0.4rem 0.5rem 0.5rem 0.5rem;
-	background: #ffffff38;
-	border: 1px solid #ffff5c;
+	background: #59c4eb;
+	border: 1px solid #5fa6da;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 -0.15em 0 rgba(0, 0, 0, 0.25), 0 0.15em 0.15em rgba(0, 0, 0, 0.05);
 	border-radius: 0.4rem;
 }
 
@@ -1031,7 +1032,7 @@ select {
 
 .pane-keymap-key {
 	padding: 0.5rem;
-	border: 6px solid #ffffff4d;
+	border: 6px solid #90c7e5;
 	border-radius: 1.2rem;
 	display: inline-block;
 }
@@ -1072,10 +1073,10 @@ select {
 	max-width: 500px;
 	padding: 0.4rem;
 	box-sizing: border-box;
-	border: 1px solid #dddddd00;
+	border: 1px solid #7fb6d5;
 	border-radius: 0.8rem;
 	margin-top: 0.4rem;
-	background: #ffffff17;
+	background: #75b5d7;
 	z-index: 1;
 }
 
@@ -1085,12 +1086,12 @@ select {
 	right: 0;
 	padding: 0.4rem 0.8rem;
 	font-size: 2rem;
-	color: #ff000075;
+	color: #ff4343;
 	cursor: pointer;
 }
 
 .pane-keymap-selector-close:hover {
-	color: #c0392b;
+	color: #ff6a5b;
 }
 
 .pane-keymap-selector-tab {
@@ -1106,8 +1107,8 @@ select {
 }
 
 .pane-keymap-selector-tab.selected {
-	color: #ffff01;
-	background: #ff000012;
+	color: #007d0d;
+	background: #abddf9;
 	border-radius: 0.2rem;
 }
 
@@ -1127,7 +1128,7 @@ select {
 	max-width: 500px;
 	margin: auto;
 	margin-top: 1rem;
-	border: 3px solid #ffffff61;
+	border: 3px solid #90c7e5;
 	border-radius: 0.6rem;
 	overflow: hidden;
 }
@@ -1140,7 +1141,7 @@ select {
 	position: relative;
 	text-align: left;
 	padding: 0.4rem 1rem;
-	border-top: 3px solid #ffffff61;
+	border-top: 3px solid #90c7e5;
 }
 
 .pane-macros-editor-action:first-child {
@@ -1178,7 +1179,7 @@ select {
 }
 
 .pane-macros-editor-record.recording {
-	border: 3px solid #c0392bcc;
+	border: 3px solid rgba(0, 0, 0, 0.1);;
 }
 
 .pane-macros-editor-screen {
