@@ -5097,9 +5097,13 @@
                 "col": 6,
                 "keycodes": [
                     {
-                        "id": "MO()",
+                        "id": "LT()",
                         "fields": [
-                            1
+                            1,
+                            {
+                                "id": "KC_RALT",
+                                "fields": []
+                            }
                         ]
                     },
                     {
@@ -5186,9 +5190,13 @@
                 "col": 7,
                 "keycodes": [
                     {
-                        "id": "MO()",
+                        "id": "LT()",
                         "fields": [
-                            2
+                            2,
+                            {
+                                "id": "KC_RCTL",
+                                "fields": []
+                            }
                         ]
                     },
                     {
@@ -5559,8 +5567,8 @@
             "kana": null,
             "led": null,
             "rgb": null,
-            "UART_RXD": "9",
-            "UART_TXD": "8",
+            "UART_RXD": "8",
+            "UART_TXD": "9",
             "RGB_DI_PIN": "10",
             "RGB_PWR_PIN": "11",
             "LED_BLE": "7",
