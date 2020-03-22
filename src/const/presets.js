@@ -5,5 +5,6 @@ module.exports = {
 	'farad69b': 'Farad69 rev.B',
 	'omega45': 'Omega45',
 	'omega50': 'Omega50',
-	'omega64': 'Omega64'
+	'omega64': 'Omega64',
+	'newhope64': 'NewHope64'
 };
