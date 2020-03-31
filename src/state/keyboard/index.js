@@ -44,7 +44,8 @@ class Keyboard {
             "LED_AUTOOFF_TIME": 5,
             "RGBLIGHT_ENABLE": 1,
             "PASSKEY": 1,
-            "SLEEP_SLOW_TIMEOUT": 15
+            "SLEEP_SLOW_TIMEOUT": 15,
+            "KEYBOARD_SLOW_SCAN_INTERVAL": 100
 		};
 
 		this.valid = false;
