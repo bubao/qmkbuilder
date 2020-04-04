@@ -135,11 +135,6 @@ class Main extends React.Component {
 				onClick={ this.upload }>
 				上传
 			</button>
-		</div>;
-	}
-
-}
-			/*
 			<br/><br/>
 			<h3>或 从keyboard-layout-editor.com导入</h3>
 			<textarea
@@ -152,5 +147,8 @@ class Main extends React.Component {
 				onClick={ this.useKLE }>
 				导入
 			</button>
-			 */
+		</div>;
+	}
+
+}
 module.exports = Main;
