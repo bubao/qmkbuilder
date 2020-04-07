@@ -7,5 +7,5 @@ module.exports = {
 	'omega50': 'Omega50',
 	'omega64': 'Omega64',
 	'newhope64': 'NewHope64',
-	'newhope84': 'NewHope84'
+	'omega84': 'Omega84'
 };
