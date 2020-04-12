@@ -169,14 +169,6 @@ class Pins extends React.Component {
               pin={keyboard.pins.LED_CHARGING}
             />
             <div style={{ height: '0.5rem' }} />
-            <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>自定义状态灯</h2>
-            <Chooser
-              noPin
-              state={state}
-              onChange={p => keyboard.setPin('LED_USER', p)}
-              pin={keyboard.pins.LED_USER}
-            />
-            <div style={{ height: '0.5rem' }} />
             <h2 style={{ width: '6rem', marginRight: '0.8rem' }}>设备1状态灯</h2>
             <Chooser
               noPin
