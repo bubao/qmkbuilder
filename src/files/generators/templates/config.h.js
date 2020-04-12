@@ -99,8 +99,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %Hiden_LED_CHARGING%#define LED_STATUS_CHARGING %LED_CHARGING%
 %Hiden_LED_USB%#define LED_STATUS_USB %LED_USB%
 %Hiden_BLE_LED_1%#define LED_BLE_CHANNEL1 %BLE_LED_1%
-%Hiden_BLE_LED_2%#define LED_BLE_CHANNEL1 %BLE_LED_2%
-%Hiden_BLE_LED_3%#define LED_BLE_CHANNEL1_3 %BLE_LED_3%
+%Hiden_BLE_LED_2%#define LED_BLE_CHANNEL2 %BLE_LED_2%
+%Hiden_BLE_LED_3%#define LED_BLE_CHANNEL3 %BLE_LED_3%
 
 
 // 独立硬件按钮
