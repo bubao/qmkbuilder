@@ -5589,6 +5589,8 @@
             "RGBLIGHT_ENABLE": 1,
             "PASSKEY": 1,
             "SLEEP_SLOW_TIMEOUT": 15,
+            "CONF_VENDOR_ID": "0x4366",
+            "CONF_PRODUCT_ID": "0x0317",
             "KEYBOARD_SLOW_SCAN_INTERVAL": 100
         }
     }
