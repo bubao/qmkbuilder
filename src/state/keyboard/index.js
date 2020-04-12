@@ -45,7 +45,9 @@ class Keyboard {
             "RGBLIGHT_ENABLE": 1,
             "PASSKEY": 1,
             "SLEEP_SLOW_TIMEOUT": 15,
-            "KEYBOARD_SLOW_SCAN_INTERVAL": 100
+			"KEYBOARD_SLOW_SCAN_INTERVAL": 100,
+			"CONF_VENDOR_ID": '0x4366',
+			"CONF_PRODUCT_ID": '0x0311'
 		};
 
 		this.valid = false;
