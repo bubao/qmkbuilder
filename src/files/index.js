@@ -17,7 +17,7 @@ class Files {
 			'lotkb/config.h': new ConfigHGenerator(keyboard).generate(),
 			'lotkb/keymap_plain.c': new KeymapPlainCGenerator(keyboard).generate(),
 			'lotkb/keymap_common.h': new KeymapCommonHGenerator(keyboard).generate(),
-			'lotkb/makefile': new MakeFileGenerator(keyboard).generate()
+			'lotkb/Makefile': new MakeFileGenerator(keyboard).generate()
 		}
 	}
 }
