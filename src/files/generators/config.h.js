@@ -64,7 +64,7 @@ class ConfigH extends Generator {
 				keyboard.settings.diodeDirection === C.DIODE_COL2ROW
 					? 'ROW_IN'
 					: 'COL_IN', // 流向
-			PRODUCT_NAME: keyboard.settings.PRODUCT || 'ble60',
+			PRODUCT_NAME: keyboard.settings.PRODUCT || 'lotkb',
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			KEYBOARD_SLOW_SCAN_INTERVAL: keyboard.settings.KEYBOARD_SLOW_SCAN_INTERVAL || 100,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT * 60 || 1200,

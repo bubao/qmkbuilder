@@ -10,16 +10,13 @@ class Files {
 	 *
 	 * @return {Object} The generated source files.
 	 */
-	static generate(keyboard) {
+	async static generate(keyboard) {
 		return {
-			'tmk_firmware/rules.mk': new RulesMKGenerator(keyboard).generate(),
-			'tmk_firmware/config.h': new ConfigHGenerator(keyboard).generate(),
-			'tmk_firmware/keymap_plain.c': new KeymapPlainCGenerator(
-				keyboard
-			).generate(),
-			'tmk_firmware/keymap_common.h': new KeymapCommonHGenerator(
-				keyboard
-			).generate()
+			'lotkb/rules.mk': new RulesMKGenerator(keyboard).generate(),
+			'lotkb/config.h': new ConfigHGenerator(keyboard).generate(),
+			'lotkb/keymap_plain.c': new KeymapPlainCGenerator(keyboard).generate(),
+			'lotkb/keymap_common.h': new KeymapCommonHGenerator(keyboard).generate()
+			'lotkb/keymap_common.h': new KeymapCommonHGenerator(keyboard).generate()
 		}
 	}
 }
