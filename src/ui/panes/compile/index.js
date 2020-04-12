@@ -22,6 +22,7 @@ class Compile extends React.Component {
 		this.downloadHex = this.downloadHex.bind(this)
 		this.downloadZip = this.downloadZip.bind(this)
 		this.downloadH = this.downloadH.bind(this)
+		this.downloadUsbHex = this.downloadUsbHex.bind(this)
 	}
 
 	downloadH() {
@@ -71,7 +72,7 @@ class Compile extends React.Component {
 		// Generate source files.
 		const files = Files.generate(keyboard)
 		// Send the request.
-		Request.post(C.LOCAL.API)
+		Request.post(C.LOCAL.HEX)
 			.timeout(99999999000)
 			.set('Content-Type', 'application/json')
 			.responseType('blob')
@@ -89,7 +90,39 @@ class Compile extends React.Component {
 					: 'layout'
 				console.log(res.body)
 				console.log(res.body.size)
-				saveAs(res.body, friendly + '.hex')
+				saveAs(res.body, friendly + '_kbd.hex')
+				state.ui.set('compile-working', false)
+			})
+	}
+	downloadUsbHex() {
+		const state = this.props.state
+		const keyboard = state.keyboard
+
+		// Disable buttons.
+		state.ui.set('compile-working', true)
+
+		// Generate source files.
+		const files = Files.generate(keyboard)
+		// Send the request.
+		Request.post(C.LOCAL.USBHEX)
+			.timeout(99999999000)
+			.set('Content-Type', 'application/json')
+			.responseType('blob')
+			.send(JSON.stringify(files))
+			.end((err, res) => {
+				// Download the hex file.
+				if (err) {
+					console.error(err)
+					state.error('无法连接到 API 服务.')
+					state.ui.set('compile-working', false)
+					return
+				}
+				const friendly = keyboard.settings.PRODUCT
+					? Utils.generateFriendly(keyboard.settings.PRODUCT)
+					: 'layout'
+				console.log(res.body)
+				console.log(res.body.size)
+				saveAs(res.body, friendly + '_ch554.hex')
 				state.ui.set('compile-working', false)
 			})
 	}
@@ -143,7 +176,7 @@ class Compile extends React.Component {
 					下载DFU空中升级刷机包
 				</button>
 				<div style={{ height: '1.5rem' }} />
-				下载烧录固件 .hex
+				下载KBD固件 .hex
 				<div style={{ height: '0.5rem' }} />
 				<button
 					className="light"
@@ -152,6 +185,19 @@ class Compile extends React.Component {
 						state.ui.get('compile-working', false)
 					}
 					onClick={this.downloadHex}
+				>
+					下载HEX烧录固件文件
+				</button>
+				<div style={{ height: '1.5rem' }} />
+				下载USB固件 .hex
+				<div style={{ height: '0.5rem' }} />
+				<button
+					className="light"
+					disabled={
+						!keyboard.valid ||
+						state.ui.get('compile-working', false)
+					}
+					onClick={this.downloadUsbHex}
 				>
 					下载HEX烧录固件文件
 				</button>
@@ -172,14 +218,11 @@ class Compile extends React.Component {
 					<br />
 					<br />
 					阅读{' '}
-					<a
-						href="https://glab.online/update-log"
-						target="_blank"
-					>
+					<a href="https://glab.online/update-log" target="_blank">
 						更新日志
 					</a>{' '}
 					了解当前固件源码更新情况.
-		  		</div>
+				</div>
 			</div>
 		)
 	}
