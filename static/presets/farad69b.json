@@ -4217,10 +4217,8 @@
                         "fields": []
                     },
                     {
-                        "id": "MACRO()",
-                        "fields": [
-                            0
-                        ]
+                        "id": "KC_TRNS",
+                        "fields": []
                     },
                     {
                         "id": "KC_TRNS",
