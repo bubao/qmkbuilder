@@ -92,12 +92,12 @@ const C = {
 	KEYMAP_MAX_LAYERS: 8,
 
 	// Macros.
-	MACRO_NONE:     0,
-	MACRO_INTERVAL: 1,
-	MACRO_DOWN:     2,
-	MACRO_UP:       3,
-	MACRO_TYPE:     4,
-	MACRO_WAIT:     5,
+	// MACRO_NONE:     0,
+	// MACRO_INTERVAL: 1,
+	// MACRO_DOWN:     2,
+	// MACRO_UP:       3,
+	// MACRO_TYPE:     4,
+	// MACRO_WAIT:     5,
 
 	// Quantum.
 // 	QUANTUM_DEFAULT: `
