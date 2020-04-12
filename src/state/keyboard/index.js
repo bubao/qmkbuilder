@@ -47,7 +47,8 @@ class Keyboard {
             "SLEEP_SLOW_TIMEOUT": 15,
 			"KEYBOARD_SLOW_SCAN_INTERVAL": 100,
 			"CONF_VENDOR_ID": '0x4366',
-			"CONF_PRODUCT_ID": '0x0311'
+			"CONF_PRODUCT_ID": '0x0311',
+			"CHARGING_DETECT": "//"
 		};
 
 		this.valid = false;

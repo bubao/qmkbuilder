@@ -118,7 +118,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BATTERY_ADC_PIN NRF_SAADC_INPUT_AIN0 // 电量检测引脚 Pin 2
 
 // 充电检测配置
-%chargeing_detect%#define PIN_CHARGING !UCC1
+%CHARGING_DETECT%#define PIN_CHARGING !UCC1
 //#define PIN_STANDBY !UCC2
 
 // 按键阵列配置

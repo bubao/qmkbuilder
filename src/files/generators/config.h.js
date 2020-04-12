@@ -68,7 +68,7 @@ class ConfigH extends Generator {
 			SLEEP_SLOW_TIMEOUT: keyboard.settings.SLEEP_SLOW_TIMEOUT || 15,
 			KEYBOARD_SLOW_SCAN_INTERVAL: keyboard.settings.KEYBOARD_SLOW_SCAN_INTERVAL || 100,
 			SLEEP_OFF_TIMEOUT: keyboard.settings.SLEEP_OFF_TIMEOUT * 60 || 1200,
-			LED_AUTOOFF_TIME: keyboard.settings.LED_AUTOOFF_TIME * 1000 || 5000,
+			LED_AUTOOFF_TIME: keyboard.settings.LED_AUTOOFF_TIME || 5000,
 			RGBLIGHT_ANIMATIONS: keyboard.settings.RGBLIGHT_ENABLE ? '' : '//',
 			RGBLED_NUM: keyboard.settings.RGBLED_NUM || 8, // 8
 			LED_CAPS: keyboard.pins.caps || 21, // 21
@@ -87,6 +87,7 @@ class ConfigH extends Generator {
 			UART_TXD: keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
 			CONF_VENDOR_ID: keyboard.settings.CONF_VENDOR_ID || '0x4366',
 			CONF_PRODUCT_ID: keyboard.settings.CONF_PRODUCT_ID || '0x0311',
+			CHARGING_DETECT: keyboard.settings.CHARGING_DETECT || "//",
 			Hiden_RGBLED_NUM: keyboard.settings.RGBLED_NUM ? '' : '//',
 			Hiden_LED_CAPS: keyboard.pins.caps ? '' : '//',
 			Hiden_RGB_DI_PIN: keyboard.pins.RGB_DI_PIN ? '' : '//',
@@ -105,8 +106,7 @@ class ConfigH extends Generator {
 			'macaddr_name': macaddr_name || '',
 			'rgb_enable': rgb_enable || '',
 			'chip_func': chip_func || '',
-			'scan_interval': scan_interval || '10',
-			'chargeing_detect': keyboard.pins.LED_CHARGING ? '' : '//'
+			'scan_interval': scan_interval || '10'
 		}
 	}
 }
