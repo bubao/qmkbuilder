@@ -5511,13 +5511,13 @@
             "RGB_DI_PIN": "10",
             "LED_BLE": "7",
             "LED_USB": "6",
-            "LED_CHARGING": null,
+            "LED_CHARGING": "5",
+            "CHARGING_DETECT": "//",
             "POWER_BUTTON": "3",
             "BLE_LED_1": "7",
             "BLE_LED_2": "6",
             "BLE_LED_3": "5",
-            "RGB_PWR_PIN": "12",
-            "LED_USER": "5"
+            "RGB_PWR_PIN": "12"
         },
         "macros": {},
         "settings": {
@@ -5529,6 +5529,8 @@
             "SLEEP_SLOW_TIMEOUT": 15,
             "PASSKEY": 1,
             "RGBLIGHT_ENABLE": 0,
+            "CONF_VENDOR_ID": "0x4366",
+            "CONF_PRODUCT_ID": "0x0315",
             "KEYBOARD_SLOW_SCAN_INTERVAL": 100
         }
     }

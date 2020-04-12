@@ -5988,6 +5988,7 @@
             "LED_BLE": "7",
             "LED_USB": "6",
             "LED_CHARGING": "5",
+            "CHARGING_DETECT": "",
             "POWER_BUTTON": "3",
             "BLE_LED_1": "7",
             "BLE_LED_2": "6",
@@ -6003,6 +6004,8 @@
             "RGBLIGHT_ENABLE": 1,
             "PASSKEY": 1,
             "SLEEP_SLOW_TIMEOUT": 15,
+            "CONF_VENDOR_ID": "0x4366",
+            "CONF_PRODUCT_ID": "0x0313",
             "KEYBOARD_SLOW_SCAN_INTERVAL": 100
         }
     }
