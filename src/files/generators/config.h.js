@@ -85,8 +85,8 @@ class ConfigH extends Generator {
 			POWER_BUTTON: keyboard.pins.POWER_BUTTON || 3, // 3
 			UART_RXD: keyboard.pins.UART_RXD || 17, // UART_RX口IO 17
 			UART_TXD: keyboard.pins.UART_TXD || 18, // UART_TX口IO 18
-			CONF_VENDOR_ID: CONF_VENDOR_ID || '0x4366',
-			CONF_PRODUCT_ID: CONF_PRODUCT_ID || '0x0311',
+			CONF_VENDOR_ID: keyboard.settings.CONF_VENDOR_ID || '0x4366',
+			CONF_PRODUCT_ID: keyboard.settings.CONF_PRODUCT_ID || '0x0311',
 			Hiden_RGBLED_NUM: keyboard.settings.RGBLED_NUM ? '' : '//',
 			Hiden_LED_CAPS: keyboard.pins.caps ? '' : '//',
 			Hiden_RGB_DI_PIN: keyboard.pins.RGB_DI_PIN ? '' : '//',
