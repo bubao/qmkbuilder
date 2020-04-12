@@ -9,7 +9,7 @@ const Generator = require('./index')
 
 const C = require('const')
 
-class ConfigH extends Generator {
+class MakeFile extends Generator {
 	loadTemplate() {
 		return require('./templates/makefile')
 	}
@@ -23,4 +23,4 @@ class ConfigH extends Generator {
 	}
 }
 
-module.exports = ConfigH
+module.exports = MakeFile

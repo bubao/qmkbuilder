@@ -33,4 +33,5 @@ all: default ch554
 
 include $(APP_PROJ_DIR)/kbd.mk
 include $(USB_SOURCE_DIR)/usb.mk
+
 `.trim()
