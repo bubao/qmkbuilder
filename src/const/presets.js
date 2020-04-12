@@ -6,5 +6,6 @@ module.exports = {
 	'omega45': 'Omega45',
 	'omega50': 'Omega50',
 	'omega64': 'Omega64',
-	'newhope64': 'NewHope64'
+	'newhope64': 'NewHope64',
+	'omega84': 'Omega84'
 };
