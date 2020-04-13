@@ -57,7 +57,7 @@ class Compile extends React.Component {
 			})
 			.catch(e => {
 				console.error(e)
-				state.error('无法生成文件')
+				state.error('无法生成源码文件')
 				state.ui.set('compile-working', false)
 			})
 	}
@@ -81,7 +81,7 @@ class Compile extends React.Component {
 				// Download the hex file.
 				if (err) {
 					console.error(err)
-					state.error('无法连接到 API 服务.')
+					state.error('无法连接到编译服务.')
 					state.ui.set('compile-working', false)
 					return
 				}
@@ -113,7 +113,7 @@ class Compile extends React.Component {
 				// Download the hex file.
 				if (err) {
 					console.error(err)
-					state.error('无法连接到 API 服务.')
+					state.error('无法连接到编译服务.')
 					state.ui.set('compile-working', false)
 					return
 				}
@@ -122,7 +122,7 @@ class Compile extends React.Component {
 					: 'layout'
 				console.log(res.body)
 				console.log(res.body.size)
-				saveAs(res.body, friendly + '_ch554.hex')
+				saveAs(res.body, friendly + '_ch554.bin')
 				state.ui.set('compile-working', false)
 			})
 	}
@@ -144,7 +144,7 @@ class Compile extends React.Component {
 			.end((err, res) => {
 				if (err) {
 					console.error(err)
-					state.error('无法连接到 API 服务.')
+					state.error('无法连接到编译服务.')
 					state.ui.set('compile-working', false)
 					return
 				}
@@ -164,7 +164,7 @@ class Compile extends React.Component {
 
 		return (
 			<div className="pane-compile">
-				下载升级包 .zip.
+				下载蓝牙DFU升级包 .zip.
 				<div style={{ height: '0.5rem' }} />
 				<button
 					disabled={
@@ -173,10 +173,10 @@ class Compile extends React.Component {
 					}
 					onClick={this.downloadZip}
 				>
-					下载DFU空中升级刷机包
+					下载蓝牙主控DFU空中升级刷机包
 				</button>
 				<div style={{ height: '1.5rem' }} />
-				下载KBD固件 .hex
+				下载蓝牙KBD固件 .hex
 				<div style={{ height: '0.5rem' }} />
 				<button
 					className="light"
@@ -186,10 +186,10 @@ class Compile extends React.Component {
 					}
 					onClick={this.downloadHex}
 				>
-					下载HEX烧录固件文件
+					下载蓝牙主控烧录固件文件
 				</button>
 				<div style={{ height: '1.5rem' }} />
-				下载USB固件 .hex
+				下载USB固件 .bin
 				<div style={{ height: '0.5rem' }} />
 				<button
 					className="light"
@@ -199,7 +199,7 @@ class Compile extends React.Component {
 					}
 					onClick={this.downloadUsbHex}
 				>
-					下载HEX烧录固件文件
+					下载CH554 USB芯片烧录固件文件
 				</button>
 				<div style={{ height: '1.5rem' }} />
 				下载源码 .zip
