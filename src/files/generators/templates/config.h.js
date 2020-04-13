@@ -76,11 +76,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
@@ -101,7 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %Hiden_BLE_LED_1%#define LED_BLE_CHANNEL1 %BLE_LED_1%
 %Hiden_BLE_LED_2%#define LED_BLE_CHANNEL2 %BLE_LED_2%
 %Hiden_BLE_LED_3%#define LED_BLE_CHANNEL3 %BLE_LED_3%
-
+#define LED_POSITIVE // LED上拉驱动
 
 // 独立硬件按钮
 %Hiden_POWER_BUTTON%#define POWER_BUTTON %POWER_BUTTON% // 3
