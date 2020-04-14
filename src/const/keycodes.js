@@ -481,17 +481,17 @@ const keycodes = {
 		'SYS_SLEEP',
 		[]
 	),
-	'SYS_SWITCH': new Keycode(
-		new Template(['切换输入模式', ''], 'ACTION_FUNCTION(1)'),
-		'SYS_SWITCH',
+	'SYS_NKRO': new Keycode(
+		new Template(['切换NKRO', ''], 'ACTION_FUNCTION(1)'),
+		'SYS_NKRO',
 		[]
 	),
-	'TRICKY_ESC': new Keycode(
-		new Template(['智选ESC', ''], 'ACTION_FUNCTION(2)'),
-		'TRICKY_ESC',
+	'DFU': new Keycode(
+		new Template(['DFU模式', ''], 'ACTION_FUNCTION(2)'),
+		'DFU',
 		[]
 	),
-	'SYS_OFF': new Keycode(
+	'SWITCH_DEVICE': new Keycode(
 		new Template(['键盘关机', ''], 'ACTION_FUNCTION(3)'),
 		'SYS_OFF',
 		[]
@@ -805,9 +805,9 @@ const categories = {
 		'OSM()',
 		'MT()',
 		'MK()',
-		'',
+		''
 
-		'SYS_SLEEP',
+		/*'SYS_SLEEP',
 		'SYS_OFF',
 		'SYS_SWITCH',
 		'DEL_BOND',
@@ -815,7 +815,7 @@ const categories = {
 		'TRICKY_SLSH',
 		'PRINT_BAT',
 		''
-		/*'CTL_T()',
+		'CTL_T()',
 		'SFT_T()',
 		'ALT_T()',
 		'GUI_T()',
