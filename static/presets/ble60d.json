@@ -33,7 +33,7 @@
                         "fields": []
                     },
                     {
-                        "id": "SYS_OFF",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
@@ -1179,7 +1179,7 @@
                         "fields": []
                     },
                     {
-                        "id": "SYS_SLEEP",
+                        "id": "KC_TRNS",
                         "fields": []
                     },
                     {
