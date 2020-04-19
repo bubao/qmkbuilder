@@ -1,13 +1,20 @@
+/**
+ * @Description: 
+ * @Author: bubao
+ * @Date: 2019-08-23 01:16:29
+ * @LastEditors: bubao
+ * @LastEditTime: 2020-04-19 16:22:25
+ */
 const React = require('react')
 
 const C = require('const')
 
 class Keymap extends React.Component {
-	render() {
-		const state = this.props.state
-		const selectType = this.props.selectType
-		const keyboard = state.keyboard
-		const flipped = state.ui.get('display-flip', false)
+  render() {
+    const state = this.props.state
+    const selectType = this.props.selectType
+    const keyboard = state.keyboard
+    const flipped = state.ui.get('display-flip', false)
 
 		const keySize = state.ui.get('keySize', C.KEY_SIZE)
 
@@ -32,43 +39,34 @@ class Keymap extends React.Component {
 				style.transform = rotateString
 			}
 
-			const blockStyle = {
-				width: key.size.w * keySize - 20,
-				height: key.size.h * keySize - 12,
-				lineHeight: key.size.h * keySize - 9 + 'px'
-			}
-			if (key.state.st != 0) {
-				return (
-					// 普通键字体颜色
-					<div className="display-keycode" key={index} style={style}>
-						<div
-							className="display-keycode-block"
-							style={blockStyle}
-						>
-							{selectType === 'settings'
-								? key.size.w
-								: key.keycodes[layer].getName()}
-						</div>
-					</div>
-				)
-			} else {
-				// 大键字体颜色
-				return (
-					<div className="display-keycode2" key={index} style={style}>
-						<div
-							className="display-keycode-block2"
-							style={blockStyle}
-						>
-							{selectType === 'settings'
-								? key.size.w
-								: key.keycodes[layer].getName()}
-						</div>
-					</div>
-				)
-			}
-		})
-		return <div className="display-inner">{keys}</div>
-	}
+      const blockStyle = {
+        width: key.size.w * keySize - 20,
+        height: key.size.h * keySize - 12,
+        lineHeight: key.size.h * keySize - 9 + 'px'
+      }
+      if (key.state.st != 0) {
+        return (
+          // 普通键字体颜色
+          <div className="display-keycode" key={index} style={style}>
+            <div className="display-keycode-block" style={blockStyle}>
+              {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
+            </div>
+          </div>
+        )
+      } else {
+        // 大键字体颜色
+        return (
+          <div className="display-keycode2" key={index} style={style}>
+            <div className="display-keycode-block2" style={blockStyle}>
+              {selectType === 'settings' ? key.size.w : key.keycodes[layer].getName()}
+            </div>
+          </div>
+        )
+      }
+    })
+
+    return <div className="display-inner">{keys}</div>
+  }
 }
 
 module.exports = Keymap

@@ -123,27 +123,27 @@ const keycodes = {
 	KC_8: new Keycode('KC_8', '8', []),
 	KC_9: new Keycode('KC_9', '9', []),
 	KC_0: new Keycode('KC_0', '0', []),
-	KC_ENT: new Keycode('KC_ENT', 'ENTER', ['RETURN']),
-	KC_ESC: new Keycode('KC_ESC', 'ESC', ['ESCAPE']),
-	KC_BSPC: new Keycode('KC_BSPC', 'BACKSPACE', [
+	KC_ENT: new Keycode('KC_ENT', 'Enter', ['RETURN']),
+	KC_ESC: new Keycode('KC_ESC', 'Esc', ['ESCAPE']),
+	KC_BSPC: new Keycode('KC_BSPC', 'Backspace', [
 		'BS',
 		'BACK SPACE',
 		'BACK<BR>SPACE'
 	]),
-	KC_TAB: new Keycode('KC_TAB', 'TAB', []),
-	KC_SPC: new Keycode('KC_SPC', 'SPACE', ['']),
-	KC_MINS: new Keycode('KC_MINS', '-', ['MINUS']),
-	KC_EQL: new Keycode('KC_EQL', '=', ['EQUAL']),
-	KC_LBRC: new Keycode('KC_LBRC', '[', []),
-	KC_RBRC: new Keycode('KC_RBRC', ']', []),
+	KC_TAB: new Keycode('KC_TAB', 'Tab', []),
+	KC_SPC: new Keycode('KC_SPC', 'Space', ['']),
+	KC_MINS: new Keycode('KC_MINS', '-_', ['MINUS']),
+	KC_EQL: new Keycode('KC_EQL', '=+', ['EQUAL']),
+	KC_LBRC: new Keycode('KC_LBRC', '[{', []),
+	KC_RBRC: new Keycode('KC_RBRC', ']}', []),
 	KC_BSLS: new Keycode('KC_BSLS', '\\', []),
-	KC_NUHS: new Keycode('KC_NUHS', 'NUHS', []),
-	KC_SCLN: new Keycode('KC_SCLN', ';', []),
-	KC_QUOT: new Keycode('KC_QUOT', "'", []),
-	KC_GRV: new Keycode('KC_GRV', '`', []),
-	KC_COMM: new Keycode('KC_COMM', ',', []),
-	KC_DOT: new Keycode('KC_DOT', '.', []),
-	KC_SLSH: new Keycode('KC_SLSH', '/', []),
+	KC_NUHS: new Keycode('KC_NUHS', '#~', []),
+	KC_SCLN: new Keycode('KC_SCLN', ';:', []),
+	KC_QUOT: new Keycode('KC_QUOT', "'”", []),
+	KC_GRV: new Keycode('KC_GRV', '`~', []),
+	KC_COMM: new Keycode('KC_COMM', ',<', []),
+	KC_DOT: new Keycode('KC_DOT', '.>', []),
+	KC_SLSH: new Keycode('KC_SLSH', '/?', []),
 	KC_CAPS: new Keycode('KC_CAPS', 'CAPS', ['CAPS LOCK']),
 	KC_F1: new Keycode('KC_F1', 'F1', []),
 	KC_F2: new Keycode('KC_F2', 'F2', []),
@@ -157,7 +157,7 @@ const keycodes = {
 	KC_F10: new Keycode('KC_F10', 'F10', []),
 	KC_F11: new Keycode('KC_F11', 'F11', []),
 	KC_F12: new Keycode('KC_F12', 'F12', []),
-	KC_PSCR: new Keycode('KC_PSCR', 'PSCR', [
+	KC_PSCR: new Keycode('KC_PSCR', 'PScr', [
 		'PRINT',
 		'PRINT SCREEN',
 		'PRINT<BR>SCREEN',
@@ -168,23 +168,23 @@ const keycodes = {
 		'SCROLL LOCK',
 		'SCROLL<BR>LOCK'
 	]),
-	KC_PAUS: new Keycode('KC_PAUS', 'PAUSE', ['BREAK']),
-	KC_INS: new Keycode('KC_INS', 'INS', ['INSERT']),
-	KC_HOME: new Keycode('KC_HOME', 'HOME', []),
-	KC_PGUP: new Keycode('KC_PGUP', 'PGUP', ['PAGE UP']),
-	KC_DEL: new Keycode('KC_DEL', 'DEL', ['DELETE']),
-	KC_END: new Keycode('KC_END', 'END', []),
-	KC_PGDN: new Keycode('KC_PGDN', 'PGDN', ['PAGE DOWN']),
-	KC_RGHT: new Keycode('KC_RGHT', 'RIGHT', []),
-	KC_LEFT: new Keycode('KC_LEFT', 'LEFT', []),
-	KC_DOWN: new Keycode('KC_DOWN', 'DOWN', []),
-	KC_UP: new Keycode('KC_UP', 'UP', []),
-	KC_NLCK: new Keycode('KC_NLCK', 'NLCK', ['NUM LOCK', 'NUM<BR>LOCK']),
+	KC_PAUS: new Keycode('KC_PAUS', 'Pause', ['BREAK']),
+	KC_INS: new Keycode('KC_INS', 'Ins', ['INSERT']),
+	KC_HOME: new Keycode('KC_HOME', 'Home', []),
+	KC_PGUP: new Keycode('KC_PGUP', 'PgUp', ['PAGE UP']),
+	KC_DEL: new Keycode('KC_DEL', 'Del', ['DELETE']),
+	KC_END: new Keycode('KC_END', 'End', []),
+	KC_PGDN: new Keycode('KC_PGDN', 'PgDn', ['PAGE DOWN']),
+	KC_RGHT: new Keycode('KC_RGHT', '→', []),
+	KC_LEFT: new Keycode('KC_LEFT', '←', []),
+	KC_DOWN: new Keycode('KC_DOWN', '↓', []),
+	KC_UP: new Keycode('KC_UP', '↑', []),
+	KC_NLCK: new Keycode('KC_NLCK', 'NumLK', ['NUM LOCK', 'NUM<BR>LOCK']),
 	KC_PSLS: new Keycode('KC_PSLS', 'P/', []),
 	KC_PAST: new Keycode('KC_PAST', 'P*', []),
 	KC_PMNS: new Keycode('KC_PMNS', 'P-', []),
 	KC_PPLS: new Keycode('KC_PPLS', 'P+', []),
-	KC_PENT: new Keycode('KC_PENT', 'PENT', []),
+	KC_PENT: new Keycode('KC_PENT', 'PEnter', []),
 	KC_P1: new Keycode('KC_P1', 'P1', []),
 	KC_P2: new Keycode('KC_P2', 'P2', []),
 	KC_P3: new Keycode('KC_P3', 'P3', []),
@@ -196,7 +196,7 @@ const keycodes = {
 	KC_P9: new Keycode('KC_P9', 'P9', []),
 	KC_P0: new Keycode('KC_P0', 'P0', []),
 	KC_PDOT: new Keycode('KC_PDOT', 'P.', []),
-	KC_NUBS: new Keycode('KC_NUBS', 'NUBS', []),
+	KC_NUBS: new Keycode('KC_NUBS', '\ |', []),
 	KC_APP: new Keycode('KC_APP', 'APP', []),
 	KC_POWER: new Keycode('KC_POWER', '_POWER', []),
 	KC_PEQL: new Keycode('KC_PEQL', 'P=', []),
@@ -431,11 +431,11 @@ const keycodes = {
 		'LM(%1, %2)',
 		[]
 	),
-	/*'TO()': new Keycode(
-	new Template(['TO', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
+	'TO()': new Keycode(
+	new Template(['切换默认层', 'LAYER'], 'ACTION_DEFAULT_LAYER_TOGGLE(%1)'),
 		'TO(%1)',
 		[]
-	), */
+	),
 	'MO()': new Keycode(
 		new Template(['瞬时开启层', 'LAYER'], 'ACTION_LAYER_MOMENTARY(%1)'),
 		'MO(%1)',
@@ -469,6 +469,11 @@ const keycodes = {
 	'MK()': new Keycode(
 		new Template(['组合键', 'MOD', 'KEY'], 'ACTION_MODS_KEY(%1, %2)'),
 		'MK(%1, %2)',
+		[]
+	),
+	'MACRO()': new Keycode(
+		new Template(['自定义宏', 'MACRO'], 'ACTION_MACRO(%1)'), 
+		'MACRO(%1)', 
 		[]
 	),
 	'SYS_SLEEP': new Keycode(
@@ -613,8 +618,6 @@ const categories = {
 
 		'KC_NUHS',
 		'KC_NUBS',
-		'',
-
 		'KC_MINS',
 		'KC_EQL',
 		'KC_LBRC',
@@ -777,7 +780,7 @@ const categories = {
 
 		'LT()',
 		'LM()',
-		//'TO()',
+		'TO()',
 		'MO()',
 		'DF()',
 		'TG()',
@@ -785,6 +788,7 @@ const categories = {
 		'OSM()',
 		'MT()',
 		'MK()',
+		'MACRO()',
 		'',
 
 		'SYS_SLEEP',

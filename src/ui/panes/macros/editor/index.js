@@ -239,22 +239,22 @@ class Editor extends React.Component {
 		return <div>
 			<button
 				onClick={ this.addAction }>
-				Add Action
+				添加动作
 			</button>
 			&nbsp;&nbsp;
 			<button
 				className={ classNames('light pane-macros-editor-record', { 'recording': this.state.recording }) }
 				onClick={ e => this.state.recording ? this.stopRecording() : this.startRecording(e) }>
-				{ this.state.recording? 'Stop Recording' : 'Record Macro' }
+				{ this.state.recording? '停止录制' : '录制宏' }
 			</button>
 			&nbsp;&nbsp;
 			<button
 				className='light'
 				onClick={ this.clear }>
-				Clear Macro
+				清除宏
 			</button>
 			<div className='pane-macros-editor-content'>
-				{ actions.length === 0 && <div className='pane-macros-editor-empty'>No actions yet</div> }
+				{ actions.length === 0 && <div className='pane-macros-editor-empty'>无宏动作</div> }
 				{ actions }
 			</div>
 			<div
