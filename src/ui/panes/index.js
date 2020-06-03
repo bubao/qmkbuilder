@@ -23,7 +23,7 @@ class Panes extends React.Component {
 				<div className='panes-content'>
 					{ state.screen === C.SCREEN_WIRING && <Wiring state={ state }/> }
 					{ state.screen === C.SCREEN_PINS && <Pins state={ state }/> }
-					{ state.screen === C.SCREEN_KEYMAP && <Keymap state={ state }/> }
+					{/* state.screen === C.SCREEN_KEYMAP && <Keymap state={ state }/> */}
 					{/* { state.screen === C.SCREEN_MACROS && <Macros state={ state }/> } */}
 					{/* { state.screen === C.SCREEN_QUANTUM && <Quantum state={ state }/> } */}
 					{ state.screen === C.SCREEN_SETTINGS && <Settings state={ state }/> }
