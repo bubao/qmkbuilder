@@ -164,7 +164,7 @@ class Compile extends React.Component {
 
 		return (
 			<div className="pane-compile">
-				下载蓝牙DFU升级包 .zip.
+				下载蓝牙核心固件DFU升级包 .zip.
 				<div style={{ height: '0.5rem' }} />
 				<button
 					disabled={
@@ -173,23 +173,10 @@ class Compile extends React.Component {
 					}
 					onClick={this.downloadZip}
 				>
-					下载蓝牙主控DFU空中升级刷机包
+					蓝牙DFU升级包
 				</button>
 				<div style={{ height: '1.5rem' }} />
-				下载蓝牙KBD固件 .hex
-				<div style={{ height: '0.5rem' }} />
-				<button
-					className="light"
-					disabled={
-						!keyboard.valid ||
-						state.ui.get('compile-working', false)
-					}
-					onClick={this.downloadHex}
-				>
-					下载蓝牙主控烧录固件文件
-				</button>
-				<div style={{ height: '1.5rem' }} />
-				下载USB固件 .bin
+				下载CH554 USB芯片固件 .bin
 				<div style={{ height: '0.5rem' }} />
 				<button
 					className="light"
@@ -199,7 +186,7 @@ class Compile extends React.Component {
 					}
 					onClick={this.downloadUsbHex}
 				>
-					下载CH554 USB芯片烧录固件文件
+					CH554烧录固件
 				</button>
 				<div style={{ height: '1.5rem' }} />
 				下载源码 .zip
